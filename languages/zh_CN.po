@@ -1,0 +1,356 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: amativeness\n"
+"POT-Creation-Date: 2013-08-15 22:37+0100\n"
+"PO-Revision-Date: 2014-02-09 06:20+0800\n"
+"Last-Translator: xyayy <570047973@qq.com>\n"
+"Language-Team: amativeness\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: 404.php:17
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "这是有点尴尬，还&rsquo；吗？"
+
+#: 404.php:21
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "我们似乎可以&rsquo；T找到你要找的是什么。也许搜索可以帮助。"
+
+#: archive.php:29
+msgid "Daily Archives: %s"
+msgstr "日常档案：%s"
+
+#: archive.php:31
+msgid "Monthly Archives: %s"
+msgstr "每月档案：%s"
+
+#: archive.php:31
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: archive.php:33
+msgid "Yearly Archives: %s"
+msgstr "每年的档案：%s"
+
+#: archive.php:33
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: archive.php:35
+msgid "Archives"
+msgstr "档案"
+
+#: author.php:32
+msgid "Author Archives: %s"
+msgstr "作者档案：%s"
+
+#: author.php:63 content.php:59
+msgid "About %s"
+msgstr "关于 %s"
+
+#: category.php:21
+msgid "Category Archives: %s"
+msgstr "分类档案: %s"
+
+#: comments.php:31
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:42
+msgid "Comment navigation"
+msgstr "评论导航"
+
+#: comments.php:43
+msgid "&larr; Older Comments"
+msgstr "&LARR；年长的评论"
+
+#: comments.php:44
+msgid "Newer Comments &rarr;"
+msgstr "新的评论和RARR；"
+
+#: comments.php:53
+msgid "Comments are closed."
+msgstr "评论已经关闭"
+
+#: content-aside.php:15 content-image.php:13 content-link.php:14
+#: content-quote.php:13 content-status.php:31 content.php:41
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "继续阅读"
+
+#: content-aside.php:20 content-link.php:18 content-quote.php:17
+#: content-status.php:15
+msgid "Permalink to %s"
+msgstr "固定链接 %s"
+
+#: content-aside.php:23 content-image.php:23 content-link.php:21
+#: content-quote.php:20 content-status.php:37 content.php:30
+msgid "Leave a reply"
+msgstr "留下回复"
+
+#: content-aside.php:23 content-image.php:23 content-link.php:21
+#: content-quote.php:20 content-status.php:37 content.php:30
+msgid "1 Reply"
+msgstr "1 回复"
+
+#: content-aside.php:23 content-image.php:23 content-link.php:21
+#: content-quote.php:20 content-status.php:37 content.php:30
+msgid "% Replies"
+msgstr "% 留言"
+
+#: content-aside.php:26 content-image.php:26 content-link.php:24
+#: content-page.php:24 content-quote.php:23 content-status.php:40
+#: content.php:48 functions.php:349 image.php:37
+msgid "Edit"
+msgstr "编辑"
+
+#: content-link.php:12
+msgid "Link"
+msgstr "链接"
+
+#: content-none.php:13 index.php:49 search.php:34
+msgid "Nothing Found"
+msgstr "非常遗憾"
+
+#: content-none.php:17 index.php:53
+msgid ""
+"Apologies, but no results were found. Perhaps searching will help find a "
+"related post."
+msgstr "抱歉，没有符合您搜索条件的结果。请换其它关键词再试。"
+
+#: content-page.php:21 content.php:42 image.php:102
+msgid "Pages:"
+msgstr "页面："
+
+#: content.php:16
+msgid "Featured post"
+msgstr "精选文章"
+
+#: content.php:63
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "查看所有职位 %s <span class=\"meta-nav\">&rarr;</span>"
+
+#. Author URI of the plugin/theme
+#: footer.php:16
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: footer.php:16
+msgid "Semantic Personal Publishing Platform"
+msgstr "个人信息发布平台"
+
+#: footer.php:16
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: functions.php:64
+msgid "Primary Menu"
+msgstr "主菜单"
+
+#. translators: If there are characters in your language that are not supported
+#. * by Open Sans, translate this to 'off'. Do not translate into your own
+#. language.
+#: functions.php:101
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr ""
+
+#. translators: To add an additional Open Sans character subset specific to
+#. your language,
+#. * translate this to 'greek', 'cyrillic' or 'vietnamese'. Do not translate
+#. into your own language.
+#: functions.php:107
+msgctxt "Open Sans font: add new subset (greek, cyrillic, vietnamese)"
+msgid "no-subset"
+msgstr "没有子集"
+
+#: functions.php:215
+msgid "Page %s"
+msgstr "页面 %s"
+
+#: functions.php:244
+msgid "Main Sidebar"
+msgstr "主工具栏"
+
+#: functions.php:246
+msgid ""
+"Appears on posts and pages except the optional Front Page template, which "
+"has its own widgets"
+msgstr "出现在文章和网页除了可选的前台页面的模板，有自己的小部件"
+
+#: functions.php:254
+msgid "First Front Page Widget Area"
+msgstr "第一工具栏"
+
+#: functions.php:256 functions.php:266
+msgid ""
+"Appears when using the optional Front Page template with a page set as "
+"Static Front Page"
+msgstr "使用时出现的与一个网页设置为静态的首页可选的前台页面的模板"
+
+#: functions.php:264
+msgid "Second Front Page Widget Area"
+msgstr "第二工具栏"
+
+#: functions.php:288 single.php:20
+msgid "Post navigation"
+msgstr "文章导航"
+
+#: functions.php:289
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: functions.php:290
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "最新文章 <span class=\"meta-nav\">&rarr;</span>"
+
+#: functions.php:317
+msgid "Pingback:"
+msgstr ""
+
+#: functions.php:317
+msgid "(Edit)"
+msgstr ""
+
+#: functions.php:332
+msgid "Post author"
+msgstr ""
+
+#. translators: 1: date, 2: time
+#: functions.php:338
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: functions.php:344
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:353
+msgid "Reply"
+msgstr "回复"
+
+#. Translators: used between list items, there is a space after the comma.
+#: functions.php:376 functions.php:379
+msgid ", "
+msgstr ""
+
+#: functions.php:390
+msgid "View all posts by %s"
+msgstr ""
+
+#. Translators: 1 is category, 2 is tag, 3 is the date and 4 is the author's
+#. name.
+#: functions.php:396
+msgid ""
+"This entry was posted in %1$s and tagged %2$s on %3$s<span class=\"by-author"
+"\"> by %4$s</span>."
+msgstr ""
+
+#: functions.php:398
+msgid ""
+"This entry was posted in %1$s on %3$s<span class=\"by-author\"> by %4$s</"
+"span>."
+msgstr ""
+
+#: functions.php:400
+msgid "This entry was posted on %3$s<span class=\"by-author\"> by %4$s</span>."
+msgstr ""
+
+#: header.php:43
+msgid "Menu"
+msgstr ""
+
+#: header.php:44
+msgid "Skip to content"
+msgstr ""
+
+#: image.php:26
+msgid ""
+"<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class="
+"\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></"
+"span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; "
+"%5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</"
+"a>."
+msgstr ""
+
+#: image.php:41
+msgid "&larr; Previous"
+msgstr ""
+
+#: image.php:42
+msgid "Next &rarr;"
+msgstr ""
+
+#: index.php:38
+msgid "No posts to display"
+msgstr ""
+
+#: index.php:42
+msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
+msgstr ""
+
+#: search.php:18
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:38
+msgid ""
+"Sorry, but nothing matched your search criteria. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: single.php:21
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr ""
+
+#: single.php:22
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr ""
+
+#: tag.php:21
+msgid "Tag Archives: %s"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "amativeness"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://wordpress.org/themes/amativeness"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"The 2012 theme for WordPress is a fully responsive theme that looks great on "
+"any device. Features include a front page template with its own widgets, an "
+"optional display font, styling for post formats on both index and single "
+"views, and an optional no-sidebar page template. Make it yours with a custom "
+"menu, header image, and background."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "the WordPress team"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Front Page Template"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full-width Page Template, No Sidebar"
+msgstr ""

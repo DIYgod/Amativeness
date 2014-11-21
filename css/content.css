@@ -1,0 +1,288 @@
+/*********************
+ *
+ *      正文部分
+ *
+ *********************/
+
+/* 文章列表 */
+
+.article-list {
+    margin-top: 40px;
+}
+.article-list > .main {
+    width: 67%; 
+    float: left;
+}
+.article-list > .side {
+    width: 30%;
+    float: right;
+}
+@media (max-width: 890px) {
+    .article-list > .side {
+        display: none;
+    }
+    .article-list > .main {
+        width: 100%
+    }
+}
+
+
+/* block */
+
+.block {
+    position: relative;
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+
+    box-shadow: 0 5px 20px #bbb;	
+    -moz-box-shadow: 0 5px 20px #bbb;
+}
+.blue.block, .info.block {
+    background-color: #E6F4F9;
+    color: #4D8796;
+}
+.yellow.block, .warning.block {
+    background-color: #F6F3D5;
+    color: #96904D;
+}
+.green.block, .success.block, .positive.block {
+    background-color: #DEFCD5;
+    color: #52A954;
+}
+.red.block, .error.block, .negative.block {
+    background-color: #F1D7D7;
+    color: #A95252;
+}
+
+.block .title {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin: 15px 0;
+}
+.block .title a:hover {
+    text-shadow: 0 8px 2px rgba(0, 0, 0, 0.1),0px 10px 5px rgba(0, 0, 0, 0.2);
+}
+.post.block {
+    margin-bottom: 40px;
+}
+.category.block {
+    margin-bottom: 40px;
+}
+
+@media (max-width: 480px) {
+    .post.block {
+        margin-bottom: 20px;
+    }
+}
+
+/* 每篇文章左上角的时间 */
+
+.round-date {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    height: 60px;
+    width: 70px;
+    padding-top: 10px;
+    border-radius: 100px;
+
+    color: #fff;
+    background-color: #E8E8E8;
+    border-color: #DE3859;
+}
+.round-date .month, .round-date .day {
+    text-align: center;
+    display: block;
+}
+.round-date .day {
+    font-size: 30px;	
+    font-weight: bold;
+}
+
+.round-date.red {
+    background-color: #D95C5C;
+}
+.round-date.green {
+    background-color: #A1CF64;
+}
+.round-date.blue {
+    background-color: #6ECFF5;
+}
+.round-date.purple {
+    background-color: #564F8A;
+}
+.round-date.orange {
+    background-color: #F05940;
+}
+.round-date.teal {
+    background-color: #00B5AD;
+}
+.round-date.grey {
+    background-color: #E8E8E8;
+}
+
+
+@media (max-width: 480px) {
+    .round-date {
+        display: none;
+    }
+}
+
+/* 文章信息 */
+.article-meta {
+    color: #555;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* 文章中 查看更多 链接 */
+
+.more {
+    text-align: center;
+}
+.more a {
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #E8E8E8;
+
+    transition: 500ms;
+    -o-transition: 500ms;
+    -moz-transition: 500ms;
+    -webkit-transition: 500ms;
+}
+.article-content.red > .more a {
+    background-color: #D95C5C;
+}
+.article-content.green > .more a {
+    background-color: #A1CF64;
+}
+.article-content.blue > .more a {
+    background-color: #6ECFF5;
+}
+.article-content.purple > .more a {
+    background-color: #564F8A;
+}
+.article-content.orange > .more a {
+    background-color: #F05940;
+}
+.article-content.teal > .more a {
+    background-color: #00B5AD;
+}
+.article-content.grey > .more a {
+    background-color: #E8E8E8;
+}
+
+
+/* 文章分页列表 */
+#content > ol:nth-child(2) {
+display: none;
+}
+.page-navigator {
+    display: inline-block;
+    padding: 0px;
+    border-radius: 5px;
+
+    box-shadow: 0px 5px 20px #bbb;
+    -webkit-box-shadow: 0px 5px 20px #bbb;
+    background: #ffffff;
+}
+
+.page-navigator li {
+    display: inline-block;
+    padding: 10px;
+    background: #fff;
+}
+.page-navigator li:first-child {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.page-navigator li:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.page-numbers.current {
+display: inline-block;
+padding: 10px;
+background: #fff;
+}
+ol > span.page-numbers.dots {
+display: inline-block;
+padding: 10px;
+background: #fff;
+}
+ol > a.next.page-numbers {
+display: inline-block;
+padding: 10px;
+background: #fff;
+}
+/* 评论列表之后的分页列表无box-shadow */
+.block .comment-list + .page-navigator {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+/* 侧边栏 */
+
+.side .list {
+    list-style: none;
+}
+.side .list .item {
+    padding: 5px 0px;
+    display: list-item;
+}
+.side .list .item:after {
+    clear: both;
+    content: '';
+    display: table;
+}
+.side .list .item a {
+    color: rgba(0, 0, 0, 0.8);
+}
+.side .list .item a:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.side .animated.list .item {
+    cursor: pointer;
+    padding: 5px 0px;
+
+    transition: .2s color ease,.2s padding-left ease,.2s background-color ease;
+    -o-transition: .2s color ease,.2s padding-left ease,.2s background-color ease;
+    -moz-transition: .2s color ease,.2s padding-left ease,.2s background-color ease;
+    -webkit-transition: .2s color ease,.2s padding-left ease,.2s background-color ease;
+}
+.side .animated.list .item:hover {
+    padding-left: 15px;
+    background-color: rgba(0, 0, 0, 0.02);
+    color: rgba(0, 0, 0, 0.7);
+}
+.side .animated.list .item:hover * {
+    cursor: pointer;
+}
+
+.side .friend.list .item {
+    padding: 10px 0px;
+    color: #555;
+}
+.side .friend.list .item:hover img {
+    transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+.side .friend.list p {
+    margin: 1px;
+}
+.side .friend.list .header {
+    font-weight: bold;
+}
+
+/* 分类下 显示文章个数的标签 */
+.side .category.list .item .label {
+    float: right;
+}

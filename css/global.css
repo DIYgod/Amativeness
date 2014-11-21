@@ -1,0 +1,213 @@
+/*------------------------------------
+ * theme by Sloger
+ *
+ * @author  Sloger
+ * @link  http: //blog.sloger.info
+ * @update  2013-12-31
+ * --------------------------------- */
+
+/*********************
+ *
+ *      整体框架
+ *
+ *********************/
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, div, span, footer {
+    margin: 0px;
+    cursor: default;
+}
+body {
+    background: #e5e5e5 url(../images/background.png);
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+}
+a {
+    color: #333;
+    text-decoration: none;
+
+    transition: 500ms;
+    -o-transition: 500ms;
+    -moz-transition: 500ms;
+    -webkit-transition: 500ms;
+}
+a:hover {
+    color: #707070;
+    text-shadow: 1px 1px 5px #969696;
+}
+img {
+    max-width: 100%;
+    border-radius: 5px;
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+
+    transition: 500ms;
+    -o-transition: 500ms;
+    -moz-transition: 500ms;
+    -webkit-transition: 500ms;
+}
+img:hover {
+    opacity: .8;
+}
+
+/* 侧边栏友情链接和回复列表中的头像 */
+img.avatar {
+    float: left;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 50px !important;
+
+    transition: 500ms;
+    -o-transition: 500ms;
+    -moz-transition: 500ms;
+    -webkit-transition: 500ms;
+}
+
+
+.article-list .main p {
+    margin: 10px 0px;
+}
+
+/* 布局 */
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+.container:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+@media (min-width: 1170px) {
+    .container {
+        max-width: 80%;
+    } 
+}
+
+
+/* semantic框架提供的 label */
+
+.ui.ribbon.label {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* 代码 */
+
+pre, code {
+	word-wrap: break-word;
+    border-radius: 5px;
+    color: #DE3859;
+    border: 1px solid #ddd;
+    cursor: auto;
+    padding: 2px 5px;
+    font-size: 14px;
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+
+    user-select: initial;
+    -moz-user-select: initial;
+    -webkit-user-select: initial;
+}
+pre {
+    padding: 10px;
+    border-left: 4px solid #de3859;
+    overflow: auto;
+}
+pre code {
+    border: 0px;
+    padding: 0px;
+}
+
+.article-content.red pre {
+    border-left-color: #D95C5C;
+    padding: 10px;
+border-left: 4px solid #de3859;
+overflow: auto;
+line-height: 20px;
+word-wrap: break-word;
+}
+.article-content.green pre {
+    border-left-color: #A1CF64;
+}
+.article-content.blue pre {
+    border-left-color: #6ECFF5;
+}
+.article-content.purple pre {
+    border-left-color: #564F8A;
+}
+.article-content.orange pre {
+    border-left-color: #F05940;
+}
+.article-content.teal pre {
+    border-left-color: #00B5AD;
+}
+.article-content.grey pre {
+    border-left-color: #E8E8E8;
+}
+
+.article-content.red code {
+    color: #D95C5C;
+}
+.article-content.green code {
+    color: #A1CF64;
+}
+.article-content.blue code {
+    color: #6ECFF5;
+}
+.article-content.purple code {
+    color: #564F8A;
+}
+.article-content.orange code {
+    color: #F05940;
+}
+.article-content.teal code {
+    color: #00B5AD;
+}
+.article-content.grey code {
+    color: #E8E8E8;
+}
+
+/* footer 部分 */
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(136, 136, 136);
+    font-size: 14px;
+}
+footer p {
+    margin: 5px 0px;
+}
+footer a {
+    color: rgb(136, 136, 136);
+}
+footer a:hover {
+    color: rgb(200, 200, 200);
+}
+
+/* Font Awesome 字体 */
+
+.fa {
+    padding: 10px;
+    font-size: 20px;
+}
+
+
+
+/* 光标 */
+.side .block .label:hover, .main .block .comments:hover, .main .block .round-date:hover {
+    cursor: pointer;
+}
+
+
+#content {
+    position:relative;
+    margin-top: -180px;
+}
+
+form textarea {
+    resize: none !important;
+}

@@ -1,0 +1,571 @@
+/*
+ * # Semantic - Form
+ * http://github.com/jlukic/semantic-ui/
+ *
+ *
+ * Copyright 2013 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+/*******************************
+           Standard
+*******************************/
+
+/*--------------------
+        Form
+---------------------*/
+
+.comment-form {
+  position: relative;
+  max-width: 100%;
+}
+.form-submit > #submit {
+outline: none;
+background: #dd5e5e;
+color: #fff;
+}
+.form-submit > #submit:hover {
+outline: none;
+background: #DB3333;
+color: #fff;
+}
+.comment-form :first-child {
+  margin-top: 0em;
+}
+
+.comment-form:last-child {
+  margin-bottom: 0em;
+}
+
+/*--------------------
+        Content
+---------------------*/
+.comment-notes {
+	display: none;
+}
+.comment-form > p {
+  margin: 1em 0;
+}
+
+/*--------------------
+        Field
+---------------------*/
+
+.comment-form .field {
+  clear: both;
+  margin: 0em 0em 1em;
+}
+
+/*--------------------
+        Labels
+---------------------*/
+
+.comment-form .field > label {
+  margin: 0em 0em 0.3em;
+  display: block;
+  color: #555555;
+  font-size: 0.875em;
+}
+
+/*--------------------
+    Standard Inputs
+---------------------*/
+
+.comment-formtextarea,
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="date"],
+.comment-form input[type="password"],
+.comment-form input[type="number"],
+.comment-form input[type="url"],
+.comment-form input[type="tel"],
+.comment-form .ui.input {
+  width: 100%;
+}
+
+.comment-formm textarea,
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="date"],
+.comment-form input[type="password"],
+.comment-form input[type="number"],
+.comment-form input[type="url"],
+.comment-form input[type="tel"] {
+  margin: 0em;
+  padding: 0.85em 1.2em;
+  font-size: 0.875em;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  outline: none;
+  color: rgba(0, 0, 0, 0.7);
+  border-radius: 0.3125em;
+  -webkit-transition: background-color 0.3s ease-out, -webkit-box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: background-color 0.3s ease-out, box-shadow 0.2s ease, border-color 0.2s ease;
+  -webkit-box-shadow: 0em 0em 0em 0em rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0em 0em 0em 0em rgba(0, 0, 0, 0.3) inset;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.comment-form.textarea,
+.comment-form textarea {
+  line-height: 1.33;
+  min-height: 8em;
+  height: 12em;
+  max-height: 24em;
+  resize: vertical;
+}
+
+.comment-form textarea,
+.comment-form input[type="checkbox"] {
+  vertical-align: top;
+}
+
+/*--------------------
+       Dividers
+---------------------*/
+
+.comment-form .divider {
+  clear: both;
+  margin: 1em 0em;
+}
+
+/*--------------------
+   Types of Messages
+---------------------*/
+
+.comment-form .info.message,
+.comment-form .warning.message,
+.comment-form .error.message {
+  display: none;
+}
+
+/* Assumptions */
+
+.comment-form .message:first-child {
+  margin-top: 0px;
+}
+
+/*--------------------
+   Validation Prompt
+---------------------*/
+
+.comment-form .field .prompt.label {
+  white-space: nowrap;
+}
+
+.comment-form .inline.field .prompt {
+  margin-top: 0em;
+  margin-left: 1em;
+}
+
+.comment-form .inline.field .prompt:before {
+  margin-top: -0.3em;
+  bottom: auto;
+  right: auto;
+  top: 50%;
+  left: 0em;
+}
+
+/*******************************
+            States
+*******************************/
+
+/*--------------------
+        Focus
+---------------------*/
+
+.comment-form input[type="text"]:focus,
+.comment-form input[type="email"]:focus,
+.comment-form input[type="date"]:focus,
+.comment-form input[type="password"]:focus,
+.comment-form input[type="number"]:focus,
+.comment-form input[type="url"]:focus,
+.comment-form input[type="tel"]:focus,
+.comment-form textarea:focus {
+  color: rgba(0, 0, 0, 0.85);
+  border-color: rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0.3em 0em 0em 0em rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0.3em 0em 0em 0em rgba(0, 0, 0, 0.2) inset;
+}
+
+/*--------------------
+        Error
+---------------------*/
+
+/* On Form */
+
+.comment-form.warning .warning.message {
+  display: block;
+}
+
+/*--------------------
+        Warning
+---------------------*/
+
+/* On Form */
+
+.comment-form.error .error.message {
+  display: block;
+}
+
+/* On Field(s) */
+
+.comment-form .fields.error .field label,
+.comment-form .field.error label,
+.comment-form .fields.error .field .input,
+.comment-form .field.error .input {
+  color: #D95C5C;
+}
+
+.comment-form .fields.error .field .corner.label,
+.comment-form .field.error .corner.label {
+  border-color: #D95C5C;
+  color: #FFFFFF;
+}
+
+.comment-form .fields.error .field textarea,
+.comment-form .fields.error .field input[type="text"],
+.comment-form .fields.error .field input[type="email"],
+.comment-form .fields.error .field input[type="date"],
+.comment-form .fields.error .field input[type="password"],
+.comment-form .fields.error .field input[type="number"],
+.comment-form .fields.error .field input[type="url"],
+.comment-form .fields.error .field input[type="tel"],
+.comment-form .field.error textarea,
+.comment-form .field.error input[type="text"],
+.comment-form .field.error input[type="email"],
+.comment-form .field.error input[type="date"],
+.comment-form .field.error input[type="password"],
+.comment-form .field.error input[type="number"],
+.comment-form .field.error input[type="url"],
+.comment-form .field.error input[type="tel"] {
+  background-color: #FFFAFA;
+  border-color: #E7BEBE;
+  border-left: none;
+  color: #D95C5C;
+  padding-left: 1.2em;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-box-shadow: 0.3em 0em 0em 0em #D95C5C inset;
+  box-shadow: 0.3em 0em 0em 0em #D95C5C inset;
+}
+
+.comment-form .field.error textarea:focus,
+.comment-form .field.error input[type="text"]:focus,
+.comment-form .field.error input[type="email"]:focus,
+.comment-form .field.error input[type="date"]:focus,
+.comment-form .field.error input[type="password"]:focus,
+.comment-form .field.error input[type="number"]:focus,
+.comment-form .field.error input[type="url"]:focus,
+.comment-form .field.error input[type="tel"]:focus {
+  border-color: #ff5050;
+  color: #ff5050;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0.3em 0em 0em 0em #FF5050 inset;
+  box-shadow: 0.3em 0em 0em 0em #FF5050 inset;
+}
+
+/*--------------------
+  Empty (Placeholder)
+---------------------*/
+
+/* browsers require these rules separate */
+
+.comment-form ::-webkit-input-placeholder {
+  color: #AAAAAA;
+}
+
+.comment-form ::-moz-placeholder {
+  color: #AAAAAA;
+}
+
+.comment-form :focus::-webkit-input-placeholder {
+  color: #999999;
+}
+
+.comment-form :focus::-moz-placeholder {
+  color: #999999;
+}
+
+/* Error Placeholder */
+
+.comment-form .error ::-webkit-input-placeholder {
+  color: rgba(255, 80, 80, 0.4);
+}
+
+.comment-form .error ::-moz-placeholder {
+  color: rgba(255, 80, 80, 0.4);
+}
+
+.comment-form .error :focus::-webkit-input-placeholder {
+  color: rgba(255, 80, 80, 0.7);
+}
+
+.comment-form .error :focus::-moz-placeholder {
+  color: rgba(255, 80, 80, 0.7);
+}
+
+/*--------------------
+       Disabled
+---------------------*/
+
+.comment-form .field :disabled,
+.comment-form .field.disabled {
+  opacity: 0.5;
+}
+
+.comment-form .field.disabled label {
+  opacity: 0.5;
+}
+
+.comment-form .field.disabled :disabled {
+  opacity: 1;
+}
+
+/*--------------------
+     Loading State
+---------------------*/
+
+/* On Form */
+
+.comment-form.loading {
+  position: relative;
+}
+
+.comment-form.loading:after {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8) url(../images/loader-large.gif) no-repeat 50% 50%;
+  visibility: visible;
+}
+
+/*******************************
+           Variations
+*******************************/
+
+/*--------------------
+      Fluid Width
+---------------------*/
+
+.comment-form.fluid {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*--------------------------
+  Input w/ attached Button
+---------------------------*/
+
+.comment-form input.attached {
+  width: auto;
+}
+
+/*--------------------
+      Date Input
+---------------------*/
+
+.comment-form .date.field > label {
+  position: relative;
+}
+
+.comment-form .date.field > label:after {
+  position: absolute;
+  top: 2em;
+  right: 0.5em;
+  font-family: 'Icons';
+  content: '\f133';
+  font-size: 1.2em;
+  font-weight: normal;
+  color: #CCCCCC;
+}
+
+/*--------------------
+    Inverted Colors
+---------------------*/
+
+.comment-form.ui.inverted.form label {
+  color: #FFFFFF;
+}
+
+.comment-form.ui.inverted.form .field.error textarea,
+.comment-form.ui.inverted.form .field.error input[type="text"],
+.comment-form.ui.inverted.form .field.error input[type="email"],
+.comment-form.ui.inverted.form .field.error input[type="date"],
+.comment-form.ui.inverted.form .field.error input[type="password"],
+.comment-form.ui.inverted.form .field.error input[type="number"],
+.comment-form.ui.inverted.form .field.error input[type="url"],
+.comment-form.ui.inverted.form .field.error input[type="tel"] {
+  background-color: #FFCCCC;
+}
+
+/*--------------------
+     Field Groups
+---------------------*/
+
+/* Grouped Vertically */
+
+.comment-form .grouped.fields {
+  margin: 0em 0em 1em;
+}
+
+.comment-form .grouped.fields .field {
+  display: block;
+  float: none;
+  margin: 0.5em 0em;
+  padding: 0em;
+}
+
+/*--------------------
+          Fields
+---------------------*/
+
+/* Split fields */
+
+.comment-form .fields {
+  clear: both;
+}
+
+.comment-form .fields:after {
+  content: ' ';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.comment-form .fields > .field {
+  clear: none;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.comment-form .fields > .field:first-child {
+  border-left: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* Other Combinations */
+
+.comment-form .two.fields > .fields,
+.comment-form .two.fields > .field {
+  width: 50%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.comment-form .three.fields > .fields,
+.comment-form .three.fields > .field {
+  width: 33.333%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.comment-form .four.fields > .fields,
+.comment-form .four.fields > .field {
+  width: 25%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.comment-form .five.fields > .fields,
+.comment-form .five.fields > .field {
+  width: 20%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.comment-form .fields .field:first-child {
+  padding-left: 0%;
+}
+
+.comment-form .fields .field:last-child {
+  padding-right: 0%;
+}
+
+/*--------------------
+    Inline Fields
+---------------------*/
+
+.comment-form .inline.fields .field {
+  min-height: 1.3em;
+  margin-right: 0.5em;
+}
+
+.comment-form .inline.fields .field > label,
+.comment-form .inline.fields .field > p,
+.comment-form .inline.fields .field > input,
+.comment-form .inline.field > label,
+.comment-form .inline.field > p,
+.comment-form .inline.field > input {
+  display: inline-block;
+  width: auto;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  vertical-align: middle;
+  font-size: 1em;
+}
+
+.comment-form .inline.fields .field > input,
+.comment-form .inline.field > input {
+  font-size: 0.875em;
+}
+
+.comment-form .inline.fields .field > :first-child,
+.comment-form .inline.field > :first-child {
+  margin: 0em 0.5em 0em 0em;
+}
+
+.comment-form .inline.fields .field > :only-child,
+.comment-form .inline.field > :only-child {
+  margin: 0em;
+}
+
+/*--------------------
+        Sizes
+---------------------*/
+
+/* Standard */
+
+.comment-form.ui.small.form {
+  font-size: 0.875em;
+}
+
+.comment-form.ui.small.form textarea,
+.comment-form.ui.small.form input[type="text"],
+.comment-form.ui.small.form input[type="email"],
+.comment-form.ui.small.form input[type="date"],
+.comment-form.ui.small.form input[type="password"],
+.comment-form.ui.small.form input[type="number"],
+.comment-form.ui.small.form input[type="url"],
+.comment-form.ui.small.form input[type="tel"],
+.comment-form.ui.small.form label {
+  font-size: 1em;
+}
+
+/* Large */
+
+.comment-form {
+  font-size: 1.125em;
+}
