@@ -1406,8 +1406,8 @@ img#wpstats {
 	margin: 0 auto 1.714285714rem;
 }
 
-/* Minimum width of 600 pixels. */
-@media screen and (min-width: 600px) {
+/* Minimum width of 6 pixels. */
+@media screen and (min-width: 6px) {
 	.author-avatar {
 		float: left;
 		margin-top: 8px;

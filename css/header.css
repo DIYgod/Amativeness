@@ -143,16 +143,28 @@ transition: .6s;
 @media (max-width: 768px) {
     .navbar .nav-right .search-form {
         display: none;
+        position: relative;
+    }
+    .navbar  {
+        position: relative;
     }
 }
 @media (max-width: 550px) {
     .navbar .nav-right {
         display: none;
+        position: relative;
+    }
+    .navbar  {
+        position: relative;
     }
 }
 @media (max-width: 300px) {
     .navbar .nav {
         display: none;
+        position: relative;
+    }
+    .navbar  {
+        position: relative;
     }
 }
 
