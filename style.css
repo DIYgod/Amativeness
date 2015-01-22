@@ -2204,3 +2204,9 @@ border-style:inset;
 border-width:1px;
 padding:1px;
 }
+
+@media (max-width: 768px) {
+    .wppet {
+        display: none;
+    }
+}
