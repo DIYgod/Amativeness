@@ -1887,123 +1887,6 @@ border-radius: 50%;
 .readers-list a:hover em {color:#EE8B17; font:bold 12px/36px microsoft yahei;}
 .readers-list a:hover strong {color:#EE8B17; right:150px; top:0; text-align:center; border-right:#ccc 1px solid; height:44px; line-height:40px;}
 
-.music-main {
-width: 67%;
-margin: auto;
-}
-.music-main > article {
-text-align: center;
-padding: 20px;
-}
-.music-c{
-	background-color: hsl(0, 70%, 89%);
-}
-#music-box {
-    right:20px;
-    padding:30px;
-    filter:alpha(opacity=70);
-    -moz-opacity:0.7;
-    -khtml-opacity: 0.7;
-    opacity: 0.7;
-    text-align:center;
-}
-#music-box div {
-}
-#music-box:hover {
-    filter:alpha(opacity=100);
-    -moz-opacity:1;
-    -khtml-opacity: 1;
-    opacity: 1;
-}
-h2#song-title {
-    font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
-    color:#fff;
-    font-size: 30px;
-}
-h3#song-author {
-    font-family:Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;;
-    color:#fff;
-    font-size: 20px;
-    margin-top:20px;
-}
-div#music-process {
-    width:400px;
-    margin: auto;
-}
-div#music-process-p {
-	display: block;
-	background: url(./images/button.gif) 0 -133px repeat-x;
-	height: 40px;
-	margin: auto;
-	width: 290px;
-	margin-top: 20px;
-}
-span#music-process-slide {
-    cursor:pointer;
-    display:block;
-    float:left;
-    width:30px;
-    background:url(./images/button.png) -30px -230px no-repeat;
-    height:30px;
-}
-div#music-ctime {
-    display:block;
-    float:left;
-    color:#FFF;
-    font-weight:bold;
-    width:40px;
-    height:30px;
-    font-family:Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
-}
-div#music-etime {
-    display:block;
-    float:right;
-    color:#FFF;
-    font-weight:bold;
-    width:40px;
-    height:30px;
-    font-family:Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
-}
-div#music-play {
-    cursor:pointer;
-    display:block;
-    margin:10px auto;
-    width:100px;
-    border:0px #FFF solid;
-    background:url(./images/button.png) 0 -12px no-repeat;
-    height:70px;
-}
-div#music-next {
-    cursor:pointer;
-    margin:10px auto;
-    width:100px;
-    margin-top:15px;
-    border:0px #FFF solid;
-    background:url(./images/button.png) 0 -85px no-repeat;
-    height:40px;
-}
-div#music-volume {
-	margin: auto;
-	width: 50px;
-	margin-left: 55%;
-	position: absolute;
-	padding-top: 30px;
-}
-div#music-volume-v {
-    float:left;
-    display:block;
-    width:50px;
-    background:url(./images/button.png) 3px -250px no-repeat;
-    height:100px;
-}
-span#music-volume-slide {
-    cursor:pointer;
-    display:block;
-    float:left;
-    width:40px;
-    background:url(./images/button.png) 0px -353px no-repeat;
-    height:30px;
-}
 div.tishik {
 overflow: hidden;
 border: 0;
@@ -2164,45 +2047,45 @@ bottom:30px;
 }
 
 .blogroll{
-width:100%;
-display:block;
-/*记得清除浮动*/
-overflow:auto;
-/*兼容IE6*/
-zoom:1;
-height:400px; 
-overflow-y:auto; 
+	width:100%;
+	display:block;
+	/*记得清除浮动*/
+	overflow:auto;
+	/*兼容IE6*/
+	zoom:1;
+	height:400px; 
+	overflow-y:auto; 
 }
 .blogroll li{
-float:left;
-width:50%;
-display:block;
-font-size: 10pt;
+	float:left;
+	width:50%;
+	display:block;
+	font-size: 10pt;
 }
 
 /*----------table----------*/
 table.table {
-border-spacing:2px;
-border-collapse:separate;
-background-color:#FFF;
-border-color:gray;
-border-style:outset;
-border-width:1px;
+	border-spacing:2px;
+	border-collapse:separate;
+	background-color:#FFF;
+	border-color:gray;
+	border-style:outset;
+	border-width:1px;
 }
 table.table th {
-background-color:#FFF;
--moz-border-radius:0;
-border-color:gray;
-border-style:inset;
-border-width:1px;
-padding:1px;
+	background-color:#FFF;
+	-moz-border-radius:0;
+	border-color:gray;
+	border-style:inset;
+	border-width:1px;
+	padding:1px;
 }
 table.table td {
--moz-border-radius:0;
-border-color:gray;
-border-style:inset;
-border-width:1px;
-padding:1px;
+	-moz-border-radius:0;
+	border-color:gray;
+	border-style:inset;
+	border-width:1px;
+	padding:1px;
 }
 
 @media (max-width: 768px) {

