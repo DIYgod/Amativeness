@@ -3,6 +3,26 @@
 *
 *http://www.dao-gu.com
 */
+
+var weather=Array();
+weather.state=false;
+$(document).ready(function(){
+    $.ajax({
+        dataType:"jsonp",
+        success:function(data){
+            if(data.success!=1){return;}
+            weather.state=true;
+            weather.c=Array();
+            weather.c[0]=data.result[0].citynm+"今天气温:"+data.result[0].temp_low+"-"+data.result[0].temp_high+"°C";
+            weather.c[1]=data.result[0].citynm+"今天天气:"+data.result[0].weather;
+            weather.c[2]=data.result[1].citynm+"明天气温:"+data.result[1].temp_low+"-"+data.result[1].temp_high+"°C";
+            weather.c[3]=data.result[1].citynm+"明天天气:"+data.result[1].weather;
+        },
+        type:"GET",
+        url:"http://fuckingweather.sinaapp.com/?callback=?"
+    });
+});
+
 //右键菜单
 jQuery(document).ready(function ($) {
     $("#spig").mousedown(function (e) {
@@ -29,6 +49,7 @@ jQuery(document).ready(function ($) {
     $(".mumu").mouseover(function () {
        $(".mumu").fadeTo("300", 0.3);
        msgs = ["我隐身了，你看不到我", "我会隐身哦！嘿嘿！", "别动手动脚的，把手拿开！", "把手拿开我才出来！"];
+	//if(weather.state)msgs.concat(weather.c[0],weather.c[1],weather.c[2],weather.c[3],weather.c[4],weather.c[5],weather.c[6],weather.c[7]);
        var i = Math.floor(Math.random() * msgs.length);
         showMessage(msgs[i]);
     });
@@ -42,19 +63,19 @@ jQuery(document).ready(function ($) {
     if (isindex) { //如果是主页
         var now = (new Date()).getHours();
         if (now > 0 && now <= 6) {
-            showMessage(visitor + ' 你是夜猫子呀？还不睡觉，明天起的来么你？', 6000);
+            showMessage('你是夜猫子呀？还不睡觉，明天起的来么你？', 6000);
         } else if (now > 6 && now <= 11) {
-            showMessage(visitor + ' 早上好，早起的鸟儿有虫吃噢！早起的虫儿被鸟吃，你是鸟儿还是虫儿？嘻嘻！', 6000);
+            showMessage('早上好，早起的鸟儿有虫吃噢！早起的虫儿被鸟吃，你是鸟儿还是虫儿？嘻嘻！', 6000);
         } else if (now > 11 && now <= 14) {
-            showMessage(visitor + ' 中午了，吃饭了么？不要饿着了，饿死了谁来陪我呀！', 6000);
+            showMessage('中午了，吃饭了么？不要饿着了，饿死了谁来陪我呀！', 6000);
         } else if (now > 14 && now <= 18) {
-            showMessage(visitor + ' 中午的时光真难熬！还好有你在！', 6000);
+            showMessage('中午的时光真难熬！还好有你在！', 6000);
         } else {
-            showMessage(visitor + ' 快来逗我玩吧！', 6000);
+            showMessage('快来逗我玩吧！', 6000);
         }
     }
     else {
-        showMessage('欢迎' + visitor + '来到Anotherhome阅读 ' + title + ' ', 6000);
+        showMessage('欢迎来到Anotherhome阅读 ' + title + ' ', 6000);
     }
     $(".spig").animate({
         top: $(".spig").offset().top + 300,
@@ -133,7 +154,8 @@ jQuery(document).ready(function ($) {
 jQuery(document).ready(function ($) {
 
     window.setInterval(function () {
-        msgs = ["去留言板申请友链吧！", "陪我聊天吧！", "好无聊哦，你都不陪我玩！", "…@……!………", "^%#&*!@*(&#)(!)(", "我可爱吧！嘻嘻!~^_^!~~","谁淫荡呀?~谁淫荡?，你淫荡呀!~~你淫荡！~~","从前有座山，山上有座庙，庙里有个老和尚给小和尚讲故事，讲：“从前有座……”"];
+        msgs = ["去留言板申请友链吧！", "好无聊哦，你都不陪我玩！", "^%#&*!@*(&#)(!)(", "谁淫荡呀?~谁淫荡?，你淫荡呀!~~你淫荡！~~","从前有座山，山上有座庙，庙里有个老和尚给小和尚讲故事，讲：“从前有座……”"];
+	//if(weather.state)msgs.concat(weather.c[0],weather.c[1],weather.c[2],weather.c[3],weather.c[4],weather.c[5],weather.c[6],weather.c[7]);
         var i = Math.floor(Math.random() * msgs.length);
         showMessage(msgs[i], 10000);
     }, 35000);
