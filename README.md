@@ -1,4 +1,4 @@
-:octocat: Wordpress主题
+Wordpress主题　Amativeness
 ===========
 
 基于原作者 Nitian 的 [Amativeness 3.0](http://azfashao.com/amativeness3-0/) ，略微改动。
