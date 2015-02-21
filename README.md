@@ -1,4 +1,4 @@
-:octocat: Wordpress主题　Amativeness [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/DIYgod/amativeness/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+:octocat: Wordpress主题
 ===========
 
 基于原作者 Nitian 的 [Amativeness 3.0](http://azfashao.com/amativeness3-0/) ，略微改动。
