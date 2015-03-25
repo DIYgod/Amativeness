@@ -61,22 +61,8 @@ var jiathis_config={
 <!-- JiaThis Button END -->
 
 <br><br>
-<span style="font-size: 8pt;"><i class="icon-emo-grin"></i>站点维护需要很多资金和精力，希望您能对本站关闭ADBlock之类的屏蔽广告插件然后猛击广告来支持本站，以维持本站微薄的收入
-<br><br>
-<i class="icon-emo-grin"></i>如果本站给你带来过欢乐，或者对你有所帮助，欢迎<a href="http://www.anotherhome.net/donate" target="_blank">捐款</a>支持，本站所得捐赠之款项80%将用于<a href="http://www.anotherhome.net/projectpage" target="_blank">公益项目</a>
-<br><br>
+<span style="font-size: 8pt;">
 <i class="icon-emo-grin"></i>无特殊说明，本站所有原创内容采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可</span></span>
-<br><br>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- 文章下方 -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-5433699470727157"
-     data-ad-slot="6056478224"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 				<?php comments_template( '', true ); ?>
 			<?php endwhile; // end of the loop. ?>

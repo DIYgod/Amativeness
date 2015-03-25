@@ -36,8 +36,8 @@
     margin-bottom: 20px;
     border-radius: 5px;
 
-    box-shadow: 0 5px 20px #bbb;	
-    -moz-box-shadow: 0 5px 20px #bbb;
+    /* box-shadow: 0 5px 20px #bbb; */	
+    /* -moz-box-shadow: 0 5px 20px #bbb; */
 }
 .blue.block, .info.block {
     background-color: #E6F4F9;
@@ -63,7 +63,7 @@
     margin: 15px 0;
 }
 .block .title a:hover {
-    text-shadow: 0 8px 2px rgba(0, 0, 0, 0.1),0px 10px 5px rgba(0, 0, 0, 0.2);
+    /* text-shadow: 0 8px 2px rgba(0, 0, 0, 0.1),0px 10px 5px rgba(0, 0, 0, 0.2); */
 }
 .post.block {
     margin-bottom: 40px;
@@ -187,8 +187,8 @@ display: none;
     padding: 0px;
     border-radius: 5px;
 
-    box-shadow: 0px 5px 20px #bbb;
-    -webkit-box-shadow: 0px 5px 20px #bbb;
+    /* box-shadow: 0px 5px 20px #bbb; */
+    /* -webkit-box-shadow: 0px 5px 20px #bbb; */
     background: #ffffff;
 }
 
@@ -222,8 +222,8 @@ background: #fff;
 }
 /* 评论列表之后的分页列表无box-shadow */
 .block .comment-list + .page-navigator {
-    box-shadow: none;
-    -webkit-box-shadow: none;
+    /* box-shadow: none; */
+    /* -webkit-box-shadow: none; */
 }
 
 /* 侧边栏 */

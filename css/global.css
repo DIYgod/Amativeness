@@ -16,7 +16,9 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, div, span, footer {
     cursor: default;
 }
 body {
-    background: #e5e5e5 url(../images/background.png);
+    background-color: #e2e2e2;
+    background-image: url("../images/background.png");
+    background-repeat: repeat-x;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 15px;
 }
@@ -31,7 +33,7 @@ a {
 }
 a:hover {
     color: #707070;
-    text-shadow: 1px 1px 5px #969696;
+    /* text-shadow: 1px 1px 5px #969696; */
 }
 img {
     max-width: 100%;

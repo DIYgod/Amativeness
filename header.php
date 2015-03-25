@@ -30,6 +30,7 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 <?php wp_head(); ?>
+
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -38,6 +39,17 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48084758-1', 'auto');
+  ga('send', 'pageview');
+
 </script>
 </head>
 
@@ -86,7 +98,7 @@ var _hmt = _hmt || [];
 </header>
 <div id="information" class="info block">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="avatar" data-pinit="registered" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
-                <p class="description"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Write the Code. Change the World.</a></p>
+                <p class="description"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span style="color: #3369e8;">Write</span> <span style="color: #d50f25;">the</span> <span style="color: #eeb211;">Code.</span> <span style="color: #3369e8;">Change</span> <span style="color: #009925;">the</span> <span style="color: #d50f25;">World.</span></a></p>
 </div>
 <div class="container" id="content">
 <div id="circle"></div> <div id="circle1" ></div>

@@ -16,10 +16,10 @@
     height: 48px;
     z-index: 999;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
+    background: #FFF;
  
-    box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, 0.35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, 0.35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, 0.35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25); */
+    /* -moz-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, 0.35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25); */
 }
 #back-to-top:hover {
     background: rgba(255, 255, 255, 0.6);
@@ -59,8 +59,8 @@
 /* 导航栏 */
 .navbar {
     background: #000000;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); */
+    /* -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); */
     height: 38px;
     position: relative;
     left: 0px;
@@ -190,7 +190,7 @@ transition: .6s;
     display: inline-block;
     padding: 10px 15px 10px;
     color: #999;
-    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    /* text-shadow: 0 -1px 0 rgba(0,0,0,0.25); */
 }
 #site-navigation > div > ul > li > a.active,.fuser,.feed{
     background: #000;
@@ -203,7 +203,7 @@ transition: .6s;
 /* 站点标题 */
 
 #description {
-    background: url(http://diygod.qiniudn.com/2961_1.jpg);
+    background: url(http://diygod.qiniudn.com/background2.jpg);
     background-position-y: 10%;
     background-size: cover;
     height: 650px;
@@ -216,7 +216,7 @@ transition: .6s;
     font-size: 68px;
     font-weight: bold;
     text-align: center;
-    text-shadow: 0px 2px 13px black;
+    /* text-shadow: 0px 2px 13px black; */
     margin-bottom: 130px;
 
     animation: show-site-title 1s ease-out 0 1 forwards;  
@@ -228,7 +228,7 @@ transition: .6s;
 #site-header a {
     color: #fff;
 }
-#site-header a:hover {
+/*#site-header a:hover {
     text-shadow: 1px 1px 3px #969696;
 
     transition: color .25s linear, text-shadow .25s linear;
@@ -236,16 +236,16 @@ transition: .6s;
     -moz-transition: color .25s linear, text-shadow .25s linear;
     -webkit-transition: color .25s linear, text-shadow .25s linear;
 }
-
+*/
 
 /* 图片下方阴影层 */
-.shadow {
+/*.shadow {
     width: 100%;
     height: 150px;
     position: absolute;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0, 0, 0, 0.2)), color-stop(100%,rgba(255, 255, 255, 0)));
     z-index: -999;
-}
+}*/
 .houtai{
 display: inline-block;
 float: left;
@@ -275,8 +275,8 @@ cursor: pointer;
     font-size:16px;opacity:.98;
     background: rgba(230, 244, 249, 0.8);
 
-    box-shadow: 0 5px 20px #555;
-    -moz-box-shadow: 0 5px 20px #555;
+    /* box-shadow: 0 5px 20px #555; */
+    /* -moz-box-shadow: 0 5px 20px #555; */
 
     animation: show-description 1s ease-out 0 1 forwards;
     -o-animation: show-description 1s ease-out 0 1 forwards;
@@ -295,8 +295,8 @@ cursor: pointer;
     -moz-transition: 500ms;
     -webkit-transition: 500ms;
     
-    box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25); */
+    /* -moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25); */
 }
 #information  img.avatar:hover {
     transform: none;
@@ -305,8 +305,8 @@ cursor: pointer;
     -moz-transform: none;
     -webkit-transform: none;
 
-    box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.5); */
+    /* -moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.5); */
 }
 
 #information .description {
