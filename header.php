@@ -1,58 +1,33 @@
 <!DOCTYPE html>
-<!--[if IE 7]>
-<html class="ie ie7" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if IE 8]>
-<html class="ie ie8" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if !(IE 7) | !(IE 8)  ]><!-->
-<html <?php language_attributes(); ?>>
-<!--<![endif]-->
+<html>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
-<title><?php wp_title( '|', true, 'right' ); ?></title>
-<script type='text/javascript' src='http://libs.baidu.com/jquery/1.8.2/jquery.min.js?ver=1.8.2'></script>
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/fontello.css" type="text/css" />
-<!--[if IE 7]><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/fontello-ie7.css" type="text/css" /><![endif]-->
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/form.css">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/label.css">    
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/zocial.css">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/global.css">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/header.css">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/content.css">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/comments.css">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/zidingyi.css">
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-<!--[if lt IE 9]>
-<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
-<![endif]-->
-<?php wp_head(); ?>
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?bba413fa5f4068452339708b39598e70";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-48084758-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+    <meta charset="UTF-8">
+    <title><?php wp_title('|', true, 'right'); ?></title>
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/fontello.css">
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
+    <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/e1.gif">
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico">
+    <script type='text/javascript' src='https://dn-diygod.qbox.me/jquery.min.js'></script>
+    <!--[if lt IE 9]>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
+    <![endif]-->
+    <?php wp_head(); ?>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-48084758-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </head>
-
 <body <?php body_class(); ?>>
 <div id="back-to-top" class="red" data-scroll="body" style="display: block;">
     <svg id="rocket" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64">
@@ -65,41 +40,77 @@ var _hmt = _hmt || [];
     </svg>
 </div>
 <div class="navbar">
-<?php if ( is_user_logged_in() ) : ?> 
-	<a href="<?php bloginfo('url');?>/wp-admin/" title="博客后台" class="houtai fa fa-user">后台</a>
-<?php endif; ?>	
-<div class="container">
-<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-</nav>
-<?php if ( is_single() ) : ?>
-<div class="edit-wz">
-<?php edit_post_link("<p class='fa fa-pencil'>编辑文章</p>"); ?>
+    <?php if (is_user_logged_in()) : ?>
+        <a href="<?php bloginfo('url'); ?>/wp-admin/" title="博客后台" class="houtai fa fa-user">后台</a>
+    <?php endif; ?>
+    <div class="container">
+        <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+            <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'nav-menu')); ?>
+        </nav>
+        <?php if (is_single()) : ?>
+            <div class="edit-wz">
+                <?php edit_post_link("<p class='fa fa-pencil'>编辑文章</p>"); ?>
+            </div>
+        <?php endif; ?>
+        <?php if (is_page()) : ?>
+            <div class="edit-wz">
+                <?php edit_post_link("<p class='fa fa-pencil'>编辑文章</p>"); ?>
+            </div>
+        <?php endif; ?>
+        <div class="nav-right">
+            <form class="search-form" method="post" action="<?php bloginfo('url'); ?>">
+                <input type="text" name="s" class="search-input" placeholder="站内搜索">
+                <button type="submit" class="search-submit sousuo"></button>
+            </form>
+        </div>
+    </div>
 </div>
-<?php endif; ?>
-<?php if ( is_page() ) : ?>
-<div class="edit-wz">
-<?php edit_post_link("<p class='fa fa-pencil'>编辑文章</p>"); ?>
-</div>
-<?php endif; ?>
-<div class="nav-right">
-	<form class="search-form" method="post" action="<?php bloginfo('url');?>">
-        <input type="text" name="s" class="search-input" placeholder="站内搜索">
-        <button type="submit" class="search-submit sousuo"></button>
-    </form>
-</div>
-</div>
-</div>
-
 <header id="description">
     <div id="site-header">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+        <h1><a href="<?php echo esc_url(home_url('/')); ?>"
+               title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>"
+               rel="home"><?php bloginfo('name'); ?></a></h1>
     </div>
 </header>
 <div id="information" class="info block">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="avatar" data-pinit="registered" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
-                <p class="description"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span style="color: #3369e8;">Write</span> <span style="color: #d50f25;">the</span> <span style="color: #eeb211;">Code.</span> <span style="color: #3369e8;">Change</span> <span style="color: #009925;">the</span> <span style="color: #d50f25;">World.</span></a></p>
+    <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php header_image(); ?>" class="avatar"
+                                                         data-pinit="registered"
+                                                         width="<?php echo get_custom_header()->width; ?>"
+                                                         height="<?php echo get_custom_header()->height; ?>"
+                                                         alt=""/></a>
+
+    <h2 class="description"><a href="<?php echo esc_url(home_url('/')); ?>"
+                               title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><span
+                style="color: #3369e8;">Write</span> <span style="color: #d50f25;">the</span> <span
+                style="color: #eeb211;">Code.</span> <span style="color: #3369e8;">Change</span> <span
+                style="color: #009925;">the</span> <span style="color: #d50f25;">World.</span></a></h2>
 </div>
+
+<div class="wwdc15">
+        <span class="large-circles">
+            <div class="large circle one"></div>
+            <div class="large circle two"></div>
+            <div class="large circle three"></div>
+            <div class="large circle four"></div>
+            <div class="large circle five"></div>
+            <div class="large circle six"></div>
+            <div class="large circle seven"></div>
+            <div class="large circle eight"></div>
+        </span>
+        <span class="small-shapes">
+            <div class="small circle one"></div>
+            <div class="small squircle two"></div>
+            <div class="small circle three"></div>
+            <div class="small squircle four"></div>
+            <div class="small circle five"></div>
+            <div class="small squircle six"></div>
+            <div class="small circle seven"></div>
+            <div class="small squircle eight"></div>
+        </span>
+        <span class="content-squircle">
+            <div class="large squircle one"></div>
+        </span>
+</div>
+
 <div class="container" id="content">
-<div id="circle"></div> <div id="circle1" ></div>
-<div class="article-list">
+    <div class="article-list">
