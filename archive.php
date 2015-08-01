@@ -2,10 +2,10 @@
 <section id="primary" class="site-content">
     <div class="main" id="thumbs">
         <?php while (have_posts()) : the_post(); ?>
-            <?php get_template_part('content', get_post_format()); ?>
-            <?php comments_template('', true); ?>
-        <?php endwhile; // end of the loop. ?>
-        <?php amativeness_content_nav('nav-below'); ?>
+    <?php get_template_part('content', get_post_format()); ?>
+    <?php comments_template('', true); ?>
+<?php endwhile; // end of the loop. ?>
+<?php amativeness_content_nav('nav-below'); ?>
     </div>
     <!-- main -->
 </section><!-- #primary -->

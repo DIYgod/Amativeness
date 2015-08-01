@@ -2,11 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="theme-color" content="#595C5E">
     <title><?php wp_title('|', true, 'right'); ?></title>
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/fontello.css">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
     <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/e1.gif">
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico">
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
     <script type='text/javascript' src='https://dn-diygod.qbox.me/jquery.min.js'></script>
     <!--[if lt IE 9]>
     <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
@@ -65,7 +66,7 @@
         </div>
     </div>
 </div>
-<header id="description">
+<header id="particles-js" class="header-description">
     <div id="site-header">
         <h1><a href="<?php echo esc_url(home_url('/')); ?>"
                title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>"
@@ -85,32 +86,5 @@
                 style="color: #eeb211;">Code.</span> <span style="color: #3369e8;">Change</span> <span
                 style="color: #009925;">the</span> <span style="color: #d50f25;">World.</span></a></h2>
 </div>
-
-<div class="wwdc15">
-        <span class="large-circles">
-            <div class="large circle one"></div>
-            <div class="large circle two"></div>
-            <div class="large circle three"></div>
-            <div class="large circle four"></div>
-            <div class="large circle five"></div>
-            <div class="large circle six"></div>
-            <div class="large circle seven"></div>
-            <div class="large circle eight"></div>
-        </span>
-        <span class="small-shapes">
-            <div class="small circle one"></div>
-            <div class="small squircle two"></div>
-            <div class="small circle three"></div>
-            <div class="small squircle four"></div>
-            <div class="small circle five"></div>
-            <div class="small squircle six"></div>
-            <div class="small circle seven"></div>
-            <div class="small squircle eight"></div>
-        </span>
-        <span class="content-squircle">
-            <div class="large squircle one"></div>
-        </span>
-</div>
-
 <div class="container" id="content">
     <div class="article-list">

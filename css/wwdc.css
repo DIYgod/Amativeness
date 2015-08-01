@@ -1,0 +1,400 @@
+/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255, 255, 255, .38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+
+#cVim-link-container, .cVim-link-hint, #cVim-command-bar, #cVim-command-bar-mode, #cVim-command-bar-input, #cVim-command-bar-search-results, .cVim-completion-item, .cVim-completion-item .cVim-full, .cVim-completion-item .cVim-left, .cVim-completion-item .cVim-right, #cVim-hud, #cVim-status-bar {
+    font-family: Helvetica, Helvetica Neue, Neue, sans-serif, monospace, Arial;
+    font-size: 10pt !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+#cVim-link-container {
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    top: 0;
+    z-index: 2147483647;
+}
+
+.cVim-link-hint {
+    color: #302505 !important;
+    background-color: #ffd76e !important;
+    border-radius: 2px !important;
+    padding: 2px !important;
+    font-size: 8pt !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    border: 1px solid #ad810c;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    text-align: center !important;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25) !important;
+    position: absolute !important;
+}
+
+.cVim-link-hint_match {
+    color: #777;
+    text-transform: uppercase !important;
+}
+
+#cVim-command-bar {
+    position: fixed !important;
+    z-index: 2147483646 !important;
+    background-color: #1b1d1e !important;
+    color: #bbb !important;
+    display: none;
+    box-sizing: content-box !important;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+    left: 0 !important;
+    width: 100% !important;
+    height: 20px !important;
+}
+
+#cVim-command-bar-mode {
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box !important;
+    padding-left: 2px !important;
+    height: 100% !important;
+    width: 10px !important;
+    padding-top: 2px !important;
+    color: #888 !important;
+}
+
+#cVim-command-bar-input {
+    background-color: #1b1d1e !important;
+    color: #bbb !important;
+    height: 100% !important;
+    right: 0 !important;
+    top: 0 !important;
+    width: calc(100% - 10px) !important;
+    position: absolute !important;
+}
+
+#cVim-command-bar-search-results {
+    position: fixed;
+    width: 100% !important;
+    overflow: hidden;
+    z-index: 2147483647 !important;
+    left: 0;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+    background-color: #1c1c1c;
+}
+
+.cVim-completion-item, .cVim-completion-item .cVim-full, .cVim-completion-item .cVim-left, .cVim-completion-item .cVim-right {
+    text-overflow: ellipsis;
+    padding: 1px;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.cVim-completion-item:nth-child(even) {
+    background-color: #1f1f1f;
+}
+
+.cVim-completion-item {
+    width: 100%;
+    left: 0;
+    color: #bcbcbc;
+}
+
+.cVim-completion-item .cVim-left {
+    color: #fff;
+    width: 37%;
+}
+
+.cVim-completion-item .cVim-right {
+    font-style: italic;
+    color: #888;
+    width: 57%;
+}
+
+#cVim-hud {
+    background-color: rgba(28, 28, 28, 0.9);
+    position: fixed !important;
+    transition: right 0.2s ease-out;
+    z-index: 24724289;
+}
+
+#cVim-hud span {
+    padding: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    color: #8f8f8f;
+    font-size: 10pt;
+}
+
+#cVim-frames-outline {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 9999999999;
+    box-sizing: border-box;
+    border: 3px solid yellow;
+}
+
+.wwdc15 {
+    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #fff;
+    font-size: 24px;
+    position: relative;
+    bottom: 837px;
+}
+
+.wwdc15 span {
+    display: block;
+    position: absolute;
+    top: -webkit-calc(50% - 10em);
+    top: calc(50% - 10em);
+    left: -webkit-calc(50% - 10em);
+    left: calc(50% - 10em);
+    width: 20em;
+    height: 20em;
+}
+
+.wwdc15 .large-circles {
+    -webkit-animation: spin 10s linear infinite;
+    animation: spin 10s linear infinite;
+}
+
+.wwdc15 .small-shapes {
+    -webkit-animation: spin 30s linear infinite;
+    animation: spin 30s linear infinite;
+}
+
+.wwdc15 .content-squircle {
+    -webkit-animation: spin-pulse 20s linear infinite;
+    animation: spin-pulse 20s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+    100% {
+        -webkit-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+    100% {
+        -webkit-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+    }
+}
+
+@-webkit-keyframes spin-pulse {
+    0% {
+        -webkit-transform: scale(1) rotateZ(0);
+        transform: scale(1) rotateZ(0);
+    }
+    50% {
+        -webkit-transform: scale(0.9) rotateZ(180deg);
+        transform: scale(0.9) rotateZ(180deg);
+    }
+    100% {
+        -webkit-transform: scale(1) rotateZ(360deg);
+        transform: scale(1) rotateZ(360deg);
+    }
+}
+
+@keyframes spin-pulse {
+    0% {
+        -webkit-transform: scale(1) rotateZ(0);
+        transform: scale(1) rotateZ(0);
+    }
+    50% {
+        -webkit-transform: scale(0.9) rotateZ(180deg);
+        transform: scale(0.9) rotateZ(180deg);
+    }
+    100% {
+        -webkit-transform: scale(1) rotateZ(360deg);
+        transform: scale(1) rotateZ(360deg);
+    }
+}
+
+.wwdc15 .circle {
+    border-radius: 50%;
+    left: -webkit-calc(50% - 6.25em);
+    left: calc(50% - 6.25em);
+    top: -webkit-calc(50% - 12.5em);
+    top: calc(50% - 12.5em);
+    -webkit-transform-origin: 50% 12.5em;
+    -ms-transform-origin: 50% 12.5em;
+    transform-origin: 50% 12.5em;
+}
+
+.wwdc15 .squircle {
+    border-radius: 25%;
+}
+
+.wwdc15 .circle, .wwdc15 .squircle {
+    width: 12.5em;
+    height: 12.5em;
+    position: absolute;
+    border-top: 0.1em solid rgba(255, 255, 255, 0.4);
+}
+
+.wwdc15 .large.circle {
+    -webkit-box-shadow: 0 1em 2em rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.5);
+}
+
+.wwdc15 .small {
+    width: 4em;
+    height: 4em;
+    left: -webkit-calc(50% - 2em);
+    left: calc(50% - 2em);
+    top: -webkit-calc(50% - 15em);
+    top: calc(50% - 15em);
+    -webkit-transform-origin: 50% 15em;
+    -ms-transform-origin: 50% 15em;
+    transform-origin: 50% 15em;
+    -webkit-box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.2);
+}
+
+.wwdc15 .one {
+    background: rgba(16, 63, 236, 0.75);
+    -webkit-transform: rotateZ(225deg);
+    transform: rotateZ(225deg);
+}
+
+.wwdc15 .two {
+    background: rgba(37, 172, 162, 0.75);
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+}
+
+.wwdc15 .three {
+    background: rgba(233, 124, 32, 0.75);
+    -webkit-transform: rotateZ(135deg);
+    transform: rotateZ(135deg);
+}
+
+.wwdc15 .four {
+    background: rgba(235, 67, 35, 0.75);
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+}
+
+.wwdc15 .five {
+    background: rgba(190, 28, 65, 0.75);
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+}
+
+.wwdc15 .six {
+    background: rgba(208, 57, 159, 0.75);
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+}
+
+.wwdc15 .seven {
+    background: rgba(150, 32, 198, 0.75);
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+}
+
+.wwdc15 .eight {
+    background: rgba(95, 33, 203, 0.75);
+    -webkit-transform: rotateZ(-90deg);
+    transform: rotateZ(-90deg);
+}
+
+.wwdc15 .small.squircle {
+    background: none;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.wwdc15 .small.squircle::after {
+    content: "";
+    border-radius: 25%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: red;
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+    -webkit-box-shadow: -0.25em 0.25em 0.5em rgba(0, 0, 0, 0.2);
+    box-shadow: -0.25em 0.25em 0.5em rgba(0, 0, 0, 0.2);
+}
+
+.wwdc15 .small.squircle.two::after {
+    background: rgba(37, 172, 162, 0.75);
+}
+
+.wwdc15 .small.squircle.four::after {
+    background: rgba(235, 67, 35, 0.75);
+}
+
+.wwdc15 .small.squircle.six::after {
+    background: rgba(208, 57, 159, 0.75);
+}
+
+.wwdc15 .small.squircle.eight::after {
+    background: rgba(95, 33, 203, 0.75);
+}
+
+.wwdc15 .large.squircle {
+    position: absolute;
+    background: rgba(30,7,66, 0.65);
+    border: none;
+    left: -webkit-calc(50% - 7.5em);
+    left: calc(50% - 7.5em);
+    top: -webkit-calc(50% - 7.5em);
+    top: calc(50% - 7.5em);
+    width: 15em;
+    height: 15em;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+
+.wwdc15 .large.squircle.one {
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+}
+
+.wwdc15 .content {
+    text-align: center;
+}
+
+.wwdc15 .content svg {
+    fill: #fff;
+    width: 3em;
+    margin: 1.25em auto 1em;
+}
+
+.wwdc15 .content h1 {
+    font-weight: lighter;
+    font-size: 1.75em;
+    margin: 0.25em auto 1em;
+    max-width: 6em;
+}

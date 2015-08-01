@@ -10,10 +10,10 @@ License URI: http://blog.ageme.info/
 Tags: light, gray, white, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
 Text Domain: amativeness
 */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
-    cursor:url(images/cursor.ico),auto;
+    cursor: url(images/cursor.ico), auto;
 }
 
 .alignnone {
@@ -25,15 +25,10 @@ ul {
     list-style: none;
 }
 
-html {
-     font-size: 87.5%;
- }
-
 body {
     line-height: 1;
-    min-width: 1000px;
     background: #e2e2e2;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Avenir Next", Helvetica, Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
     font-size: 15px;
 }
 
@@ -200,6 +195,10 @@ img {
     .primary-navigation .page_item_has_children li.menu-item-has-children > a:after,
     .primary-navigation .page_item_has_children li.page_item_has_children > a:after {
         top: 20px;
+    }
+
+    .menu-item {
+        cursor: pointer;
     }
 }
 
@@ -451,7 +450,7 @@ article > div > p {
     display: table;
 }
 
-@media (min-width: 1170px) {
+@media (min-width: 600) {
     .container {
         max-width: 80%;
     }
@@ -474,7 +473,6 @@ pre, code {
     cursor: auto;
     padding: 2px 5px;
     font-size: 14px;
-    font-family: Consolas, 'Liberation Mono', Courier, monospace;
 
     user-select: initial;
     -moz-user-select: initial;
@@ -537,7 +535,6 @@ form textarea {
     resize: none !important;
 }
 
-
 /* label.css */
 /*
  * # Semantic - Label
@@ -574,7 +571,7 @@ form textarea {
 .ui.ribbon.label {
     position: relative;
     margin: 0em 0.2em;
-    left: -2.3rem;
+    left: -2.0rem;
     padding-left: 2rem;
     border-radius: 0px 4px 4px 0px;
     border-color: rgba(0, 0, 0, 0.15);
@@ -599,8 +596,9 @@ form textarea {
 .ui.red.label {
     background-color: #92C0EF;
     border-color: #92C0EF;
-    color: #FFFFFF;
+    color: #fff;
     margin: 5px 0 15px 2px;
+    font-size: 14px;
 }
 
 .ui.labels .red.label:before,
@@ -611,259 +609,6 @@ form textarea {
 
 .ui.red.ribbon.label {
     border-color: #47456D;
-}
-
-/* wwdc.css */
-.wwdc15 {
-    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #fff;
-    font-size: 24px;
-    position: relative;
-    bottom: 850px;
-    animation: show-site-title 1s ease-out;
-    -o-animation: show-site-title 1s ease-out;
-    -moz-animation: show-site-title 1s ease-out;
-    -webkit-animation: show-site-title 1s ease-out;
-}
-
-.wwdc15 span {
-    display: block;
-    position: absolute;
-    top: -webkit-calc(50% - 10em);
-    top: calc(50% - 10em);
-    left: -webkit-calc(50% - 10em);
-    left: calc(50% - 10em);
-    width: 20em;
-    height: 20em;
-}
-
-.wwdc15 .large-circles {
-    -webkit-animation: spin 10s linear infinite;
-    animation: spin 10s linear infinite;
-}
-
-.wwdc15 .small-shapes {
-    -webkit-animation: spin 30s linear infinite;
-    animation: spin 30s linear infinite;
-}
-
-.wwdc15 .content-squircle {
-    -webkit-animation: spin-pulse 20s linear infinite;
-    animation: spin-pulse 20s linear infinite;
-}
-
-@-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotateZ(0deg);
-        transform: rotateZ(0deg);
-    }
-    100% {
-        -webkit-transform: rotateZ(360deg);
-        transform: rotateZ(360deg);
-    }
-}
-
-@keyframes spin {
-    0% {
-        -webkit-transform: rotateZ(0deg);
-        transform: rotateZ(0deg);
-    }
-    100% {
-        -webkit-transform: rotateZ(360deg);
-        transform: rotateZ(360deg);
-    }
-}
-
-@-webkit-keyframes spin-pulse {
-    0% {
-        -webkit-transform: scale(1) rotateZ(0deg);
-        transform: scale(1) rotateZ(0deg);
-    }
-    50% {
-        -webkit-transform: scale(0.9) rotateZ(180deg);
-        transform: scale(0.9) rotateZ(180deg);
-    }
-    100% {
-        -webkit-transform: scale(1) rotateZ(360deg);
-        transform: scale(1) rotateZ(360deg);
-    }
-}
-
-@keyframes spin-pulse {
-    0% {
-        -webkit-transform: scale(1) rotateZ(0deg);
-        transform: scale(1) rotateZ(0deg);
-    }
-    50% {
-        -webkit-transform: scale(0.9) rotateZ(180deg);
-        transform: scale(0.9) rotateZ(180deg);
-    }
-    100% {
-        -webkit-transform: scale(1) rotateZ(360deg);
-        transform: scale(1) rotateZ(360deg);
-    }
-}
-
-.wwdc15 .circle {
-    border-radius: 50%;
-    left: -webkit-calc(50% - 6.25em);
-    left: calc(50% - 6.25em);
-    top: -webkit-calc(50% - 12.5em);
-    top: calc(50% - 12.5em);
-    -webkit-transform-origin: 50% 12.5em;
-    -ms-transform-origin: 50% 12.5em;
-    transform-origin: 50% 12.5em;
-}
-
-.wwdc15 .squircle {
-    border-radius: 25%;
-}
-
-.wwdc15 .circle, .wwdc15 .squircle {
-    width: 12.5em;
-    height: 12.5em;
-    position: absolute;
-    border-top: 0.1em solid rgba(255, 255, 255, 0.4);
-}
-
-.wwdc15 .large.circle {
-    -webkit-box-shadow: 0 1em 2em rgba(0, 0, 0, 0.5);
-    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.5);
-}
-
-.wwdc15 .small {
-    width: 4em;
-    height: 4em;
-    left: -webkit-calc(50% - 2em);
-    left: calc(50% - 2em);
-    top: -webkit-calc(50% - 15em);
-    top: calc(50% - 15em);
-    -webkit-transform-origin: 50% 15em;
-    -ms-transform-origin: 50% 15em;
-    transform-origin: 50% 15em;
-    -webkit-box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.2);
-}
-
-.wwdc15 .one {
-    background: rgba(16, 63, 236, 0.75);
-    -webkit-transform: rotateZ(225deg);
-    transform: rotateZ(225deg);
-}
-
-.wwdc15 .two {
-    background: rgba(37, 172, 162, 0.75);
-    -webkit-transform: rotateZ(180deg);
-    transform: rotateZ(180deg);
-}
-
-.wwdc15 .three {
-    background: rgba(233, 124, 32, 0.75);
-    -webkit-transform: rotateZ(135deg);
-    transform: rotateZ(135deg);
-}
-
-.wwdc15 .four {
-    background: rgba(235, 67, 35, 0.75);
-    -webkit-transform: rotateZ(90deg);
-    transform: rotateZ(90deg);
-}
-
-.wwdc15 .five {
-    background: rgba(190, 28, 65, 0.75);
-    -webkit-transform: rotateZ(45deg);
-    transform: rotateZ(45deg);
-}
-
-.wwdc15 .six {
-    background: rgba(208, 57, 159, 0.75);
-    -webkit-transform: rotateZ(0deg);
-    transform: rotateZ(0deg);
-}
-
-.wwdc15 .seven {
-    background: rgba(150, 32, 198, 0.75);
-    -webkit-transform: rotateZ(-45deg);
-    transform: rotateZ(-45deg);
-}
-
-.wwdc15 .eight {
-    background: rgba(95, 33, 203, 0.75);
-    -webkit-transform: rotateZ(-90deg);
-    transform: rotateZ(-90deg);
-}
-
-.wwdc15 .small.squircle {
-    background: none;
-    border: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
-.wwdc15 .small.squircle::after {
-    content: "";
-    border-radius: 25%;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: red;
-    -webkit-transform: rotateZ(-45deg);
-    transform: rotateZ(-45deg);
-    -webkit-box-shadow: -0.25em 0.25em 0.5em rgba(0, 0, 0, 0.2);
-    box-shadow: -0.25em 0.25em 0.5em rgba(0, 0, 0, 0.2);
-}
-
-.wwdc15 .small.squircle.two::after {
-    background: rgba(37, 172, 162, 0.75);
-}
-
-.wwdc15 .small.squircle.four::after {
-    background: rgba(235, 67, 35, 0.75);
-}
-
-.wwdc15 .small.squircle.six::after {
-    background: rgba(208, 57, 159, 0.75);
-}
-
-.wwdc15 .small.squircle.eight::after {
-    background: rgba(95, 33, 203, 0.75);
-}
-
-.wwdc15 .large.squircle {
-    position: absolute;
-    background: rgba(30, 7, 66, 0.65);
-    border: none;
-    left: -webkit-calc(50% - 7.5em);
-    left: calc(50% - 7.5em);
-    top: -webkit-calc(50% - 7.5em);
-    top: calc(50% - 7.5em);
-    width: 15em;
-    height: 15em;
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
-}
-
-.wwdc15 .large.squircle.one {
-    -webkit-transform: rotateZ(45deg);
-    transform: rotateZ(45deg);
-}
-
-.wwdc15 .content {
-    text-align: center;
-}
-
-.wwdc15 .content svg {
-    fill: #fff;
-    width: 3em;
-    margin: 1.25em auto 1em;
-}
-
-.wwdc15 .content h1 {
-    font-weight: lighter;
-    font-size: 1.75em;
-    margin: 0.25em auto 1em;
-    max-width: 6em;
 }
 
 /* content.css */
@@ -889,13 +634,17 @@ form textarea {
     float: right;
 }
 
-@media (max-width: 890px) {
+@media (max-width: 1000px) {
     .article-list > .side {
         display: none;
     }
 
     .article-list > .main {
         width: 100%
+    }
+
+    .container {
+        max-width: 85%;
     }
 }
 
@@ -907,6 +656,7 @@ form textarea {
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 5px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 .block .title {
@@ -935,7 +685,7 @@ form textarea {
 .round-date {
     position: absolute;
     top: -20px;
-    left: -20px;
+    left: -35px;
     height: 60px;
     width: 70px;
     padding-top: 10px;
@@ -1109,7 +859,6 @@ ol > a.next.page-numbers {
     float: right;
 }
 
-
 /* header.css */
 /* ------------------------------------
  *
@@ -1153,7 +902,7 @@ ol > a.next.page-numbers {
 
 /* 导航栏 */
 .navbar {
-    background: -webkit-linear-gradient(top, #595C5E 0%, #3D4041 100%);
+    background: #595C5E;
     left: 0px;
     right: 0px;
     top: 0px;
@@ -1311,8 +1060,8 @@ ol > a.next.page-numbers {
 
 /* 站点标题 */
 
-#description {
-    background: url(https://dn-diygod.qbox.me/background.png);
+.header-description {
+    background: url(https://diygod.b0.upaiyun.com/background.png);
     background-position-y: 10%;
     background-size: cover;
     height: 650px;
@@ -1337,7 +1086,6 @@ ol > a.next.page-numbers {
 
 #site-header a {
     color: #fff;
-    text-shadow: 0 0 6px rgba(255,144,0,0.5);
 }
 
 /* 中央信息块 */
@@ -1477,5 +1225,102 @@ ol > a.next.page-numbers {
     }
     100% {
         -o-transform: translateY(0);
+    }
+}
+
+/* crayon-syntax */
+.crayon-syntax .crayon-plain {
+    width: 0 !important;
+}
+
+/* 一连串较长的英文字符自动换行 */
+#content .post{
+    white-space:normal;
+    word-break:break-all;
+    word-wrap:break-word;
+}
+
+canvas {
+    position: relative;
+    top: -198px;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes tada {
+    0% {
+        -webkit-transform: scale(1);
+    }
+
+    10%, 20% {
+        -webkit-transform: scale(0.9) rotate(-3deg);
+    }
+
+    30%, 50%, 70%, 90% {
+        -webkit-transform: scale(1.1) rotate(3deg);
+    }
+
+    40%, 60%, 80% {
+        -webkit-transform: scale(1.1) rotate(-3deg);
+    }
+
+    100% {
+        -webkit-transform: scale(1) rotate(0);
+    }
+}
+
+@keyframes tada {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    10%, 20% {
+        -webkit-transform: scale(0.9) rotate(-3deg);
+        transform: scale(0.9) rotate(-3deg);
+    }
+
+    30%, 50%, 70%, 90% {
+        -webkit-transform: scale(1.1) rotate(3deg);
+        transform: scale(1.1) rotate(3deg);
+    }
+
+    40%, 60%, 80% {
+        -webkit-transform: scale(1.1) rotate(-3deg);
+        transform: scale(1.1) rotate(-3deg);
+    }
+
+    100% {
+        -webkit-transform: scale(1) rotate(0);
+        transform: scale(1) rotate(0);
+    }
+}
+
+.tada {
+    -webkit-animation-name: tada;
+    animation-name: tada;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        box-shadow: 0 0 5px rgba(77, 173, 208, 0.1);
+    }
+
+    50% {
+        box-shadow: 0 0 60px rgba(77, 173, 208, 0.8);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(77, 173, 208, 0.1);
     }
 }

@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* CSS Document */
+
+@-webkit-keyframes shake {
+    0%, 100% {
+        -webkit-transform:translateX(0)
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform:translateX(-10px)
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform:translateX(10px)
+    }
+}
+@-moz-keyframes shake {
+    0%, 100% {
+        -moz-transform:translateX(0)
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -moz-transform:translateX(-10px)
+    }
+    20%, 40%, 60%, 80% {
+        -moz-transform:translateX(10px)
+    }
+}
+@-ms-keyframes shake {
+    0%, 100% {
+        -ms-transform:translateX(0)
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -ms-transform:translateX(-10px)
+    }
+    20%, 40%, 60%, 80% {
+        -ms-transform:translateX(10px)
+    }
+}
+@-o-keyframes shake {
+    0%, 100% {
+        -o-transform:translateX(0)
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -o-transform:translateX(-10px)
+    }
+    20%, 40%, 60%, 80% {
+        -o-transform:translateX(10px)
+    }
+}
+@keyframes shake {
+    0%, 100% {
+        transform:translateX(0)
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform:translateX(-10px)
+    }
+    20%, 40%, 60%, 80% {
+        transform:translateX(10px)
+    }
+}
+.shake:hover {
+    -webkit-animation-name:shake;
+    -moz-animation-name:shake;
+    -ms-animation-name:shake;
+    -o-animation-name:shake;
+    animation-name:shake
+}
+.shake {
+    -webkit-backface-visibility:hidden;
+    -moz-backface-visibility:hidden;
+    -ms-backface-visibility:hidden;
+    backface-visibility:hidden;
+    -webkit-animation-duration:1s;
+    -webkit-animation-delay:.2s;
+    -webkit-animation-timing-function:ease;
+    -webkit-animation-fill-mode:both;
+    -moz-animation-duration:1s;
+    -moz-animation-delay:.2s;
+    -moz-animation-timing-function:ease;
+    -moz-animation-fill-mode:both;
+    -ms-animation-duration:1s;
+    -ms-animation-delay:.2s;
+    -ms-animation-timing-function:ease;
+    -ms-animation-fill-mode:both;
+    animation-duration:1s;
+    animation-delay:.2s;
+    animation-timing-function:ease;
+    animation-fill-mode:both
+}
+@-webkit-keyframes error-swing {
+    0% {
+        -webkit-transform:rotate(1deg)
+    }
+    100% {
+        -webkit-transform:rotate(-2deg)
+    }
+}
+@-moz-keyframes error-swing {
+    0% {
+        -moz-transform:rotate(1deg)
+    }
+    100% {
+        -moz-transform:rotate(-2deg)
+    }
+}
+@keyframes error-swing {
+    0% {
+        transform:rotate(1deg)
+    }
+    100% {
+        transform:rotate(-2deg)
+    }
