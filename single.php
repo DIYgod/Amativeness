@@ -30,17 +30,6 @@
     <br>
     <br>
 <?php get_template_part('content', get_post_format()); ?>
-    <br>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- 自适应_评论上 -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-5433699470727157"
-         data-ad-slot="7172070224"
-         data-ad-format="auto"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
     <?php comments_template('', true); ?>
 <?php endwhile; // end of the loop. ?>
 </div><!-- main -->

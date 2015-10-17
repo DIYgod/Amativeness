@@ -11,7 +11,7 @@
             <p class="title">
                 <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
             </p>
-            <p class="article-meta"><i class="icon-heart"></i>发表于 <?php the_time('Y年n月j日') ?> • <i class="icon-comment"></i><?php comments_number('No Comment', 'One Comment', '% Comments'); ?>
+            <p class="article-meta"><i class="icon-heart"></i>发表于 <?php the_time('Y年n月j日') ?> • <i class="icon-eye-1"></i><?php if (function_exists('the_views')) { the_views(); } ?> • <i class="icon-comment"></i><?php comments_number('No Comment', 'One Comment', '% Comments'); ?>
             </p>
         <?php endif; // is_single() ?>
         <?php if (comments_open()) : ?>

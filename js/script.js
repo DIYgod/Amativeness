@@ -43,6 +43,10 @@ $(document).ready(function($) {
         $(this).siblings('.label').slideToggle("slow");
         $(this).siblings('.article-content').slideToggle("slow");
     });
+
+    // 头图视差
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
 });
 	
 	//  分页功能（异步加载）
@@ -109,9 +113,41 @@ document.getElementsByClassName('avatar')[0].onmouseout = function () {
     this.classList.remove('animated', 'tada');
 }
 
-document.getElementById('site-header').getElementsByTagName('a')[0].onmouseover = function () {
-    this.classList.add('animated', 'tada');
+
+// Do you like me?
+$.getJSON("https://www.anotherhome.net/api/vote/like.php?action=get", function (data) {
+    $('.like-vote span').html(data.like);
+});
+$('.like-vote').click(function () {
+    if ($('.like-title').html() === 'Do you like me?') {
+        $.getJSON("https://www.anotherhome.net/api/vote/like.php?action=add", function (data) {
+            if (data.success) {
+                $('.like-vote span').html(data.like);
+                $('.like-title').html('我也喜欢你 (*≧▽≦)');
+            }
+            else {
+                $('.like-title').html('你的爱我已经感受到了~');
+            }
+        });
+    }
+});
+
+// 博客已运行XXX
+function show_date_time() {
+    window.setTimeout("show_date_time()", 1000);
+    BirthDay = new Date("2/9/2014 11:30:00");
+    today = new Date();
+    timeold = (today.getTime() - BirthDay.getTime());
+    sectimeold = timeold / 1000
+    secondsold = Math.floor(sectimeold);
+    msPerDay = 24 * 60 * 60 * 1000
+    e_daysold = timeold / msPerDay
+    daysold = Math.floor(e_daysold);
+    e_hrsold = (e_daysold - daysold) * 24;
+    hrsold = Math.floor(e_hrsold);
+    e_minsold = (e_hrsold - hrsold) * 60;
+    minsold = Math.floor((e_hrsold - hrsold) * 60);
+    seconds = Math.floor((e_minsold - minsold) * 60);
+    span_dt_dt.innerHTML = "博客已萌萌哒运行" + daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
 }
-document.getElementById('site-header').getElementsByTagName('a')[0].onmouseout = function () {
-    this.classList.remove('animated', 'tada');
-}
+show_date_time();
