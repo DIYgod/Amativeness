@@ -1,19 +1,24 @@
-/*
-Theme Name: amativeness
-Theme URI: http://blog.ageme.info/
-Author: Guimeng's blog
-Author URI: http://blog.ageme.info/
-Description: The 2014 theme for WordPress is a fully responsive theme that looks great on any device. Features include a front page template with its own widgets, an optional display font, styling for post formats on both index and single views, and an optional no-sidebar page template. Make it yours with a custom menu, header image, and background.
-Version: 3.0
-License: GNU General Public License v2 or later
-License URI: http://blog.ageme.info/
-Tags: light, gray, white, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
-Text Domain: amativeness
-*/
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+@font-face {
+    font-family: kilsonburg;
+    src: url('https://dn-diygod.qbox.me/kilsonburg.ttf');
+}
+
+html, body, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     cursor: url(images/cursor.ico), auto;
+}
+
+article h2 {
+    font-size: 22px;
+}
+
+article h3 {
+    font-size: 18px;
+}
+
+article h1, article h2, article h3, article h4, article h5, article h6 {
+    line-height: 30px;
 }
 
 .alignnone {
@@ -30,12 +35,21 @@ body {
     background: #e2e2e2;
     font-family: "Avenir Next", Helvetica, Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
     font-size: 15px;
+    color: #444 !important;
+}
+
+.aplayer {
+    line-height: initial;
 }
 
 a {
     outline: none;
     text-decoration: none;
     color: #000;
+}
+
+p {
+    max-height: 100%;
 }
 
 .article-content {
@@ -404,8 +418,7 @@ article > div > p {
     text-align: center;
     font-size: 14px;
     color: #FFF;
-    box-shadow: 0 5px 20px #BBB;
-    -moz-box-shadow: 0 5px 20px #bbb;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 #pagination > a:hover {
@@ -571,7 +584,7 @@ form textarea {
 .ui.ribbon.label {
     position: relative;
     margin: 0em 0.2em;
-    left: -2.3rem;
+    left: -2.0rem;
     padding-left: 2rem;
     border-radius: 0px 4px 4px 0px;
     border-color: rgba(0, 0, 0, 0.15);
@@ -609,6 +622,7 @@ form textarea {
 
 .ui.red.ribbon.label {
     border-color: #47456D;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 /* content.css */
@@ -656,6 +670,7 @@ form textarea {
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 5px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 .block .title {
@@ -684,7 +699,7 @@ form textarea {
 .round-date {
     position: absolute;
     top: -20px;
-    left: -20px;
+    left: -35px;
     height: 60px;
     width: 70px;
     padding-top: 10px;
@@ -704,6 +719,7 @@ form textarea {
 
 .round-date.red {
     background-color: #92C0EF;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 @media (max-width: 480px) {
@@ -878,6 +894,7 @@ ol > a.next.page-numbers {
     z-index: 999;
     border-radius: 50%;
     background: #FFF;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 #back-to-top:hover {
@@ -1059,8 +1076,7 @@ ol > a.next.page-numbers {
 
 /* 站点标题 */
 
-#description {
-    background: url(https://dn-diygod.qbox.me/background.png);
+.header-description {
     background-position-y: 10%;
     background-size: cover;
     height: 650px;
@@ -1069,7 +1085,7 @@ ol > a.next.page-numbers {
 #site-header {
     position: relative;
     top: 140px;
-    font-family: Minion, Georgia, SimSun, serif;
+    font-family: kilsonburg;
     font-size: 34px;
     font-weight: bold;
     text-align: center;
@@ -1085,6 +1101,7 @@ ol > a.next.page-numbers {
 
 #site-header a {
     color: #fff;
+    font-weight: normal;
 }
 
 /* 中央信息块 */
@@ -1237,4 +1254,210 @@ ol > a.next.page-numbers {
     white-space:normal;
     word-break:break-all;
     word-wrap:break-word;
+}
+
+canvas {
+    position: relative;
+    top: -198px;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes tada {
+    0% {
+        -webkit-transform: scale(1);
+    }
+
+    10%, 20% {
+        -webkit-transform: scale(0.9) rotate(-3deg);
+    }
+
+    30%, 50%, 70%, 90% {
+        -webkit-transform: scale(1.1) rotate(3deg);
+    }
+
+    40%, 60%, 80% {
+        -webkit-transform: scale(1.1) rotate(-3deg);
+    }
+
+    100% {
+        -webkit-transform: scale(1) rotate(0);
+    }
+}
+
+@keyframes tada {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    10%, 20% {
+        -webkit-transform: scale(0.9) rotate(-3deg);
+        transform: scale(0.9) rotate(-3deg);
+    }
+
+    30%, 50%, 70%, 90% {
+        -webkit-transform: scale(1.1) rotate(3deg);
+        transform: scale(1.1) rotate(3deg);
+    }
+
+    40%, 60%, 80% {
+        -webkit-transform: scale(1.1) rotate(-3deg);
+        transform: scale(1.1) rotate(-3deg);
+    }
+
+    100% {
+        -webkit-transform: scale(1) rotate(0);
+        transform: scale(1) rotate(0);
+    }
+}
+
+.tada {
+    -webkit-animation-name: tada;
+    animation-name: tada;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        box-shadow: 0 0 5px rgba(77, 173, 208, 0.1);
+    }
+
+    50% {
+        box-shadow: 0 0 60px rgba(77, 173, 208, 0.8);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(77, 173, 208, 0.1);
+    }
+}
+
+@-webkit-keyframes throb {
+  0% {
+    -webkit-transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes throb {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.throb {
+    -webkit-animation: throb 1.33s ease-in-out infinite;
+    animation: throb 1.33s ease-in-out infinite;
+}
+
+
+.spinner {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  margin: 100px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #92C0EF;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+/* Do you like me? */
+.like-vote {
+    text-align: center;
+    cursor: pointer;
+    padding: 10px 0 4px;
+}
+.like-vote:hover {
+    background: #e51c23;
+}
+.like-vote:hover .like-count,
+.like-vote:hover .like-title,
+.like-vote:hover .like-message {
+    color: #fff;
+}
+.like-title {
+    color: #e51c23;
+    font-size: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.like-count {
+    color: #e51c23;
+    font-size: 40px;
+    cursor: pointer;
+}
+.like-count span {
+    cursor: pointer;
+}
+
+.scene {
+    padding: 0;
+    margin: 0;
+    position: absolute!important;
+    top: 0;
+    height: 650px;
+    overflow: hidden;
+}
+.layer img {
+    max-width: none;
+    width: 100%;
 }
