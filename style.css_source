@@ -1,3 +1,15 @@
+/*
+Theme Name: Amativeness
+Theme URI: https://github.com/DIYgod/Amativeness
+Author: DIYgod
+Author URI: https://www.anotherhome.net/
+Description: Wow, such a beautiful WordPress theme
+Version: 3.1
+License: MIT
+License URI: https://github.com/DIYgod/Amativeness
+Tags: light, gray, white, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: Amativeness
+*/
 @font-face {
     font-family: kilsonburg;
     src: url('https://dn-diygod.qbox.me/kilsonburg.ttf');
