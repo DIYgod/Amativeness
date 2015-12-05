@@ -1,6 +1,6 @@
 # Amativeness
 
-A beautiful Wordpress theme　based on [Amativeness 3.0](http://azfashao.com/amativeness3-0/).
+A beautiful Wordpress theme, based on [Amativeness 3.0](http://azfashao.com/amativeness3-0/).
 
 ## Development
 
