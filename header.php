@@ -16,7 +16,6 @@
     <script src='https://dn-diygod.qbox.me/jquery.min.js'></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/aplayer/dist/APlayer.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/nprogress/nprogress.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/lib/parallax/deploy/parallax.min.js"></script>
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;

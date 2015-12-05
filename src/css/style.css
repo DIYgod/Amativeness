@@ -1473,3 +1473,16 @@ canvas {
     max-width: none;
     width: 100%;
 }
+
+#nprogress .bar {
+    background: #9f3 !important;
+}
+
+#nprogress .peg {
+    box-shadow: 0 0 15px #9f3, 0 0 10px #9f3 !important;
+}
+
+#nprogress .spinner-icon {
+    border-top-color: #29d !important;
+    border-left-color: #29d !important;
+}
