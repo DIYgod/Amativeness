@@ -10,7 +10,7 @@
     <link rel="canonical" href="https://www.anotherhome.net/">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
     <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/e1.gif">
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/lib/aplayer/dist/APlayer.min.css">
     <script src="<?php echo get_template_directory_uri(); ?>/lib/aplayer/dist/APlayer.min.js"></script>
     <script src='https://dn-diygod.qbox.me/jquery.min.js'></script>

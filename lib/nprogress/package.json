@@ -1,0 +1,101 @@
+{
+  "_args": [
+    [
+      "nprogress",
+      "/Users/DIYgod/Desktop/Amativeness"
+    ]
+  ],
+  "_from": "nprogress@*",
+  "_id": "nprogress@0.2.0",
+  "_inCache": true,
+  "_location": "/nprogress",
+  "_nodeVersion": "1.6.2",
+  "_npmUser": {
+    "email": "rico@ricostacruz.com",
+    "name": "rstacruz"
+  },
+  "_npmVersion": "2.1.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "nprogress",
+    "raw": "nprogress",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "*",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/nprogress/-/nprogress-0.2.0.tgz",
+  "_shasum": "cb8f34c53213d895723fcbab907e9422adbcafb1",
+  "_shrinkwrap": null,
+  "_spec": "nprogress",
+  "_where": "/Users/DIYgod/Desktop/Amativeness",
+  "author": {
+    "email": "hi@ricostacruz.com",
+    "name": "Rico Sta. Cruz"
+  },
+  "bugs": {
+    "url": "https://github.com/rstacruz/nprogress/issues"
+  },
+  "dependencies": {},
+  "description": "Simple slim progress bars",
+  "devDependencies": {
+    "chai": "~1.6.1",
+    "jquery": "^2.1.1",
+    "jsdom": "^5.4.1",
+    "mocha": "^2.2.4",
+    "mocha-jsdom": "^0.3.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "cb8f34c53213d895723fcbab907e9422adbcafb1",
+    "tarball": "http://registry.npmjs.org/nprogress/-/nprogress-0.2.0.tgz"
+  },
+  "gitHead": "05e12c0bc6a3cf7460c38acec7371877abd5087e",
+  "homepage": "https://github.com/rstacruz/nprogress",
+  "installable": true,
+  "jspm": {
+    "dependencies": {
+      "css": "*"
+    },
+    "format": "global",
+    "shim": {
+      "nprogress": {
+        "deps": [
+          "./nprogress.css!"
+        ]
+      }
+    }
+  },
+  "license": "MIT",
+  "main": "nprogress.js",
+  "maintainers": [
+    {
+      "name": "rstacruz",
+      "email": "rico@ricostacruz.com"
+    }
+  ],
+  "name": "nprogress",
+  "optionalDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rstacruz/nprogress.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "spm": {
+    "ignore": [
+      "support",
+      "test",
+      "vendor"
+    ],
+    "main": "nprogress.js",
+    "output": [
+      "nprogress.css"
+    ]
+  },
+  "version": "0.2.0"
+}

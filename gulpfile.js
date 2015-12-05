@@ -10,16 +10,24 @@ var header      = require('gulp-header');
 gulp.task('lib', function() {
     gulp.src(['node_modules/aplayer/**'])
         .pipe(gulp.dest('lib/aplayer'));
-    gulp.src(['node_modules/nprogress/*.css'])
-        .pipe(gulp.dest('src/css'));
-    gulp.src(['node_modules/nprogress/*.js'])
-        .pipe(gulp.dest('src/js'));
+    gulp.src(['node_modules/nprogress/**'])
+        .pipe(gulp.dest('lib/nprogress'));
 });
 
 // Build js files
 gulp.task('compressJS', function() {
+    gulp.src(['lib/nprogress/nprogress.js'])
+        .pipe(uglify({
+            mangle: false
+        }))
+        .pipe(rename({
+            suffix: ".min"
+        }))
+        .pipe(gulp.dest('lib/nprogress'));
     gulp.src(['src/js/*.js'])
-        .pipe(uglify())
+        .pipe(uglify({
+            mangle: false
+        }))
         .pipe(concat('main.js'))
         .pipe(gulp.dest('.'));
 });
@@ -40,6 +48,12 @@ var banner = ['/*',
 
 // Build css files
 gulp.task('compressCSS', function() {
+    gulp.src(['lib/nprogress/nprogress.css'])
+        .pipe(minifyCSS())
+        .pipe(rename({
+            suffix: ".min"
+        }))
+        .pipe(gulp.dest('lib/nprogress'));
     gulp.src('src/css/*.css')
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(minifyCSS())
