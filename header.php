@@ -12,9 +12,11 @@
     <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/e1.gif">
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/lib/aplayer/dist/APlayer.min.css">
-    <script src="<?php echo get_template_directory_uri(); ?>/lib/aplayer/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/lib/nprogress/nprogress.min.css">
     <script src='https://dn-diygod.qbox.me/jquery.min.js'></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/main.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/aplayer/dist/APlayer.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/nprogress/nprogress.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/parallax/deploy/parallax.min.js"></script>
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
