@@ -3,23 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="theme-color" content="#595C5E">
-    <meta name="viewport" content="width=700px">
+    <meta name="viewport" content="width=700px, height=device-height, initial-scale=1.0, user-scalable=yes"">
     <title><?php wp_title('|', true, 'right'); ?></title>
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/APlayer/APlayer.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/fontello.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/nprogress.css">
+    <meta name="description" itemprop="description" content="欢迎来到Anotherhome！我是DIYgod，是一个可爱的蓝孩子，ACG爱好者，生活在2.5次元，前端小萌新，喜欢各种有趣的事物">
+    <meta name="keywords" itemprop="keywords" content="Anotherhome,博客,blog,DIYgod">
+    <link rel="canonical" href="https://www.anotherhome.net/">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
     <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/e1.gif">
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
-    <script type='text/javascript' src='https://dn-diygod.qbox.me/jquery.min.js'></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/APlayer/APlayer.js"></script>
-    <!--[if lt IE 9]>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/lib/aplayer/dist/APlayer.min.css">
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/aplayer/dist/APlayer.min.js"></script>
+    <script src='https://dn-diygod.qbox.me/jquery.min.js'></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/main.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-48084758-1', 'auto');
+        ga('send', 'pageview');
+    </script>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-    <script src='<?php bloginfo('template_url'); ?>/js/nprogress.js'></script>
     <script>
         NProgress.configure({
             showSpinner: false,

@@ -38,33 +38,6 @@ add_action('after_setup_theme', 'amativeness_setup');
  * Add support for a custom header image.
  */
 require(get_template_directory() . '/inc/custom-header.php');
-function amativeness_get_font_url()
-{
-    $font_url = '';
-    /* translators: If there are characters in your language that are not supported
-     * by Open Sans, translate this to 'off'. Do not translate into your own language.
-     */
-    if ('off' !== _x('on', 'Open Sans font: on or off', 'amativeness')) {
-        $subsets = 'latin,latin-ext';
-        /* translators: To add an additional Open Sans character subset specific to your language,
-         * translate this to 'greek', 'cyrillic' or 'vietnamese'. Do not translate into your own language.
-         */
-        $subset = _x('no-subset', 'Open Sans font: add new subset (greek, cyrillic, vietnamese)', 'amativeness');
-        if ('cyrillic' == $subset)
-            $subsets .= ',cyrillic,cyrillic-ext';
-        elseif ('greek' == $subset)
-            $subsets .= ',greek,greek-ext';
-        elseif ('vietnamese' == $subset)
-            $subsets .= ',vietnamese';
-        $protocol = is_ssl() ? 'https' : 'http';
-        $query_args = array(
-            'family' => 'Open+Sans:400italic,700italic,400,700',
-            'subset' => $subsets,
-        );
-        $font_url = add_query_arg($query_args, "$protocol://www.anotherhome.net/wp-content/themes/Amativeness/css/font.css");
-    }
-    return $font_url;
-}
 
 function amativeness_scripts_styles()
 {
@@ -77,9 +50,6 @@ function amativeness_scripts_styles()
         wp_enqueue_script('comment-reply');
     // Adds JavaScript for handling the navigation menu hide-and-show behavior.
     // wp_enqueue_script( 'amativeness-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', true );
-    $font_url = amativeness_get_font_url();
-    if (!empty($font_url))
-        wp_enqueue_style('amativeness-fonts', esc_url_raw($font_url), array(), null);
     // Loads our main stylesheet.
     wp_enqueue_style('amativeness-style', get_stylesheet_uri());
     // Loads the Internet Explorer specific stylesheet.
@@ -88,18 +58,7 @@ function amativeness_scripts_styles()
 }
 
 add_action('wp_enqueue_scripts', 'amativeness_scripts_styles');
-function amativeness_mce_css($mce_css)
-{
-    $font_url = amativeness_get_font_url();
-    if (empty($font_url))
-        return $mce_css;
-    if (!empty($mce_css))
-        $mce_css .= ',';
-    $mce_css .= esc_url_raw(str_replace(',', '%2C', $font_url));
-    return $mce_css;
-}
 
-add_filter('mce_css', 'amativeness_mce_css');
 function amativeness_wp_title($title, $sep)
 {
     global $paged, $page;
