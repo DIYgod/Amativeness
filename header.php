@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="theme-color" content="#595C5E">
-    <meta name="viewport" content="width=700px, height=device-height, initial-scale=1.0, user-scalable=yes"">
+    <meta name="viewport" content="width=700, height=device-height, initial-scale=1.0, user-scalable=yes"">
     <title><?php wp_title('|', true, 'right'); ?></title>
     <meta name="description" itemprop="description" content="欢迎来到Anotherhome！我是DIYgod，是一个可爱的蓝孩子，ACG爱好者，生活在2.5次元，前端小萌新，喜欢各种有趣的事物">
     <meta name="keywords" itemprop="keywords" content="Anotherhome,博客,blog,DIYgod">
