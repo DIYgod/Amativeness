@@ -44,10 +44,6 @@ $(document).ready(function ($) {
         $(this).siblings('.article-content').slideToggle("slow");
     });
 
-    // 头图视差
-    var scene = document.getElementById('scene');
-    var parallax = new Parallax(scene);
-
     // title变化
     var OriginTitile = document.title;
     var titleTime;

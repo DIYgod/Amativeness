@@ -5,8 +5,9 @@ A beautiful Wordpress theme, based on [Amativeness 3.0](http://azfashao.com/amat
 ## Development
 
 ```
-npm install
-gulp
+$ npm install
+$ npm install -g gulp
+$ gulp
 ```
 
 ## 相关说明

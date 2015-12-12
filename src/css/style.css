@@ -467,6 +467,7 @@ article > div > p {
 .container {
     max-width: 80%;
     margin: 0 auto;
+    position: relative;
 }
 
 .container:after {
@@ -951,7 +952,9 @@ ol > a.next.page-numbers {
 }
 
 .navbar .nav-right {
-    float: right;
+    position: absolute;
+    right: -43px;
+    top: 2.5px;
 }
 
 .navbar .search-form {
@@ -962,7 +965,7 @@ ol > a.next.page-numbers {
     float: right;
     height: 25px;
     width: 0px;
-    margin-top: 7px;
+    margin-top: 5px;
     padding: 0px 0px 0px 10px;
     color: rgb(238, 238, 238);
     background: rgba(0, 0, 0, 0);
@@ -1018,13 +1021,9 @@ ol > a.next.page-numbers {
     margin-left: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .navbar .nav-right .search-form {
         display: none;
-        position: relative;
-    }
-
-    .navbar {
         position: relative;
     }
 }
@@ -1092,6 +1091,7 @@ ol > a.next.page-numbers {
     background-position-y: 10%;
     background-size: cover;
     height: 650px;
+    position: relative;
 }
 
 #site-header {
@@ -1469,9 +1469,9 @@ canvas {
     height: 650px;
     overflow: hidden;
 }
-.layer img {
-    max-width: none;
+.scene img {
     width: 100%;
+    min-height: 650px;
 }
 
 #nprogress .bar {
@@ -1485,4 +1485,8 @@ canvas {
 #nprogress .spinner-icon {
     border-top-color: #29d !important;
     border-left-color: #29d !important;
+}
+
+.edit-wz {
+    float: left;
 }

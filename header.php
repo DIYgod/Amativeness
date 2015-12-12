@@ -5,8 +5,6 @@
     <meta name="theme-color" content="#595C5E">
     <meta name="viewport" content="width=700, height=device-height, initial-scale=1.0, user-scalable=yes"">
     <title><?php wp_title('|', true, 'right'); ?></title>
-    <meta name="description" itemprop="description" content="欢迎来到Anotherhome！我是DIYgod，是一个可爱的蓝孩子，ACG爱好者，生活在2.5次元，前端小萌新，喜欢各种有趣的事物">
-    <meta name="keywords" itemprop="keywords" content="Anotherhome,博客,blog,DIYgod">
     <link rel="canonical" href="https://www.anotherhome.net/">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
     <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/e1.gif">
@@ -62,7 +60,7 @@
             </nav>
             <?php if (is_single()) : ?>
                 <div class="edit-wz">
-                    <?php edit_post_link("<p class='fa fa-pencil'>编辑文章</p>"); ?>
+                    <?php edit_post_link("编辑文章"); ?>
                 </div>
             <?php endif; ?>
             <?php if (is_page()) : ?>
@@ -84,11 +82,8 @@
                    title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>"
                    rel="home"><?php bloginfo('name'); ?></a></h1>
         </div>
-        <ul id="scene" class="scene">
-            <li class="layer" data-depth="0.00"><img src="https://dn-diygod.qbox.me/background4.png"></li>
-            <li class="layer" data-depth="0.20"><img src="https://dn-diygod.qbox.me/background3.png"></li>
-            <li class="layer" data-depth="0.40"><img src="https://dn-diygod.qbox.me/background2.png"></li>
-            <li class="layer" data-depth="0.60"><img src="https://dn-diygod.qbox.me/background1.png"></li>
+        <ul class="scene">
+            <img src="https://dn-diygod.qbox.me/background.png">
         </ul>
     </header>
     <div id="information" class="info block">
