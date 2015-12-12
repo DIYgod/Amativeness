@@ -49,11 +49,13 @@ $(document).ready(function ($) {
     var titleTime;
     document.addEventListener('visibilitychange', function () {
         if (document.hidden) {
-            document.title = '(つェ⊂)我藏好了哦~ ' + OriginTitile;
+            $('[rel="shortcut icon"]').attr('href',"//www.anotherhome.net/wp-content/themes/Amativeness/fail.ico");
+            document.title = '(●—●)喔哟，崩溃啦！';
             clearTimeout(titleTime);
         }
         else {
-            document.title = '(*´∇｀*) 被你发现啦~ ' + OriginTitile;
+            $('[rel="shortcut icon"]').attr('href',"//www.anotherhome.net/wp-content/themes/Amativeness/favicon.ico");
+            document.title = '(/≧▽≦/)咦！又好了！' + OriginTitile;
             titleTime = setTimeout(function () {
                 document.title = OriginTitile;
             }, 2000);
