@@ -40,6 +40,7 @@
         });
         NProgress.set(0.7);
     </script>
+    <audio src="https://dn-diygod.qbox.me/poi.wav" autoplay="autoplay"></audio>
     <div id="back-to-top" class="red" data-scroll="body" style="display: block;">
         <svg id="rocket" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64">
             <path fill="#CCCCCC" d="M42.057,37.732c0,0,4.139-25.58-9.78-36.207c-0.307-0.233-0.573-0.322-0.802-0.329

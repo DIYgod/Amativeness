@@ -48,6 +48,7 @@ body {
     font-family: "Avenir Next", Helvetica, Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
     font-size: 15px;
     color: #444 !important;
+    min-width: 700px;
 }
 
 .aplayer {
