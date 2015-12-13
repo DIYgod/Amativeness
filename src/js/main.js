@@ -112,25 +112,6 @@ $(document).ready(function ($) {
     });
 
     show_date_time();
-
-    (function () {
-        $("*:not(textarea)").each(function (m) {
-            if (this.title) {
-                var c = this.title;
-                var a = 30;
-                $(this).mouseover(function (d) {
-                    this.title = "";
-                    $("body").append('<div id="pre_a">' + c + "</div>");
-                    $("#pre_a").css({left: (d.pageX + a) + "px", top: d.pageY + "px", opacity: "0.7"}).fadeIn(250)
-                }).mouseout(function () {
-                    this.title = c;
-                    $("#pre_a").remove()
-                }).mousemove(function (d) {
-                    $("#pre_a").css({left: (d.pageX + a) + "px", top: d.pageY + "px"})
-                })
-            }
-        })
-    })();
 });
 
 // 博客已运行XXX
