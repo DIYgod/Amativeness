@@ -17,40 +17,40 @@ Text Domain: Amativeness
 
 @media (max-width: 700px) {
     #site-header {
-        font-size: 20px;
+        font-size: 20px !important;
     }
 
     .header-description {
-        height: 500px;
+        height: 500px !important;
     }
 
     .header-description .scene {
-        height: 500px;
+        height: 500px !important;
     }
 
     .scene img {
-        min-height: 500px;
+        min-height: 500px !important;
     }
 }
 
 @media (max-width: 800px) {
     .navbar .nav-right .search-form {
-        display: none;
-        position: relative;
+        display: none !important;
+        position: relative !important;
     }
 
     .navbar .container {
-        max-width: 95%;
+        max-width: 95% !important;
     }
 
     .round-date {
-        display: none;
+        display: none !important;
     }
 }
 
 @media (max-width: 1000px) {
     .article-list > .side {
-        display: none;
+        display: none !important;
     }
 
     .article-list > .main {
