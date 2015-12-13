@@ -12,6 +12,8 @@ gulp.task('lib', function() {
         .pipe(gulp.dest('lib/aplayer'));
     gulp.src(['node_modules/nprogress/**'])
         .pipe(gulp.dest('lib/nprogress'));
+    gulp.src(['node_modules/headroom.js/**'])
+        .pipe(gulp.dest('lib/headroom.js'));
 });
 
 // Build js files
