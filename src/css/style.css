@@ -17,7 +17,7 @@ Text Domain: Amativeness
 
 @media (max-width: 700px) {
     #site-header {
-        font-size: 20px !important;
+        font-size: 16px !important;
     }
 
     .header-description {
@@ -31,6 +31,10 @@ Text Domain: Amativeness
     .scene img {
         min-height: 500px !important;
     }
+
+    #information {
+        padding: 20px 0 !important;
+    }
 }
 
 @media (max-width: 800px) {
@@ -39,7 +43,7 @@ Text Domain: Amativeness
         position: relative !important;
     }
 
-    .navbar .container {
+    .container {
         max-width: 95% !important;
     }
 
@@ -1069,6 +1073,9 @@ ol > a.next.page-numbers {
     background-size: cover;
     height: 650px;
     position: relative;
+    background: url(https://dn-diygod.qbox.me/background.png);
+    width: 100%;
+    background-size: cover;
 }
 
 #site-header {
@@ -1436,19 +1443,6 @@ canvas {
 }
 .like-count span {
     cursor: pointer;
-}
-
-.scene {
-    padding: 0;
-    margin: 0;
-    position: absolute!important;
-    top: 0;
-    height: 650px;
-    overflow: hidden;
-}
-.scene img {
-    width: 100%;
-    min-height: 650px;
 }
 
 #nprogress .bar {
