@@ -15,6 +15,49 @@ Text Domain: Amativeness
     src: url('https://dn-diygod.qbox.me/kilsonburg.ttf');
 }
 
+@media (max-width: 700px) {
+    #site-header {
+        font-size: 20px;
+    }
+
+    .header-description {
+        height: 500px;
+    }
+
+    .header-description .scene {
+        height: 500px;
+    }
+
+    .scene img {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar .nav-right .search-form {
+        display: none;
+        position: relative;
+    }
+
+    .navbar .container {
+        max-width: 95%;
+    }
+
+    .round-date {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .article-list > .side {
+        display: none;
+    }
+
+    .article-list > .main {
+        width: 100%
+    }
+}
+
 html, body, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
@@ -48,7 +91,6 @@ body {
     font-family: "Avenir Next", Helvetica, Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
     font-size: 15px;
     color: #444 !important;
-    min-width: 700px;
 }
 
 .aplayer {
@@ -477,12 +519,6 @@ article > div > p {
     display: table;
 }
 
-@media (min-width: 600) {
-    .container {
-        max-width: 80%;
-    }
-}
-
 /* semantic框架提供的 label */
 
 .ui.ribbon.label {
@@ -662,20 +698,6 @@ form textarea {
     float: right;
 }
 
-@media (max-width: 1000px) {
-    .article-list > .side {
-        display: none;
-    }
-
-    .article-list > .main {
-        width: 100%
-    }
-
-    .container {
-        max-width: 85%;
-    }
-}
-
 /* block */
 
 .block {
@@ -700,12 +722,6 @@ form textarea {
 
 .category.block {
     margin-bottom: 40px;
-}
-
-@media (max-width: 480px) {
-    .post.block {
-        margin-bottom: 20px;
-    }
 }
 
 /* 每篇文章左上角的时间 */
@@ -734,12 +750,6 @@ form textarea {
 .round-date.red {
     background-color: #92C0EF;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
-}
-
-@media (max-width: 480px) {
-    .round-date {
-        display: none;
-    }
 }
 
 /* 文章信息 */
@@ -938,11 +948,6 @@ ol > a.next.page-numbers {
     top: 0px;
     position: fixed;
     z-index: 99;
-    height: 38px;
-}
-
-.navbar .container {
-    width: 80%;
 }
 
 .navbar .nav {
@@ -1020,35 +1025,6 @@ ol > a.next.page-numbers {
     line-height: 38px;
     color: #fff;
     margin-left: 10px;
-}
-
-@media (max-width: 800px) {
-    .navbar .nav-right .search-form {
-        display: none;
-        position: relative;
-    }
-}
-
-@media (max-width: 550px) {
-    .navbar .nav-right {
-        display: none;
-        position: relative;
-    }
-
-    .navbar {
-        position: relative;
-    }
-}
-
-@media (max-width: 300px) {
-    .navbar .nav {
-        display: none;
-        position: relative;
-    }
-
-    .navbar {
-        position: relative;
-    }
 }
 
 .navbar .nav li {

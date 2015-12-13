@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="theme-color" content="#595C5E">
-    <meta name="viewport" content="width=700, height=device-height, initial-scale=1.0, user-scalable=yes"">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes"">
     <title><?php wp_title('|', true, 'right'); ?></title>
     <link rel="canonical" href="https://www.anotherhome.net/">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
