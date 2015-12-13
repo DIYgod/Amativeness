@@ -477,7 +477,7 @@ article > div > p {
     text-align: center;
     font-size: 14px;
     color: #FFF;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
 #pagination > a:hover {
@@ -676,7 +676,7 @@ form textarea {
 
 .ui.red.ribbon.label {
     border-color: #47456D;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
 /* content.css */
@@ -710,7 +710,7 @@ form textarea {
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
 .block .title {
@@ -753,7 +753,7 @@ form textarea {
 
 .round-date.red {
     background-color: #92C0EF;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
 /* 文章信息 */
@@ -922,7 +922,7 @@ ol > a.next.page-numbers {
     z-index: 999;
     border-radius: 50%;
     background: #FFF;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
 #back-to-top:hover {
@@ -1246,10 +1246,10 @@ ol > a.next.page-numbers {
 }
 
 /* 一连串较长的英文字符自动换行 */
-#content .post{
-    white-space:normal;
-    word-break:break-all;
-    word-wrap:break-word;
+#content .post {
+    white-space: normal;
+    word-break: break-all;
+    word-wrap: break-word;
 }
 
 canvas {
@@ -1338,31 +1338,31 @@ canvas {
 }
 
 @-webkit-keyframes throb {
-  0% {
-    -webkit-transform: scale(1);
-  }
+    0% {
+        -webkit-transform: scale(1);
+    }
 
-  50% {
-    -webkit-transform: scale(0.8);
-  }
+    50% {
+        -webkit-transform: scale(0.8);
+    }
 
-  100% {
-    -webkit-transform: scale(1);
-  }
+    100% {
+        -webkit-transform: scale(1);
+    }
 }
 
 @keyframes throb {
-  0% {
-    transform: scale(1);
-  }
+    0% {
+        transform: scale(1);
+    }
 
-  50% {
-    transform: scale(0.8);
-  }
+    50% {
+        transform: scale(0.8);
+    }
 
-  100% {
-    transform: scale(1);
-  }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .throb {
@@ -1370,47 +1370,51 @@ canvas {
     animation: throb 1.33s ease-in-out infinite;
 }
 
-
 .spinner {
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
 
-  position: relative;
-  margin: 100px auto;
+    position: relative;
+    margin: 100px auto;
 }
 
 .double-bounce1, .double-bounce2 {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: #92C0EF;
-  opacity: 0.6;
-  position: absolute;
-  top: 0;
-  left: 0;
-  
-  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
-  animation: sk-bounce 2.0s infinite ease-in-out;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #92C0EF;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
 }
 
 .double-bounce2 {
-  -webkit-animation-delay: -1.0s;
-  animation-delay: -1.0s;
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
 }
 
 @-webkit-keyframes sk-bounce {
-  0%, 100% { -webkit-transform: scale(0.0) }
-  50% { -webkit-transform: scale(1.0) }
+    0%, 100% {
+        -webkit-transform: scale(0.0)
+    }
+    50% {
+        -webkit-transform: scale(1.0)
+    }
 }
 
 @keyframes sk-bounce {
-  0%, 100% { 
-    transform: scale(0.0);
-    -webkit-transform: scale(0.0);
-  } 50% { 
-    transform: scale(1.0);
-    -webkit-transform: scale(1.0);
-  }
+    0%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
 }
 
 /* Do you like me? */
@@ -1419,14 +1423,17 @@ canvas {
     cursor: pointer;
     padding: 10px 0 4px;
 }
+
 .like-vote:hover {
     background: #e51c23;
 }
+
 .like-vote:hover .like-count,
 .like-vote:hover .like-title,
 .like-vote:hover .like-message {
     color: #fff;
 }
+
 .like-title {
     color: #e51c23;
     font-size: 20px;
@@ -1436,11 +1443,13 @@ canvas {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .like-count {
     color: #e51c23;
     font-size: 40px;
     cursor: pointer;
 }
+
 .like-count span {
     cursor: pointer;
 }
@@ -1460,4 +1469,103 @@ canvas {
 
 .edit-wz {
     float: left;
+}
+
+/* head-animated */
+
+.head-animated {
+    -webkit-animation-duration: .5s;
+    -moz-animation-duration: .5s;
+    -o-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.head-animated.slideDown {
+    -webkit-animation-name: slideDown;
+    -moz-animation-name: slideDown;
+    -o-animation-name: slideDown;
+    animation-name: slideDown;
+}
+
+.head-animated.slideUp {
+    -webkit-animation-name: slideUp;
+    -moz-animation-name: slideUp;
+    -o-animation-name: slideUp;
+    animation-name: slideUp;
+}
+
+@-webkit-keyframes slideDown {
+    0% {
+        -webkit-transform: translateY(-4em)
+    }
+    100% {
+        -webkit-transform: translateY(0)
+    }
+}
+
+@-moz-keyframes slideDown {
+    0% {
+        -moz-transform: translateY(-4em)
+    }
+    100% {
+        -moz-transform: translateY(0)
+    }
+}
+
+@-o-keyframes slideDown {
+    0% {
+        -o-transform: translateY(-4em)
+    }
+    100% {
+        -o-transform: translateY(0)
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-4em)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
+@-webkit-keyframes slideUp {
+    0% {
+        -webkit-transform: translateY(0)
+    }
+    100% {
+        -webkit-transform: translateY(-4em)
+    }
+}
+
+@-moz-keyframes slideUp {
+    0% {
+        -moz-transform: translateY(0)
+    }
+    100% {
+        -moz-transform: translateY(-4em)
+    }
+}
+
+@-o-keyframes slideUp {
+    0% {
+        -o-transform: translateY(0)
+    }
+    100% {
+        -o-transform: translateY(-4em)
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(0)
+    }
+    100% {
+        transform: translateY(-4em)
+    }
 }

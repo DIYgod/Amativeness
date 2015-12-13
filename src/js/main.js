@@ -116,7 +116,15 @@ $(document).ready(function ($) {
 
     // 当页面向下滚动时，导航条消失，当页面向上滚动时，导航条出现
     var head = document.getElementsByClassName('navbar')[0];
-    var headroom  = new Headroom(head);
+    var headroom  = new Headroom(head, {
+            "tolerance": 5,
+            "offset": 205,
+            "classes": {
+                "initial": "head-animated",
+                "pinned": "slideDown",
+                "unpinned": "slideUp"
+        }
+    });
     headroom.init();
 });
 
