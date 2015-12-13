@@ -54,7 +54,7 @@ Text Domain: Amativeness
     }
 
     .article-list > .main {
-        width: 100%
+        width: 100% !important;
     }
 }
 
