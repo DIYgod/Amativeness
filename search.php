@@ -24,7 +24,8 @@
                     <p class="title">
                         <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
                     </p>
-                    <p class="article-meta">本文由 <?php the_author(); ?> 发表于 <?php the_time('Y年n月j日') ?> </p>
+                    <p class="article-meta"><i class="icon-heart"></i>发表于 <?php the_time('Y年n月j日') ?> • <i class="icon-eye-1"></i><?php if (function_exists('the_views')) { the_views(); } ?> • <i class="icon-comment"></i><?php comments_number('没有评论,快来呀!', '活捉 1 条评论', '活捉 % 条评论'); ?>
+                    </p>
                 <?php endif; // is_single() ?>
                 <?php if (comments_open()) : ?>
                 <?php endif; // comments_open() ?>
