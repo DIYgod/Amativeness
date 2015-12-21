@@ -131,12 +131,12 @@ if (!function_exists('amativeness_content_nav')) :
                     'format' => '?paged=%#%',
                     'current' => max(1, get_query_var('paged')),
                     'total' => $wp_query->max_num_pages,
-                    'end_size' => 1,        /* 首尾显示的页数 */
+                    'end_size' => 2,        /* 首尾显示的页数 */
                     'mid_size' => 2,        /* 当前页左右显示的页数 */
                     'show_all' => false,    /* true则显示全部页码 */
                     'prev_next' => true,    /* false则不显示上下页 */
-                    'prev_text' => '<< 上一页',    /* 上一页的链接文本 */
-                    'next_text' => '下一页 >>'    /* 下一页的链接文本 */
+                    'prev_text' => '下一页',    /* 上一页的链接文本 */
+                    'next_text' => '上一页'    /* 下一页的链接文本 */
                 ));
                 ?></ol>
         <?php endif;
@@ -164,16 +164,16 @@ if (!function_exists('amativeness_comment')) :
                     <header class="comment-meta comment-author vcard">
                         <?php
                         echo get_avatar($comment, 44);
-                        printf('<cite><b class="fn">%1$s</b> %2$s</cite><br />',
+                        printf('<div class="comments-name">%1$s %2$s</div>',
                             get_comment_author_link(),
                             // If current post author is also comment author, make it known visually.
-                            ($comment->user_id === $post->post_author) ? '<span>' . __('Post author', 'amativeness') . '</span>' : ''
+                            ($comment->user_id === $post->post_author) ? '<span class="comment-master">' . __('一只萌萌哒博主', 'amativeness') . '</span>' : ''
                         );
                         printf('<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
                             esc_url(get_comment_link($comment->comment_ID)),
                             get_comment_time('c'),
                             /* translators: 1: date, 2: time */
-                            sprintf(__('%1$s at %2$s', 'amativeness'), get_comment_date(), get_comment_time())
+                            sprintf(__('%1$s %2$s', 'amativeness'), get_comment_date(), get_comment_time())
                         );
                         ?>
                     </header>
@@ -184,7 +184,7 @@ if (!function_exists('amativeness_comment')) :
                     <section class="comment-content comment">
                         <?php comment_text(); ?>
                         <?php edit_comment_link(__('Edit', 'amativeness'), '<p class="edit-link">', '</p>'); ?>
-                        <div style="margin-left: 50px;">
+                        <div class="comment-reply"">
                             <?php comment_reply_link(array_merge($args, array('reply_text' => __('Reply', 'amativeness'), 'depth' => $depth, 'max_depth' => $args['max_depth']))); ?>
                         </div>
                         <!-- .reply -->
@@ -953,31 +953,13 @@ function my_enqueue_scripts()
 
 add_action('wp_enqueue_scripts', 'my_enqueue_scripts', 1);
 
-// 评论防火墙
-function comments_spam_refuse($comment) {
-	$pattern_comment_author = '机,夜总会,营销, 网';
-	$pattern_comment_url = '';
-	$pattern_comment_content = 'shoe, cheap, shop, website';
-	$pattern_comment_ip = ',183.138.172.102,115.219.26.240';
+// 默认头像
+add_filter( 'avatar_defaults', 'newgravatar' );
 
-	$pattern_author = "/".str_replace(',','|',preg_quote($pattern_comment_author,'/'))."/u";
-	$pattern_url = "/".str_replace(',','|',preg_quote($pattern_comment_url,'/'))."/u";
-	$pattern_content = "/".str_replace(',','|',preg_quote($pattern_comment_content,'/'))."/u";
-	$pattern_hanzi = '/[一-龥]/u';
-
-	if (preg_match($pattern_author,$comment['comment_author'])):
-	err('Danger: 用户名含有禁止关键字');
-//	elseif (preg_match($pattern_url,$comment['comment_author_url'])):
-//	err('评论内容含有促销类url Filter on!!');
-	elseif(preg_match($pattern_content,$comment['comment_content'])):
-	err('Content Filter on!!');
-	elseif(!preg_match($pattern_hanzi,$comment['comment_content'])):
-	err('禁止纯英文回复 Filter on!!');
-	elseif(strpos($pattern_comment_ip,$comment['comment_author_IP'])):
-	err('您的ip不允许提交评论 Filter on!!');
-	endif;
-	return $comment;
+function newgravatar ($avatar_defaults) {
+    $myavatar = 'https://dn-diygod.qbox.me/2222.jpg';
+    $avatar_defaults[$myavatar] = "岁纳京子默认头像";
+    return $avatar_defaults;
 }
-add_filter('preprocess_comment', 'comments_spam_refuse');
 
 ?>

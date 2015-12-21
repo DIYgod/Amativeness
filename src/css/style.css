@@ -53,11 +53,11 @@ Text Domain: Amativeness
 }
 
 @media (max-width: 1000px) {
-    .article-list > .side {
+    .article-list .side {
         display: none !important;
     }
 
-    .article-list > .main {
+    .article-list .main {
         width: 100% !important;
     }
 }
@@ -290,48 +290,6 @@ section > ul > li > ul {
 
 article > section > p {
     margin-left: 50px !important;
-}
-
-article > section > div {
-    opacity: 0;
-    font-size: 13px;
-    margin-bottom: 10px;
-    margin-left: 50px;
-    transition: opacity 0.1s ease-out;
-    -o-transition: opacity 0.1s ease-out;
-    -moz-transition: opacity 0.1s ease-out;
-    -webkit-transition: opacity 0.1s ease-out;
-}
-
-article > section > div:hover {
-    opacity: 1;
-}
-
-article > header > cite > b > a,
-article > header > cite > b {
-    font-style: normal;
-    color: #009FDA;
-}
-
-article > header > a > time {
-    color: #AAAAAA;
-    font-size: 15px;
-}
-
-article > header > img {
-    -webkit-transition: .4s all ease-in-out;
-    -moz-transition: .4s all ease-in-out;
-    -o-transition: .4s all ease-in-out;
-    -ms-transition: .4s all ease-in-out;
-    transition: .4s all ease-in-out;
-}
-
-article:hover > header > img {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
 }
 
 #content > div.article-list > div.main > ol > a.prev.page-numbers {
@@ -692,12 +650,12 @@ form textarea {
     margin-top: 40px;
 }
 
-.article-list > .main {
+.article-list .main {
     width: 67%;
     float: left;
 }
 
-.article-list > .side {
+.article-list .side {
     width: 30%;
     float: right;
 }
@@ -784,52 +742,6 @@ form textarea {
 
 .article-content.red > .more a {
     background-color: #92C0EF;
-}
-
-/* 文章分页列表 */
-#content > ol:nth-child(2) {
-    display: none;
-}
-
-.page-navigator {
-    display: inline-block;
-    padding: 0px;
-    border-radius: 5px;
-    background: #ffffff;
-}
-
-.page-navigator li {
-    display: inline-block;
-    padding: 10px;
-    background: #fff;
-}
-
-.page-navigator li:first-child {
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
-}
-
-.page-navigator li:last-child {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-.page-numbers.current {
-    display: inline-block;
-    padding: 10px;
-    background: #fff;
-}
-
-ol > span.page-numbers.dots {
-    display: inline-block;
-    padding: 10px;
-    background: #fff;
-}
-
-ol > a.next.page-numbers {
-    display: inline-block;
-    padding: 10px;
-    background: #fff;
 }
 
 /* 侧边栏 */
@@ -1568,4 +1480,170 @@ canvas {
     100% {
         transform: translateY(-8em)
     }
+}
+
+/* 评论 */
+.comment-block .comment-notes {
+    display: none;
+}
+
+.comment-block .text-block {
+    padding: 10px;
+    background: #f4f6f7;
+    outline: none;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.comment-block .text-block:hover {
+    border: 1px solid #b9b9b9;
+}
+
+.comment-block .text-block:focus {
+    border: 1px solid #4d90fe;
+}
+
+.comment-block .content-field textarea {
+    margin: 10px 0;
+    height: 100px;
+    width: 100%;
+}
+
+.comment-block input.text-block {
+    height: 25px;
+    width: 32%;
+    margin-right: 2%;
+}
+
+.comment-block #url {
+    height: 25px;
+    margin-right: 0;
+}
+
+.comment-block .form-submit {
+    margin: 0;
+}
+
+.comment-block .comment-info {
+    font-size: 0;
+}
+
+.comment-block .form-submit input[type=submit] {
+    width: 100%;
+    background: #B8DBFF;
+    border: 0;
+    outline: 0;
+    font-size: 15px;
+    display: block;
+    color: #fff;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.comment-block .form-submit input[type=submit]:hover {
+    background: #47456D;
+}
+
+.comment-block #comments > a {
+    display: block;
+    border-left: 2px solid #363d4c;
+    padding: 0 10px;
+    margin: 40px 0;
+    font-size: 20px;
+}
+
+.comment-block .commentlist .comment-author img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    float: left;
+    transition: .4s all ease-in-out;
+    margin-right: 15px;
+}
+
+.comment-block .commentlist .comment:hover .comment-author img {
+    transform: rotate(360deg);
+}
+
+.comment-block .commentlist article {
+    margin: 20px 0;
+}
+
+.comment-block .commentlist .children {
+    margin-left: 50px;
+}
+
+.comment-block .commentlist .comment-author .comments-name {
+    font-size: 14px;
+    margin: 5px 8px 7px 0;
+    color: #444;
+    font-style: normal;
+    font-weight: bolder;
+}
+
+.comment-block .commentlist .comment-author .comments-name .comment-master {
+    margin-left: 10px;
+    font-style: normal;
+    background: #DFF0D8;
+    color: #3C763D;
+    border-radius: 5px;
+    padding: 1px 6px;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+.comment-block .commentlist .comment-author time {
+    color: #aaa;
+    font-size: 10px;
+}
+
+.comment-block .commentlist .comment-content {
+    line-height: 20px;
+    font-size: 14px;
+    margin-left: 80px;
+}
+
+.comment-block .commentlist .comment-content > p {
+    margin: 5px 0!important;
+}
+
+.comment-block .commentlist .comment-content .comment-reply {
+    font-size: 10px;
+}
+
+.comment-block .commentlist > li{
+    border-bottom: 1px solid #e5eaed;
+}
+
+/* 文章分页列表 */
+#content > ol:nth-child(2) {
+    display: none;
+}
+
+.page-navigator {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 0;
+    border-radius: 5px;
+    background: #fff;
+    width: 100%;
+    text-align: right;
+}
+
+.page-numbers {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.page-numbers.current {
+    color: #B8DBFF;
+}
+
+.page-numbers.dots {
+    background: #fff;
 }
