@@ -896,6 +896,31 @@ function dropdown_links_cats($cat)
     }
 }
 
+//评论表情
+function wp_smilies()
+{
+    global $wpsmiliestrans;
+    if (!get_option('use_smilies') or (empty($wpsmiliestrans))) return;
+    $smilies = array_unique($wpsmiliestrans);
+    $link = '';
+    foreach ($smilies as $key => $smile) {
+        $file = get_bloginfo('template_directory') . '/images/smilies/' . $smile;
+        $value = " " . $key . " ";
+        $img = "<img src=\"{$file}\" alt=\"{$smile}\" />";
+        $imglink = htmlspecialchars($img);
+        $link .= "<a href=\"#commentform\" title=\"表情\" onclick=\"document.getElementById('comment-content').value += '{$value}'\">{$img}</a>&nbsp;&nbsp;&nbsp;";
+        $click = "return click_a('sm')";
+    }
+    echo '<div class="s-submit"><button onclick="' . $click . '">表情</button><ul id="sm" style="display:none;">' . $link . '</ul></div>';
+}
+
+//修改评论表情调用路径
+function g_smilies_src($img_src, $img, $siteurl)
+{
+    return get_bloginfo('template_directory') . '/images/smilies/' . $img;
+}
+
+add_filter('smilies_src', 'g_smilies_src', 1, 10);
 // 移除emoji
 function disable_emoji9s_tinymce($plugins)
 {
