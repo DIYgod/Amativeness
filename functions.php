@@ -953,13 +953,35 @@ function my_enqueue_scripts()
 
 add_action('wp_enqueue_scripts', 'my_enqueue_scripts', 1);
 
-// 默认头像
-add_filter( 'avatar_defaults', 'newgravatar' );
-
-function newgravatar ($avatar_defaults) {
-    $myavatar = 'https://dn-diygod.qbox.me/2222.jpg';
-    $avatar_defaults[$myavatar] = "岁纳京子默认头像";
-    return $avatar_defaults;
+// 评论回应邮件通知
+function comment_mail_notify($comment_id) {
+    $admin_email = get_bloginfo ('admin_email');
+    $comment = get_comment($comment_id);
+    $comment_author_email = trim($comment->comment_author_email);
+    $parent_id = $comment->comment_parent ? $comment->comment_parent : '';
+    $to = $parent_id ? trim(get_comment($parent_id)->comment_author_email) : '';
+    $spam_confirmed = $comment->comment_approved;
+    if (($parent_id != '') && ($spam_confirmed != 'spam') && ($to != $admin_email)) {
+        $wp_email = 'no-reply@html.love';
+        $subject = '您在 [' . get_option("blogname") . '] 的留言有了新回复';
+        $message = '
+		<div style="-moz-border-radius: 5px;-webkit-border-radius: 5px;-khtml-border-radius: 5px;border-radius: 5px;background-color:white;border-top:2px solid #12ADDB;box-shadow:0 1px 3px #AAAAAA;line-height:180%;padding:0 15px 12px;width:500px;margin:50px auto;color:#555555;font-family:Century Gothic,Trebuchet MS,Hiragino Sans GB,微软雅黑,Microsoft Yahei,Tahoma,Helvetica,Arial,SimSun,sans-serif;font-size:12px;">
+		<h2 style="border-bottom:1px solid #DDD;font-size:14px;font-weight:normal;padding:13px 0 10px 8px;"><span style="color: #12ADDB;font-weight: bold;">></span>您在 <a style="text-decoration:none;color: #12ADDB;" href="' . get_option('home') . '" target="_blank">' . get_option('blogname') . '</a> 博客上的留言有回复啦！</h2><div style="padding:0 12px 0 12px;margin-top:18px"><p>亲爱的 ' . trim(get_comment($parent_id)->comment_author) . '， 您好！您曾在文章《' . get_the_title($comment->comment_post_ID) . '》上发表评论：</p>
+		<p style="background-color: #f5f5f5;border: 0px solid #DDD;padding: 10px 15px;margin:18px 0">'. trim(get_comment($parent_id)->comment_content) . '</p><p>'. trim($comment->comment_author) .'给您的回复如下：</p><p style="background-color: #f5f5f5;border: 0px solid #DDD;padding: 10px 15px;margin:18px 0">' . trim($comment->comment_content) .'</p><p>您可以点击<a href="' . htmlspecialchars(get_comment_link($parent_id, array('type' => 'comment'))) . '">查看回复的完整内容</a>，欢迎再次光临<a href="' . get_option('home') . '">' . get_option('blogname') . '</a> 。</p>
+		<p style="color: #000;background: #f5f5f5;font-size:11px;border: solid 1px #eee;padding: 2px 10px;">请注意：此邮件由 <a href="' . get_option('home') . '">' . get_option('blogname') . '</a> 自动发送，请勿直接回复。<br />如果此邮件不是您请求的，请忽略并删除！</p></div></div>';
+        $from = "From: \"" . get_option('blogname') . "\" <$wp_email>";
+        $headers = "$from\nContent-Type: text/html; charset=" . get_option('blog_charset') . "\n";
+        wp_mail( $to, $subject, $message, $headers );
+    }
 }
+add_action('comment_post', 'comment_mail_notify');
+// -- END ----------------------------------------
+
+// gravatar 镜像
+function qiniu_avatar($avatar) {
+    $avatar = str_replace(array("www.gravatar.com","0.gravatar.com","1.gravatar.com","2.gravatar.com","secure.gravatar.com","cn.gravatar.com"),"nzqrwm1zi.qnssl.com",$avatar);
+    return $avatar;
+}
+add_filter( 'get_avatar', 'qiniu_avatar', 10, 3 );
 
 ?>

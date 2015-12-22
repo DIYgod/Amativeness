@@ -126,6 +126,8 @@ $(document).ready(function ($) {
         }
     });
     headroom.init();
+
+    document.getElementById('linkcat-0').getElementsByClassName('label')[0].innerHTML = '小伙伴';
 });
 
 // 博客已运行XXX
