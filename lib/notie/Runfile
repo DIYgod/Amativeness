@@ -1,0 +1,17 @@
+register('deploy', ['build', 'git', 'publish'])
+
+alias('dev', 'gulp')
+
+alias('build', [
+  'gulp browser',
+  'gulp webpack'
+])
+
+register('git', () => {
+  var message = argv._[1] || 'update'
+  exec('git add -A')
+  exec(`git commit -m "${message}"`)
+  exec('git push origin gh-pages')
+})
+
+alias('publish', 'npm publish')

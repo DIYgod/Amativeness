@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Notie</title>
+    <style>
+      body {
+        font-family: Helvetica, serif;
+        margin: 0;
+        background-color: #f9f9f9
+      }
+      .header {
+        background-color: #03a9f4;
+        padding: 60px 30px;
+        color: #fff;
+        font-size: 60px;
+      }
+      .header a {
+        color: #fff;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      p.intro {
+        margin: 10px 0;
+        font-size: 20px;
+      }
+      button {
+        border: 1px solid transparent;
+        padding: 20px 30px;
+        border-radius: 2px;
+        background-color: #b1eaf1;
+        font-size: 20px;
+        outline: none;
+        cursor: pointer;
+        color: #698997;
+      }
+      button:hover {
+        background-color: #00BCD4;
+        color: #E0F7FA;
+      }
+      .main {
+        margin-top: 40px;
+      }
+      .link {
+        color: #698997;
+        text-decoration: none;
+        font-size: 24px;
+      }
+      .footer {
+        margin-top: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">Notie<p class="intro">a corner tip utility for Chelly</p></div>
+    </header>
+    <div class="main container">
+      <button onclick="notie('info', 'hello world', true)">info</button>
+      <button onclick="notie('success', 'hello world', true)">success</button>
+      <button onclick="notie('warning', 'hello world', true)">warning</button>
+      <button onclick="notie('error', 'hello world', true)">error</button>
+      <button onclick="notie('warning', 'hello <a href=#>world</a>', false)">never fade</button>
+      <button onclick="notie('info', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit quisquam quo consequatur, consequuntur exercitationem maxime qui voluptatibus error optio explicabo at ipsa porro <a href=#>veniam</a> dolores unde consectetur tempora nesciunt! Tenetur!', true)">huge text</button>
+      <footer class="footer">
+        <a href="https://github.com/egoist/notie" class="link">Star me on GitHub!</a>
+      </footer>
+    </div>
+
+    <script src="./browser/notie.js"></script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+@define-mixin colorful $bgColor, $borderColor, $color {
+  background-color: $bgColor;
+  border-color: $borderColor;
+  color: $color;
+  a {
+    color: $color;
+  }
+}
+
+.noties {
+  position: fixed;
+  right: 0;
+  top: 40px;
+  &:empty {
+    display: none;
+  }
+}
+
+.notie {
+  background-color: #ddd;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform .3s, opacity .3s;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  width: 200px;
+  font: 14px/1.4 Helvetica, serif;
+  word-wrap: break-word;
+  &.notie-auto-hide-disabled {
+    cursor: pointer;
+  }
+  &.notie-shown {
+    transform: translateX(-20px);
+    opacity: 1;
+  }
+  .notie-body {
+    padding: 10px 12px;
+  }
+  .notie-svg {
+    height: 23px;
+    display: block;
+    float: left;
+  }
+  .notie-text {
+    display: block;
+    padding-left: 30px;
+    padding-top: 2px;
+  }
+  svg {
+    height: 23px;
+    width: 23px;
+  }
+  &.notie-info {
+    @mixin colorful #C6E4F4, #A9D3EB, #477DAC;
+  }
+  &.notie-error {
+    @mixin colorful #EAC1BD, #D7A9A6, #AB2925;
+  }
+  &.notie-success {
+    @mixin colorful #D9F1CF, #C8E1BF, #748C6C;
+  }
+  &.notie-warning {
+    @mixin colorful #F7F2CF, #E8E2B2, #9C7D45;
+  }
+}

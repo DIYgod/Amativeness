@@ -3,9 +3,9 @@
             <span id=span_dt_dt></span>
             <p>
                 托管于<a href="http://www.aliyun.com/" target="_blank"> 阿里云</a>.
-                <a href="http://www.qiniu.com/" target="_blank">七牛</a> <a href="https://www.upyun.com/" target="_blank">UPYUN</a>提供文件云存储服务.
+                <a href="http://www.qiniu.com/" target="_blank">七牛</a> 提供文件云存储服务.
                 <a href="http://www.google.com/analytics/" target="_blank">Google Analytics </a>提供网站统计服务.
-                <a href="http://www.cloudxns.net/" target="_blank">CloudXNS </a>提供DNS解析服务.
+                <a href="http://www.cloudxns.net/" target="_blank">CloudXNS </a>提供 DNS 解析服务.
             </p>
             <p>&copy; 2015 <a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>.
                 由 <a href="http://wordpress.org" target="_blank">Wordpress</a> 强力驱动.
