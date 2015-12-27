@@ -164,11 +164,15 @@ if (!function_exists('amativeness_comment')) :
                     <header class="comment-meta comment-author vcard">
                         <?php
                         echo get_avatar($comment, 44);
-                        printf('<div class="comments-name">%1$s %2$s</div>',
+                        printf('<div class="comments-authore-title"><div class="comments-name">%1$s %2$s</div>',
                             get_comment_author_link(),
                             // If current post author is also comment author, make it known visually.
                             ($comment->user_id === $post->post_author) ? '<span class="comment-master">' . __('一只萌萌哒博主', 'amativeness') . '</span>' : ''
                         );
+                        get_author_class($comment->comment_author_email,$comment->user_id);
+                        echo '<div class="comments-ua">';
+                        useragent_output_custom();
+                        echo '</div></div>';
                         printf('<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
                             esc_url(get_comment_link($comment->comment_ID)),
                             get_comment_time('c'),
@@ -983,5 +987,42 @@ function qiniu_avatar($avatar) {
     return $avatar;
 }
 add_filter( 'get_avatar', 'qiniu_avatar', 10, 3 );
+
+/*
+// 默认头像
+add_filter( 'avatar_defaults', 'newgravatar' );
+
+function newgravatar ($avatar_defaults) {
+    $myavatar = 'https://dn-diygod.qbox.me/2222.jpg';
+    $avatar_defaults[$myavatar] = "岁纳京子默认头像";
+    return $avatar_defaults;
+}
+*/
+
+// 评论等级
+function get_author_class($comment_author_email){
+    global $wpdb;
+    $adminEmail = get_option('admin_email');
+    $author_count  =  count($wpdb->get_results(
+        "SELECT comment_ID as author_count FROM  $wpdb->comments WHERE comment_author_email = '$comment_author_email' "));
+    if($comment_author_email ==$adminEmail) return;
+    if($comment_author_email =='i@lwl12.com') {
+        echo '<div class="comments-class">我老婆</div>';
+        return;
+    }
+
+    if($author_count>=1 && $author_count<2)
+        echo '<div class="comments-class">抖M</div>';
+    else if($author_count>=2 && $author_count<5)
+        echo '<div class="comments-class">天然呆</div>';
+    else if($author_count>=5 && $author_count<10)
+        echo '<div class="comments-class">中二病</div>';
+    else if($author_count>=10 && $author_count<20)
+        echo '<div class="comments-class">傲娇</div>';
+    else if($author_count>=20 &&$author_count<40)
+        echo '<div class="comments-class">腹黑</div>';
+    else if($author_count>=40)
+        echo '<div class="comments-class">抖S</div>';
+}
 
 ?>

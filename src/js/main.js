@@ -85,6 +85,7 @@ $(document).ready(function ($) {
         return false;
     });
 
+    // 顶部头像动画
     document.getElementsByClassName('avatar')[0].onmouseover = function () {
         this.classList.add('animated', 'tada');
     };
@@ -98,17 +99,15 @@ $(document).ready(function ($) {
         $('.like-vote span').html(data.like);
     });
     $('.like-vote').click(function () {
-        if ($('.like-title').html() === 'Do you like me?') {
-            $.getJSON("https://www.anotherhome.net/api/vote/like.php?action=add", function (data) {
-                if (data.success) {
-                    $('.like-vote span').html(data.like);
-                    $('.like-title').html('我也喜欢你 (*≧▽≦)');
-                }
-                else {
-                    $('.like-title').html('你的爱我已经感受到了~');
-                }
-            });
-        }
+        $.getJSON("https://www.anotherhome.net/api/vote/like.php?action=add", function (data) {
+            if (data.success) {
+                $('.like-vote span').html(data.like);
+                $('.like-title').html('我也喜欢你 (*≧▽≦)');
+            }
+            else {
+                $('.like-title').html('你的爱我已经感受到了~');
+            }
+        });
     });
 
     // 博客已运行XXX
@@ -127,7 +126,41 @@ $(document).ready(function ($) {
     });
     headroom.init();
 
+    // 友链小工具文案
     document.getElementById('linkcat-0').getElementsByClassName('label')[0].innerHTML = '小伙伴';
+
+    // 版权信息
+    document.body.addEventListener('copy', function (e) {
+        if (window.getSelection().toString() && window.getSelection().toString().length > 42) {
+            setClipboardText(e);
+            alert('商业转载请联系作者获得授权，非商业转载请注明出处，谢谢合作。');
+        }
+    });
+
+    function setClipboardText(event) {
+        var clipboardData = event.clipboardData || window.clipboardData;
+        if (clipboardData) {
+            event.preventDefault();
+
+            var htmlData = ''
+                + '著作权归作者所有。<br>'
+                + '商业转载请联系作者获得授权，非商业转载请注明出处。<br>'
+                + '作者：DIYgod<br>'
+                + '链接：' + window.location.href + '<br>'
+                + '来源：Anotherhome<br><br>'
+                + window.getSelection().toString();
+            var textData = ''
+                + '著作权归作者所有。\n'
+                + '商业转载请联系作者获得授权，非商业转载请注明出处。\n'
+                + '作者：DIYgod\n'
+                + '链接：' + window.location.href + '\n'
+                + '来源：Anotherhome\n\n'
+                + window.getSelection().toString();
+
+            clipboardData.setData('text/html', htmlData);
+            clipboardData.setData('text/plain',textData);
+        }
+    }
 });
 
 // 博客已运行XXX

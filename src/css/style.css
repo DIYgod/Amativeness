@@ -1497,6 +1497,10 @@ canvas {
     border-radius: 3px;
 }
 
+.comment-block .comment-info .text-block {
+    padding: 0 10px;
+}
+
 .comment-block .text-block:hover {
     border: 1px solid #b9b9b9;
 }
@@ -1556,7 +1560,7 @@ canvas {
     font-size: 20px;
 }
 
-.comment-block .commentlist .comment-author img {
+.comment-block .commentlist .comment-author > img {
     width: 65px;
     height: 65px;
     border-radius: 50%;
@@ -1565,7 +1569,7 @@ canvas {
     margin-right: 15px;
 }
 
-.comment-block .commentlist .comment:hover .comment-author img {
+.comment-block .commentlist .comment:hover .comment-author > img {
     transform: rotate(360deg);
 }
 
@@ -1583,6 +1587,7 @@ canvas {
     color: #444;
     font-style: normal;
     font-weight: bolder;
+    display: inline-block;
 }
 
 .comment-block .commentlist .comment-author .comments-name .comment-master {
@@ -1592,19 +1597,23 @@ canvas {
     color: #3C763D;
     border-radius: 5px;
     padding: 1px 6px;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: normal;
 }
 
 .comment-block .commentlist .comment-author time {
     color: #aaa;
-    font-size: 10px;
+    font-size: 12px;
+    display: block;
 }
 
 .comment-block .commentlist .comment-content {
     line-height: 20px;
     font-size: 14px;
     margin-left: 80px;
+    white-space: normal;
+    word-break: break-all;
+    word-wrap: break-word;
 }
 
 .comment-block .commentlist .comment-content > p {
@@ -1612,7 +1621,7 @@ canvas {
 }
 
 .comment-block .commentlist .comment-content .comment-reply {
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .comment-block .commentlist > li{
@@ -1646,4 +1655,43 @@ canvas {
 
 .page-numbers.dots {
     background: #fff;
+}
+
+.comments-ua {
+    display: inline-block;
+}
+
+.comments-ua a {
+    color: #fff;
+    margin-left: 5px;
+    font-style: normal;
+    border-radius: 5px;
+    padding: 1px 6px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.comments-ua a:first-child {
+    background: #66CC66;
+}
+
+.comments-ua a:last-child {
+    background: #1e90ff;
+}
+
+.comment-block .commentlist .comment-author .comments-class {
+    display: inline-block;
+    margin-left: 10px;
+    font-style: normal;
+    background: #DFF0D8;
+    color: #3C763D;
+    border-radius: 5px;
+    padding: 3px 6px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.comments-authore-title {
+    height: 25px;
+    overflow: hidden;
 }
