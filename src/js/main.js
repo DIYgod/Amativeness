@@ -133,7 +133,8 @@ $(document).ready(function ($) {
     document.body.addEventListener('copy', function (e) {
         if (window.getSelection().toString() && window.getSelection().toString().length > 42) {
             setClipboardText(e);
-            alert('商业转载请联系作者获得授权，非商业转载请注明出处，谢谢合作。');
+            //alert('商业转载请联系作者获得授权，非商业转载请注明出处，谢谢合作。');
+            notie('info', '商业转载请联系作者获得授权，非商业转载请注明出处，谢谢合作。', true)
         }
     });
 
@@ -161,6 +162,17 @@ $(document).ready(function ($) {
             clipboardData.setData('text/plain',textData);
         }
     }
+
+    // ASpace
+    aSpace(document.getElementById('content'));
+    if (document.getElementById('comment-content')) {
+        document.getElementById('comment-content').addEventListener('change', function () {
+            this.value = aSpace(this.value);
+        });
+    }
+
+    var poi = new Audio('https://dn-diygod.qbox.me/poi.wav');
+    poi.play();
 });
 
 // 博客已运行XXX

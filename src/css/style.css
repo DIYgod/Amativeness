@@ -1695,3 +1695,13 @@ canvas {
     height: 25px;
     overflow: hidden;
 }
+
+.noties {
+    z-index: 999;
+}
+
+.notie {
+    font-family: "Avenir Next", Helvetica, Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif !important;
+    font-size: 13px !important;
+    line-height: 18px;
+}

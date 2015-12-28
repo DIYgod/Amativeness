@@ -1,0 +1,85 @@
+{
+  "_args": [
+    [
+      "aspace@0.0.3",
+      "/Users/DIYgod/Code/PhpstormProjects/Amativeness"
+    ]
+  ],
+  "_from": "aspace@0.0.3",
+  "_id": "aspace@0.0.3",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/aspace",
+  "_nodeVersion": "4.1.1",
+  "_npmUser": {
+    "email": "diy.d.god@gmail.com",
+    "name": "diygod"
+  },
+  "_npmVersion": "3.5.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "aspace",
+    "raw": "aspace@0.0.3",
+    "rawSpec": "0.0.3",
+    "scope": null,
+    "spec": "0.0.3",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_shasum": "0c38e3b865703118553096ec0d84ce622e8ec6c5",
+  "_shrinkwrap": null,
+  "_spec": "aspace@0.0.3",
+  "_where": "/Users/DIYgod/Code/PhpstormProjects/Amativeness",
+  "author": {
+    "name": "DIYgod"
+  },
+  "bugs": {
+    "url": "https://github.com/DIYgod/ASpace/issues"
+  },
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.1"
+  },
+  "description": "Add space between English and CJK",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "0c38e3b865703118553096ec0d84ce622e8ec6c5",
+    "tarball": "http://registry.npmjs.org/aspace/-/aspace-0.0.3.tgz"
+  },
+  "gitHead": "e1c3db7b6053bf0e3944416533ed6f731ababc02",
+  "homepage": "https://github.com/DIYgod/ASpace#readme",
+  "keywords": [
+    "CJK",
+    "Chinese",
+    "Japanese",
+    "Korean",
+    "space"
+  ],
+  "license": "MIT",
+  "main": "ASpace.js",
+  "maintainers": [
+    {
+      "name": "diygod",
+      "email": "diy.d.god@gmail.com"
+    }
+  ],
+  "name": "aspace",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DIYgod/ASpace.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.3"
+}

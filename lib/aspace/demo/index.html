@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AutoSpace Demo</title>
+</head>
+<body>
+    <script src="../ASpace.js"></script>
+    <div class="wrap">
+        文本节点自动加空格: 测试test测试test,test:test?test!test+test-test*test
+        <p>子元素自动加空格: test测试test测试</p>
+        <p class="no-space">设置no-space: test测试test测试</p>
+        <p>绑定onchange事件:<input type="text" onchange="this.value = aSpace(this.value);"></p>
+        不影响非文本节点内容:<img src="he测试ad.jpg" width="20px">
+    </div>
+    <script>
+        aSpace(document.getElementsByClassName('wrap'));
+    </script>
+</body>
+</html>

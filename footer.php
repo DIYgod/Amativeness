@@ -18,6 +18,8 @@
     </div>
     <?php wp_footer(); ?>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/headroom.js/dist/headroom.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/notie/browser/notie.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/aspace/ASpace.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/main.js"></script>
     <script>
         NProgress.set(1.0);

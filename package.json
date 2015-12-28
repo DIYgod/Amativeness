@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "aplayer": "^1.2.0",
+    "aspace": "0.0.3",
     "headroom.js": "^0.7.1",
     "nprogress": "^0.2.0"
   }
