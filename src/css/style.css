@@ -125,7 +125,7 @@ hr {
     height: 1px;
 }
 
-img {
+.main img {
     max-width: 100%;
     border-radius: 5px;
     -webkit-user-drag: none;
