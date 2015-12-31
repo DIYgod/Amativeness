@@ -132,6 +132,10 @@ hr {
     height: auto;
 }
 
+img {
+    max-width: 100%;
+}
+
 .sousuo {
     background: url(images/search-icon.png);
     width: 25px;
