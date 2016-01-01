@@ -1,36 +1,37 @@
 {
   "_args": [
     [
-      "aplayer@1.2.0",
-      "/Users/DIYgod/Desktop/Amativeness"
+      "aplayer@1.2.7",
+      "/Users/DIYgod/Code/PhpstormProjects/Amativeness"
     ]
   ],
-  "_from": "aplayer@1.2.0",
-  "_id": "aplayer@1.2.0",
+  "_from": "aplayer@1.2.7",
+  "_id": "aplayer@1.2.7",
   "_inCache": true,
+  "_installable": true,
   "_location": "/aplayer",
   "_nodeVersion": "4.1.1",
   "_npmUser": {
     "email": "diy.d.god@gmail.com",
     "name": "diygod"
   },
-  "_npmVersion": "3.3.4",
+  "_npmVersion": "3.5.2",
   "_phantomChildren": {},
   "_requested": {
     "name": "aplayer",
-    "raw": "aplayer@1.2.0",
-    "rawSpec": "1.2.0",
+    "raw": "aplayer@1.2.7",
+    "rawSpec": "1.2.7",
     "scope": null,
-    "spec": "1.2.0",
+    "spec": "1.2.7",
     "type": "version"
   },
   "_requiredBy": [
     "/"
   ],
-  "_shasum": "60d8e1d6383454ec7cf69b439be9598208fa1aff",
+  "_shasum": "a260ce639f006f9da197f2086f43c15075574559",
   "_shrinkwrap": null,
-  "_spec": "aplayer@1.2.0",
-  "_where": "/Users/DIYgod/Desktop/Amativeness",
+  "_spec": "aplayer@1.2.7",
+  "_where": "/Users/DIYgod/Code/PhpstormProjects/Amativeness",
   "author": {
     "name": "DIYgod"
   },
@@ -51,12 +52,11 @@
   },
   "directories": {},
   "dist": {
-    "shasum": "60d8e1d6383454ec7cf69b439be9598208fa1aff",
-    "tarball": "http://registry.npmjs.org/aplayer/-/aplayer-1.2.0.tgz"
+    "shasum": "a260ce639f006f9da197f2086f43c15075574559",
+    "tarball": "http://registry.npmjs.org/aplayer/-/aplayer-1.2.7.tgz"
   },
-  "gitHead": "28554b0f35864cad42e0a25cdd9a828edfdd3c19",
+  "gitHead": "e08cb961ad6ac6ef820dbc65c54ab5a17d779715",
   "homepage": "https://github.com/DIYgod/APlayer#readme",
-  "installable": true,
   "keywords": [
     "html5",
     "music",
@@ -72,6 +72,7 @@
   ],
   "name": "aplayer",
   "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DIYgod/APlayer.git"
@@ -79,5 +80,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.2.0"
+  "version": "1.2.7"
 }

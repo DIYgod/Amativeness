@@ -337,10 +337,12 @@ $aplayer-height-lrc: $aplayer-height + $lrc-height;
             font-size: 12px;
             color: #666;
             line-height: 20px;
+            height: 20px;
             padding: 0;
             margin: 0;
             transition: all 0.5s ease-out;
             opacity: 0.4;
+            overflow: hidden;
 
             &.aplayer-lrc-current {
                 opacity: 1;
@@ -348,7 +350,6 @@ $aplayer-height-lrc: $aplayer-height + $lrc-height;
         }
 
         .aplayer-lrc-contents {
-            position: absolute;
             width: 100%;
             transition: all 0.5s ease-out;
         }

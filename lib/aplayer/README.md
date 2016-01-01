@@ -2,7 +2,9 @@
 
 [![npm](https://img.shields.io/npm/v/aplayer.svg?style=flat-square)](https://www.npmjs.com/package/aplayer)
 [![npm](https://img.shields.io/npm/l/aplayer.svg?style=flat-square)](https://www.npmjs.com/package/aplayer)
+[![devDependency Status](https://img.shields.io/david/dev/DIYgod/aplayer.svg?style=flat-square)](https://david-dm.org/DIYgod/APlayer#info=devDependencies)
 [![npm](https://img.shields.io/npm/dt/aplayer.svg?style=flat-square)](https://www.npmjs.com/package/aplayer)
+[![Travis](https://img.shields.io/travis/DIYgod/APlayer.svg?style=flat-square)](https://travis-ci.org/DIYgod/APlayer)
 
 Wow, such a beautiful html5 music player
 
@@ -13,32 +15,30 @@ UI 参考网易云音乐外链播放器
 [Demo](https://www.anotherhome.net/file/APlayer)
 
 Screenshot
-![image](https://github.com/DIYgod/APlayer/raw/master/screenshot.png)
-![image](https://github.com/DIYgod/APlayer/raw/master/screenshot-lrc.png)
+![image](https://i.imgur.com/JDrJXCr.png)
+![image](https://i.imgur.com/eIRyqvT.png)
 
 ## Install
 
 ```
-npm install aplayer
+$ npm install aplayer
 ```
 
 ## Usage
 
-### HTML:
+### HTML
 
-```
-<link rel="stylesheet" href="APlayer.css">
+```HTML
+<link rel="stylesheet" href="APlayer.min.css">
 <!-- ... -->
-<div id="player1" class="aplayer">
-    <div style="padding: 10px; font-size: 10px; text-align: center;">(＞﹏＜) APlayer 加载中,好累的说...</div>
-</div>
+<div id="player1" class="aplayer"></div>
 <!-- ... -->
-<script src="APlayer.js"></script>
+<script src="APlayer.min.js"></script>
 ```
 
-### JS:
+### JS
 
-```
+```JS
 var ap = new APlayer({
     element: document.getElementById('player1'),
     narrow: false,
@@ -54,9 +54,9 @@ var ap = new APlayer({
 ap.init();
 ```
 
-### JS Initialized Options
+#### Options
 
-```
+```JS
 {
     element: document.getElementById('player1'),                       // Optional, player element
     narrow: false,                                                     // Optional, narrow style
@@ -71,17 +71,31 @@ ap.init();
 }
 ```
 
+#### API
+
++ `ap.init()`
++ `ap.play()`
++ `ap.pause()`
+
 ### With lrc
 
-Using [LRC format](https://en.wikipedia.org/wiki/LRC_(file_format))
+#### LRC format:
 
-HTML:
+Support multiple time tag, support three decimal second
 
 ```
-<link rel="stylesheet" href="APlayer.css">
+[mm:ss.xx]lyric
+[mm:ss.xxx]lyric
+[mm:ss.xx][mm:ss.xx][mm:ss.xx]lyric
+...
+```
+
+#### HTML:
+
+```HTML
+<link rel="stylesheet" href="APlayer.min.css">
 <!-- ... -->
 <div id="player1" class="aplayer">
-    <div style="padding: 10px; font-size: 10px; text-align: center;">(＞﹏＜) APlayer 加载中,好累的说...</div>
     <pre class="aplayer-lrc-content">
         [ti:平凡之路]
         [ar:朴树]
@@ -95,27 +109,33 @@ HTML:
         [00:17.37]你要走吗
         [00:23.20]易碎的 骄傲着
         [00:28.75]那也曾是我的模样
+        [00:34.55]沸腾着的 不安着的
+        [00:40.26]你要去哪
+        [00:46.00]谜一样的 沉默着的
+        [00:51.75]故事你真的在听吗
+        [00:56.25][03:25.78][04:10.64]我曾经跨过山和大海
+        [00:59.55][03:28.14][04:13.54]也穿过人山人海
+        [01:02.70][03:30.44]我曾经拥有着一切
+        [01:05.00][03:33.69]转眼都飘散如烟
+        [01:07.75][03:36.24]我曾经失落失望失掉所有方向
+        [01:13.46][03:42.04]直到看见平凡才是唯一的答案
         <!-- ... -->
     </pre>
 </div>
 <!-- ... -->
-<script src="APlayer.js"></script>
+<script src="APlayer.min.js"></script>
 ```
 
-JS:
+#### JS:
 
-Initialized Option: `showlrc: false`
+Option: `showlrc: false`
 
-### API
-
-+ `ap.init()`
-+ `ap.play()`
-+ `ap.pause()`
-
-### Development
+## Development
 
 ```
-gulp
+$ npm install
+$ npm install -g gulp
+$ gulp
 ```
 
 ## Todo
@@ -133,30 +153,11 @@ gulp
 ## Issues
 
 - [ ] 在 Firefox 中调整进度后, 播放到最后时音乐总时间会自动变长
-- [ ] 移动端各种浏览器触发事件的时机不同: 目前使用 loadedmetadata 代替 canplay
-```
-举例:
-WIFI环境:
-iOS: 加载? durationchange(真) loadedmetadata 点击 开始播放 loadeddata canplay canplaythrough
-Android Chrome: durationchange(真) loadedmetadata loadeddata canplay canplaythrough 点击 加载 开始播放
-Android UC: durationchange loadedmetadata loadeddata 加载 durationchange(真) canplay canplaythrough 点击 开始播放
-PC: 加载 开始播放 durationchange(真) loadedmetadata loadeddata canplay canplaythrough
-蜂窝环境:
-Android Chrome: durationchange loadedmetadata loadeddata canplay canplaythrough 点击 加载 开始播放 durationchange(真)
-Android UC: durationchange loadedmetadata loadeddata 点击 加载 开始播放 canplay canplaythrough durationchange(真)
-```
+- [ ] 移动端各种浏览器触发事件的时机不同
 - [ ] 移动版 Safari 和 部分 Android 浏览器不支持 volume
 - [ ] 部分 Android 浏览器不支持 duration
 
 
 ## LICENSE
 
-(MIT License)
-
-Copyright (c) DIYgod
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+MIT © [DIYgod](http://github.com/DIYgod)
