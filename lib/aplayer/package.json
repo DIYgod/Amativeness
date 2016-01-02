@@ -1,12 +1,12 @@
 {
   "_args": [
     [
-      "aplayer@1.2.7",
+      "aplayer@1.2.11",
       "/Users/DIYgod/Code/PhpstormProjects/Amativeness"
     ]
   ],
-  "_from": "aplayer@1.2.7",
-  "_id": "aplayer@1.2.7",
+  "_from": "aplayer@1.2.11",
+  "_id": "aplayer@1.2.11",
   "_inCache": true,
   "_installable": true,
   "_location": "/aplayer",
@@ -19,18 +19,18 @@
   "_phantomChildren": {},
   "_requested": {
     "name": "aplayer",
-    "raw": "aplayer@1.2.7",
-    "rawSpec": "1.2.7",
+    "raw": "aplayer@1.2.11",
+    "rawSpec": "1.2.11",
     "scope": null,
-    "spec": "1.2.7",
+    "spec": "1.2.11",
     "type": "version"
   },
   "_requiredBy": [
     "/"
   ],
-  "_shasum": "a260ce639f006f9da197f2086f43c15075574559",
+  "_shasum": "13cd10d365b2c13c6f6d500aa557084986907d6d",
   "_shrinkwrap": null,
-  "_spec": "aplayer@1.2.7",
+  "_spec": "aplayer@1.2.11",
   "_where": "/Users/DIYgod/Code/PhpstormProjects/Amativeness",
   "author": {
     "name": "DIYgod"
@@ -52,10 +52,10 @@
   },
   "directories": {},
   "dist": {
-    "shasum": "a260ce639f006f9da197f2086f43c15075574559",
-    "tarball": "http://registry.npmjs.org/aplayer/-/aplayer-1.2.7.tgz"
+    "shasum": "13cd10d365b2c13c6f6d500aa557084986907d6d",
+    "tarball": "http://registry.npmjs.org/aplayer/-/aplayer-1.2.11.tgz"
   },
-  "gitHead": "e08cb961ad6ac6ef820dbc65c54ab5a17d779715",
+  "gitHead": "c62083e7cc32a722b3a8b4ba416dfff6873d839b",
   "homepage": "https://github.com/DIYgod/APlayer#readme",
   "keywords": [
     "html5",
@@ -80,5 +80,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.2.7"
+  "version": "1.2.11"
 }

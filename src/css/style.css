@@ -1709,11 +1709,3 @@ canvas {
     font-size: 13px !important;
     line-height: 18px;
 }
-
-.aplayer .aplayer-pic img {
-    border-radius: 0;
-}
-
-.aplayer .aplayer-lrc p {
-    margin: 0!important;
-}

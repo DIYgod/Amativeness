@@ -5,6 +5,7 @@
 [![devDependency Status](https://img.shields.io/david/dev/DIYgod/aplayer.svg?style=flat-square)](https://david-dm.org/DIYgod/APlayer#info=devDependencies)
 [![npm](https://img.shields.io/npm/dt/aplayer.svg?style=flat-square)](https://www.npmjs.com/package/aplayer)
 [![Travis](https://img.shields.io/travis/DIYgod/APlayer.svg?style=flat-square)](https://travis-ci.org/DIYgod/APlayer)
+[![%e2%9d%a4](https://img.shields.io/badge/made%20with-%e2%9d%a4-ff69b4.svg?style=flat-square)](https://www.anotherhome.net/)
 
 Wow, such a beautiful html5 music player
 
@@ -66,7 +67,7 @@ ap.init();
         title: 'Preparation',                                          // Required, music title
         author: 'Hans Zimmer/Richard Harvey',                          // Required, music author
         url: 'http://7xifn9.com1.z0.glb.clouddn.com/Preparation.mp3',  // Required, music url
-        pic: 'http://7xifn9.com1.z0.glb.clouddn.com/Preparation.jpg'   // Required, music picture
+        pic: 'http://7xifn9.com1.z0.glb.clouddn.com/Preparation.jpg'   // Optional, music picture
     }
 }
 ```
@@ -137,6 +138,10 @@ $ npm install
 $ npm install -g gulp
 $ gulp
 ```
+
+## Related Projects
+
++ [APlayer-Typecho-Plugin](https://github.com/zgq354/APlayer-Typecho-Plugin)
 
 ## Todo
 
