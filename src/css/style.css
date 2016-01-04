@@ -97,10 +97,6 @@ body {
     color: #444 !important;
 }
 
-.aplayer {
-    line-height: initial;
-}
-
 a {
     outline: none;
     text-decoration: none;
@@ -1708,4 +1704,8 @@ canvas {
     font-family: "Avenir Next", Helvetica, Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif !important;
     font-size: 13px !important;
     line-height: 18px;
+}
+
+.widget_views {
+    font-size: 13px;
 }

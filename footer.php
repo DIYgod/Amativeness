@@ -10,7 +10,7 @@
             <p>&copy; 2016 <a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>.
                 由 <a href="http://wordpress.org" target="_blank">Wordpress</a> 强力驱动.
                 Theme By <a href="https://github.com/DIYgod/Amativeness" target="_blank">Amativeness</a>.
-                <a href="http://www.anotherhome.net/sitemap.html" target="_blank">站点地图</a>.
+                鲁ICP备16000184号.
             </p>
             <p>Made with <i class="icon-heart-1 throb" style="color: #d43f57;"></i> by DIYgod. </p>
         </div>
