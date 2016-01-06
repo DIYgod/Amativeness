@@ -50,6 +50,10 @@ Text Domain: Amativeness
     .round-date {
         display: none !important;
     }
+
+    .header-description {
+        background: url(https://dn-diygod.qbox.me/background2.jpg) !important;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -91,7 +95,7 @@ ul {
 
 body {
     line-height: 1;
-    background: #e2e2e2;
+    background-color: #e2e2e2;
     font-family: "Avenir Next", Helvetica, Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
     font-size: 15px;
     color: #444 !important;
@@ -985,7 +989,7 @@ form textarea {
     background-size: cover;
     height: 650px;
     position: relative;
-    background: url(https://dn-diygod.qbox.me/background.png);
+    background: url(https://dn-diygod.qbox.me/background1.jpg);
     width: 100%;
     background-size: cover;
 }
