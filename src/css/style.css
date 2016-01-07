@@ -52,7 +52,7 @@ Text Domain: Amativeness
     }
 
     .header-description {
-        background: url(https://dn-diygod.qbox.me/background2.jpg) !important;
+        background-image: url(https://dn-diygod.qbox.me/background2.jpg) !important;
     }
 }
 
@@ -985,13 +985,13 @@ form textarea {
 /* 站点标题 */
 
 .header-description {
-    background-position-y: 10%;
-    background-size: cover;
     height: 650px;
     position: relative;
-    background: url(https://dn-diygod.qbox.me/background1.jpg);
+    background-image: url(https://dn-diygod.qbox.me/background1.jpg);
     width: 100%;
     background-size: cover;
+    background-position: center 30px;
+    background-repeat: no-repeat;
 }
 
 #site-header {
