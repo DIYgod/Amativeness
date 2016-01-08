@@ -126,9 +126,6 @@ $(document).ready(function ($) {
     });
     headroom.init();
 
-    // 友链小工具文案
-    document.getElementById('linkcat-0').getElementsByClassName('label')[0].innerHTML = '小伙伴';
-
     // 版权信息
     document.body.addEventListener('copy', function (e) {
         if (window.getSelection().toString() && window.getSelection().toString().length > 42) {
@@ -171,8 +168,28 @@ $(document).ready(function ($) {
         });
     }
 
+    // poi
     var poi = new Audio('https://dn-diygod.qbox.me/poi.wav');
     poi.play();
+
+    // 关闭侧边栏
+    document.getElementsByClassName('close-side')[0].addEventListener('click', function () {
+        document.getElementsByClassName('side')[0].style.display = 'none';
+        document.getElementsByClassName('main')[0].style.width = '100%';
+    });
+
+    // 小工具跟随
+    var $sidebar   = $("#text-4"),
+        $last      = $("#secondary"),
+        $window    = $(window),
+        offset     = $last.offset().top + $last. height();
+    $window.scroll(function() {
+        if ($window.scrollTop() > offset) {
+            $sidebar.css({"position":"fixed","top":"40px","width":"22%","animation":"fade-in 0.5s"});
+        } else {
+            $sidebar.css({"position":"relative","top":"0","width":"initial","animation":"initial"});
+        }
+    });
 });
 
 // 博客已运行XXX
