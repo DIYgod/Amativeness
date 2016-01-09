@@ -169,8 +169,8 @@ $(document).ready(function ($) {
     }
 
     // poi
-    var poi = new Audio('https://dn-diygod.qbox.me/poi.wav');
-    poi.play();
+    // var poi = new Audio('https://dn-diygod.qbox.me/poi.wav');
+    // poi.play();
 
     // 关闭侧边栏
     document.getElementsByClassName('close-side')[0].addEventListener('click', function () {
@@ -190,6 +190,18 @@ $(document).ready(function ($) {
             $sidebar.css({"position":"relative","top":"0","width":"initial","animation":"initial"});
         }
     });
+
+    // 搜索
+    //function search() {
+    //    var searchInput = this.getElementsByClassName('search-input')[0];
+    //    if (searchInput.value) {
+    //        var url = 'https://www.google.com/search?q=site:anotherhome.net%20' + searchInput.value;
+    //        window.open(url, "_blank");
+    //        return false;
+    //    } else {
+    //        return false;
+    //    }
+    //}
 });
 
 // 博客已运行XXX

@@ -137,9 +137,12 @@ img {
 }
 
 .sousuo {
-    background: url(images/search-icon.png);
+    background-image: url(images/search-icon.png);
     width: 25px;
     height: 25px;
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* 导航栏 */
