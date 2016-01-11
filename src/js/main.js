@@ -191,6 +191,13 @@ $(document).ready(function ($) {
         }
     });
 
+    // 防重复评论
+    if (document.getElementById('submit')) {
+        document.getElementById('submit').addEventListener('click', function () {
+            this.value = '正在提交,好累呀~';
+        });
+    }
+
     // 搜索
     //function search() {
     //    var searchInput = this.getElementsByClassName('search-input')[0];

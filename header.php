@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/lib/aplayer/dist/APlayer.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/lib/nprogress/nprogress.min.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/lib/font-awesome/css/font-awesome.min.css">
     <script src='https://dn-diygod.qbox.me/jquery.min.js'></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/aplayer/dist/APlayer.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/nprogress/nprogress.min.js"></script>
@@ -71,7 +72,9 @@
             <div class="nav-right">
                 <form class="search-form" method="post" action="<?php bloginfo('url'); ?>">
                     <input type="text" name="s" class="search-input" placeholder="站内搜索">
-                    <button type="submit" class="search-submit sousuo"></button>
+                    <button type="submit" class="search-submit sousuo">
+                        <i class="fa fa-search"></i>
+                    </button>
                 </form>
             </div>
         </div>

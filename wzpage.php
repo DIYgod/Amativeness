@@ -15,7 +15,7 @@
             <p class="title">
                 <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
             </p>
-            <p class="article-meta"><i class="icon-heart"></i>发表于 <?php the_time('Y年n月j日') ?> • <i class="icon-eye-1"></i><?php if (function_exists('the_views')) { the_views(); } ?> • <i class="icon-comment"></i><?php comments_number('没有评论,快来呀!', '活捉 1 条', '活捉 % 条'); ?>
+            <p class="article-meta"><i class="fa fa-heart-o"></i>发表于 <?php the_time('Y年n月j日') ?> • <i class="fa fa-eye"></i><?php if (function_exists('the_views')) { the_views(); } ?> • <i class="fa fa-comment-o"></i><?php comments_number('没有评论,快来呀!', '活捉 1 条', '活捉 % 条'); ?>
             </p>
         <?php endif; // is_single() ?>
         <?php if (comments_open()) : ?>

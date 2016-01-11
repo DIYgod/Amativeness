@@ -13,7 +13,7 @@
                 <a href="https://www.anotherhome.net/sitemap.xml" target="_blank">站点地图</a>.
                 鲁ICP备16000184号.
             </p>
-            <p>Made with <i class="icon-heart-1 throb" style="color: #d43f57;"></i> by DIYgod. </p>
+            <p>Made with <i class="fa fa-heart throb" style="color: #d43f57;"></i> by DIYgod. </p>
         </div>
     </footer>
     </div>

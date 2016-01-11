@@ -1789,3 +1789,48 @@ canvas {
         opacity: 1;
     }
 }
+
+.fa {
+    margin: 0 .2em;
+}
+
+.watch-me {
+    font-size: 22px;
+}
+
+.watch-me a {
+    margin: 0 -5px;
+    color: #000;
+}
+
+.watch-me i {
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 44px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+    margin: .2em;
+}
+
+.weixin,
+.qq {
+    position: relative;
+}
+
+.weixin img,
+.qq img {
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    width: 200px;
+    max-width: none;
+}
+
+.weixin:hover img,
+.qq:hover img {
+    display: block;
+}
