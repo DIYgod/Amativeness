@@ -14,6 +14,10 @@ gulp.task('lib', function() {
         .pipe(gulp.dest('lib/nprogress'));
     gulp.src(['node_modules/headroom.js/**'])
         .pipe(gulp.dest('lib/headroom.js'));
+    gulp.src(['node_modules/aspace/**'])
+        .pipe(gulp.dest('lib/aspace'));
+    gulp.src(['node_modules/font-awesome/**'])
+        .pipe(gulp.dest('lib/font-awesome'));
 });
 
 // Build js files

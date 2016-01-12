@@ -6,7 +6,7 @@ if (post_password_required())
     <?php
     $args = array(
         'fields' => apply_filters('comment_form_default_fields', array(
-            'author' => '<div class="comment-info"><input class="text-block" id="author" name="author" type="text" value="" size="30"' . $aria_req . ' placeholder="昵称 *" />',
+            'author' => '<div class="comment-info"><input class="text-block" id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30"' . $aria_req . ' placeholder="昵称 *" />',
             'email' => '<input class="text-block" id="email" name="email" type="email" value="' . esc_attr($commenter['comment_author_email']) . '" size="30"' . $aria_req . ' placeholder="邮箱 *" />',
             'url' => '<input class="text-block" id="url" name="url" type="url" value="' . esc_attr($commenter['comment_author_url']) . '" size="30" placeholder="网址" /></div>',
         )),

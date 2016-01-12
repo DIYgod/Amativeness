@@ -23,6 +23,9 @@
     <script src="<?php echo get_template_directory_uri(); ?>/lib/aspace/ASpace.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/main.js"></script>
     <script>
+        <?php if(isset($_COOKIE['comment_author_'.COOKIEHASH])) {
+            echo "if (document.referrer.indexOf(location.host) === -1) {notie('success', '欢迎回来，亲爱的 ". $_COOKIE['comment_author_'.COOKIEHASH] ."酱', true);}";
+        } ?>
         NProgress.set(1.0);
     </script>
 </body>
