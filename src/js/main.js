@@ -49,12 +49,12 @@ $(document).ready(function ($) {
     var titleTime;
     document.addEventListener('visibilitychange', function () {
         if (document.hidden) {
-            $('[rel="shortcut icon"]').attr('href',"//www.anotherhome.net/wp-content/themes/Amativeness/fail.ico");
+            $('[rel="shortcut icon"]').attr('href', "//www.anotherhome.net/wp-content/themes/Amativeness/fail.ico");
             document.title = '(●—●)喔哟，崩溃啦！';
             clearTimeout(titleTime);
         }
         else {
-            $('[rel="shortcut icon"]').attr('href',"//www.anotherhome.net/wp-content/themes/Amativeness/favicon.ico");
+            $('[rel="shortcut icon"]').attr('href', "//www.anotherhome.net/wp-content/themes/Amativeness/favicon.ico");
             document.title = '(/≧▽≦/)咦！又好了！' + OriginTitile;
             titleTime = setTimeout(function () {
                 document.title = OriginTitile;
@@ -115,25 +115,28 @@ $(document).ready(function ($) {
 
     // 当页面向下滚动时，导航条消失，当页面向上滚动时，导航条出现
     var head = document.getElementsByClassName('navbar')[0];
-    var headroom  = new Headroom(head, {
-            "tolerance": 5,
-            "offset": 205,
-            "classes": {
-                "initial": "head-animated",
-                "pinned": "slideDown",
-                "unpinned": "slideUp"
+    var headroom = new Headroom(head, {
+        "tolerance": 5,
+        "offset": 205,
+        "classes": {
+            "initial": "head-animated",
+            "pinned": "slideDown",
+            "unpinned": "slideUp"
         }
     });
     headroom.init();
 
     // 版权信息
-    document.body.addEventListener('copy', function (e) {
-        if (window.getSelection().toString() && window.getSelection().toString().length > 42) {
-            setClipboardText(e);
-            //alert('商业转载请联系作者获得授权，非商业转载请注明出处，谢谢合作。');
-            notie('info', '商业转载请联系作者获得授权，非商业转载请注明出处，谢谢合作。', true)
-        }
-    });
+    var arCon = document.getElementsByClassName('article-content');
+    for (var i = 0; i < arCon.length; i++) {
+        arCon[i].addEventListener('copy', function (e) {
+            if (window.getSelection().toString() && window.getSelection().toString().length > 42) {
+                setClipboardText(e);
+                //alert('商业转载请联系作者获得授权，非商业转载请注明出处，谢谢合作。');
+                notie('info', '商业转载请联系作者获得授权，非商业转载请注明出处，谢谢合作。', true)
+            }
+        });
+    }
 
     function setClipboardText(event) {
         var clipboardData = event.clipboardData || window.clipboardData;
@@ -156,7 +159,7 @@ $(document).ready(function ($) {
                 + window.getSelection().toString();
 
             clipboardData.setData('text/html', htmlData);
-            clipboardData.setData('text/plain',textData);
+            clipboardData.setData('text/plain', textData);
         }
     }
 
@@ -179,15 +182,15 @@ $(document).ready(function ($) {
     });
 
     // 小工具跟随
-    var $sidebar   = $("#text-4"),
-        $last      = $("#secondary"),
-        $window    = $(window),
-        offset     = $last.offset().top + $last. height();
-    $window.scroll(function() {
+    var $sidebar = $("#text-4"),
+        $last = $("#secondary"),
+        $window = $(window),
+        offset = $last.offset().top + $last.height();
+    $window.scroll(function () {
         if ($window.scrollTop() > offset) {
-            $sidebar.css({"position":"fixed","top":"40px","width":"22%","animation":"fade-in 0.5s"});
+            $sidebar.css({"position": "fixed", "top": "40px", "width": "22%", "animation": "fade-in 0.5s"});
         } else {
-            $sidebar.css({"position":"relative","top":"0","width":"initial","animation":"initial"});
+            $sidebar.css({"position": "relative", "top": "0", "width": "initial", "animation": "initial"});
         }
     });
 
@@ -209,6 +212,7 @@ $(document).ready(function ($) {
     //        return false;
     //    }
     //}
+
 });
 
 // 博客已运行XXX
