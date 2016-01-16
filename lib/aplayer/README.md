@@ -17,7 +17,6 @@ UI 参考网易云音乐外链播放器
 
 Screenshot
 ![image](https://i.imgur.com/JDrJXCr.png)
-![image](https://i.imgur.com/eIRyqvT.png)
 
 ## Install
 
@@ -45,6 +44,7 @@ var ap = new APlayer({
     narrow: false,
     autoplay: true,
     showlrc: false,
+    theme: '#e6d0b2',
     music: {
         title: 'Preparation',
         author: 'Hans Zimmer/Richard Harvey',
@@ -61,8 +61,9 @@ ap.init();
 {
     element: document.getElementById('player1'),                       // Optional, player element
     narrow: false,                                                     // Optional, narrow style
-    autoplay: true,                                                    // Optional, autoplay, not supported by mobile browsers
+    autoplay: true,                                                    // Optional, autoplay song(s), not supported by mobile browsers
     showlrc: false,                                                    // Optional, show lrc
+    theme: '#e6d0b2',                                                  // Optional, theme color, default: #b7daff
     music: {                                                           // Required, music info
         title: 'Preparation',                                          // Required, music title
         author: 'Hans Zimmer/Richard Harvey',                          // Required, music author
@@ -77,6 +78,13 @@ ap.init();
 + `ap.init()`
 + `ap.play()`
 + `ap.pause()`
+
+#### Work with module bundler
+
+```js
+var APlayer = require('APlayer');
+var ap = new APlayer({...});
+```
 
 ### With lrc
 
@@ -129,14 +137,44 @@ Support multiple time tag, support three decimal second
 
 #### JS:
 
-Option: `showlrc: false`
+Option: `showlrc: true`
 
-## Development
+### With playlist
+
+#### JS:
+
+Option:
+
+```JS
+music: [
+    {
+        title: '...',
+        author: '...',
+        url: '...',
+        pic: '...'
+    },
+    {
+        title: '...',
+        author: '...',
+        url: '...',
+        pic: '...'
+    },
+    ...
+]
+```
+
+## Run in development
 
 ```
 $ npm install
-$ npm install -g gulp
-$ gulp
+$ npm run dev
+```
+
+## Make a release
+
+```
+$ npm install
+$ npm run build
 ```
 
 ## Related Projects
@@ -153,7 +191,8 @@ $ gulp
 - [x] 歌词展示
 - [x] 默认选项
 - [x] 移动端兼容性
-- [ ] 播放列表
+- [x] 播放列表
+- [x] 播放暂停按钮切换动画
 
 ## Issues
 
