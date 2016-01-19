@@ -6,7 +6,7 @@
     ]
   ],
   "_from": "aplayer@latest",
-  "_id": "aplayer@1.3.4",
+  "_id": "aplayer@1.3.6",
   "_inCache": true,
   "_installable": true,
   "_location": "/aplayer",
@@ -28,7 +28,7 @@
   "_requiredBy": [
     "/"
   ],
-  "_shasum": "dcad17143cd20f761e0faeb8de038ad712b4e648",
+  "_shasum": "fc174eb1d51f71b4f3cafd7fa68df1a49ea676c6",
   "_shrinkwrap": null,
   "_spec": "aplayer",
   "_where": "/Users/DIYgod/Code/PhpstormProjects/Amativeness",
@@ -52,10 +52,10 @@
   },
   "directories": {},
   "dist": {
-    "shasum": "dcad17143cd20f761e0faeb8de038ad712b4e648",
-    "tarball": "http://registry.npmjs.org/aplayer/-/aplayer-1.3.4.tgz"
+    "shasum": "fc174eb1d51f71b4f3cafd7fa68df1a49ea676c6",
+    "tarball": "http://registry.npmjs.org/aplayer/-/aplayer-1.3.6.tgz"
   },
-  "gitHead": "a77b723c6ecce7bb4008bd151e4c64e709740846",
+  "gitHead": "58df0cd15117636d7a4cf018dd56c29057ba74cf",
   "homepage": "https://github.com/DIYgod/APlayer#readme",
   "keywords": [
     "html5",
@@ -82,5 +82,5 @@
     "dev": "gulp",
     "test": "gulp release"
   },
-  "version": "1.3.4"
+  "version": "1.3.6"
 }
