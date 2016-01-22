@@ -17,5 +17,3 @@ $ gulp
 ## DEMO
 
 [Anotherhome](http://www.anotherhome.net)
-
-
