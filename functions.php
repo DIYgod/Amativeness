@@ -171,7 +171,8 @@ if (!function_exists('amativeness_comment')) :
                         );
                         get_author_class($comment->comment_author_email,$comment->user_id);
                         echo '<div class="comments-ua">';
-                        useragent_output_custom();
+                        if(function_exists(useragent_output_custom) === true)
+                            useragent_output_custom();
                         echo '</div></div>';
                         printf('<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
                             esc_url(get_comment_link($comment->comment_ID)),
