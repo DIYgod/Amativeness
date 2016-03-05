@@ -20,7 +20,7 @@
     <?php wp_footer(); ?>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/headroom.js/dist/headroom.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/notie/browser/notie.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/lib/aspace/ASpace.min.js"></script>
+    <!--<script src="--><?php //echo get_template_directory_uri(); ?><!--/lib/aspace/ASpace.min.js"></script>-->
     <script src="<?php echo get_template_directory_uri(); ?>/main.js"></script>
     <script>
         <?php if(isset($_COOKIE['comment_author_'.COOKIEHASH])) {

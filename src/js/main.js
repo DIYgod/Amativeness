@@ -164,12 +164,12 @@ $(document).ready(function ($) {
     }
 
     // ASpace
-    aSpace(document.getElementById('content'));
-    if (document.getElementById('comment-content')) {
-        document.getElementById('comment-content').addEventListener('change', function () {
-            this.value = aSpace(this.value);
-        });
-    }
+    //aSpace(document.getElementById('content'));
+    //if (document.getElementById('comment-content')) {
+    //    document.getElementById('comment-content').addEventListener('change', function () {
+    //        this.value = aSpace(this.value);
+    //    });
+    //}
 
     // poi
     // var poi = new Audio('https://dn-diygod.qbox.me/poi.wav');
@@ -213,6 +213,66 @@ $(document).ready(function ($) {
     //    }
     //}
 
+
+    // APlayer
+    if (document.getElementById('player5')) {
+        var ap5 = new APlayer({    //2419
+            element: document.getElementById('player5'),
+            autoplay: false,
+            showlrc: true,
+            music: {
+                title: '九九八十一',
+                author: '肥皂菌',
+                url: 'https://dn-diygod.qbox.me/九九八十一.mp3',
+                pic: 'https://dn-diygod.qbox.me/九九八十一.jpg'
+            }
+        });
+        ap5.init();
+    }
+
+    if (document.getElementById('player4')) {
+        var ap4 = new APlayer({    // 2361
+            element: document.getElementById('player4'),
+            autoplay: false,
+            showlrc: true,
+            music: {
+                title: '回レ！雪月花',
+                author: '小倉唯',
+                url: 'https://dn-diygod.qbox.me/回レ！雪月花.mp3',
+                pic: 'https://dn-diygod.qbox.me/回レ！雪月花.jpg'
+            }
+        });
+        ap4.init();
+    }
+
+    if (document.getElementById('player3')) {
+        var ap3 = new APlayer({    // 2322
+            element: document.getElementById('player3'),
+            autoplay: false,
+            showlrc: true,
+            music: {
+                title: 'secret base ~君がくれたもの~',
+                author: '茅野愛衣',
+                url: 'https://dn-diygod.qbox.me/secretbase.mp3',
+                pic: 'https://dn-diygod.qbox.me/secretbase.jpg'
+            }
+        });
+        ap3.init();
+    }
+
+    if (document.getElementById('player2')) {
+        var ap2 = new APlayer({    // 2167
+            element: document.getElementById('player2'),
+            autoplay: false,
+            music: {
+                title: 'Preparation',
+                author: 'Hans Zimmer/Richard Harvey',
+                url: 'https://dn-diygod.qbox.me/Preparation.mp3',
+                pic: 'https://dn-diygod.qbox.me/Preparation.jpg'
+            }
+        });
+        ap2.init();
+    }
 });
 
 // 博客已运行XXX
