@@ -1,6 +1,7 @@
     <footer id="colophon" role="contentinfo">
+        <div class="footer-image"></div>
         <div class="container">
-            <span id=span_dt_dt></span>
+            <p>博客已萌萌哒运行<span id=span_dt_dt></span><span class="my-face">(●'◡'●)ﾉ♥</span></p>
             <p>
                 托管于<a href="http://www.aliyun.com/" target="_blank"> 阿里云</a>.
                 <a href="http://www.qiniu.com/" target="_blank">七牛</a> 提供文件云存储服务.

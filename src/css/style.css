@@ -54,6 +54,10 @@ Text Domain: Amativeness
     .header-description {
         background-image: url(https://dn-diygod.qbox.me/background2.jpg) !important;
     }
+
+    #back-to-top {
+        display: none !important;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -532,7 +536,7 @@ pre code {
 
 footer {
     text-align: center;
-    margin-top: 40px;
+    margin-top: -10px;
     color: rgb(136, 136, 136);
     font-size: 12px;
     line-height: 1.5;
@@ -834,12 +838,15 @@ form textarea {
     position: fixed;
     right: 50px;
     bottom: 80px;
-    width: 48px;
-    height: 48px;
+    /*width: 48px;*/
+    /*height: 48px;*/
     z-index: 999;
-    border-radius: 50%;
-    background: #FFF;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    /*border-radius: 50%;*/
+    /*background: #FFF;*/
+    /*box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);*/
+    width: 70px;
+    height: 221px;
+    background: url(https://dn-diygod.qbox.me/topscroll.png);
 }
 
 #back-to-top:hover {
@@ -1822,4 +1829,20 @@ canvas {
 .weixin:hover img,
 .qq:hover img {
     display: block;
+}
+
+.footer-image {
+    background: url(https://dn-diygod.qbox.me/footer01.png) no-repeat center;
+    height: 368px;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+}
+
+footer .container {
+    background: #232323;
+    width: 100%;
+    top: 294px;
+    padding: 15px 0 10px;
+    max-width: 100% !important;
 }
