@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/lib/aplayer/dist/APlayer.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/lib/nprogress/nprogress.min.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/lib/balloon-css/balloon.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/lib/font-awesome/css/font-awesome.min.css">
     <script src='https://dn-diygod.qbox.me/jquery.min.js'></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/aplayer/dist/APlayer.min.js"></script>

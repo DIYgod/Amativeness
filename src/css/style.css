@@ -21,15 +21,15 @@ Text Domain: Amativeness
     }
 
     .header-description {
-        height: 500px !important;
+        height: 450px !important;
     }
 
     .header-description .scene {
-        height: 500px !important;
+        height: 450px !important;
     }
 
     .scene img {
-        min-height: 500px !important;
+        min-height: 450px !important;
     }
 
     #information {
@@ -49,10 +49,6 @@ Text Domain: Amativeness
 
     .round-date {
         display: none !important;
-    }
-
-    .header-description {
-        background-image: url(https://dn-diygod.qbox.me/background2.jpg) !important;
     }
 
     #back-to-top {
@@ -1202,7 +1198,7 @@ canvas {
     }
 
     100% {
-        -webkit-transform: scale(1) rotate(0);
+        -webkit-transform: scale(1) rotate(0deg);
     }
 }
 
@@ -1228,8 +1224,8 @@ canvas {
     }
 
     100% {
-        -webkit-transform: scale(1) rotate(0);
-        transform: scale(1) rotate(0);
+        -webkit-transform: scale(1) rotate(0deg);
+        transform: scale(1) rotate(0deg);
     }
 }
 
@@ -1845,4 +1841,20 @@ footer .container {
     top: 294px;
     padding: 15px 0 10px;
     max-width: 100% !important;
+}
+
+.houtai {
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 700px) {
+    #primary-navigation>div {
+        width: 610px;
+    }
+
+    .navbar .container {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
 }

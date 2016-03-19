@@ -11,13 +11,15 @@ $(document).ready(function ($) {
         });
     };
     // 判断位置控制 返回顶部的显隐
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > 700) {
-            $("#back-to-top").fadeIn(800);
-        } else {
-            $("#back-to-top").fadeOut(800);
-        }
-    });
+    if ($(window).width() > 800) {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 700) {
+                $("#back-to-top").fadeIn(800);
+            } else {
+                $("#back-to-top").fadeOut(800);
+            }
+        });
+    }
     // 启用
     $.scrollto("#back-to-top", 800);
 

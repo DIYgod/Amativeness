@@ -1,0 +1,85 @@
+{
+  "_args": [
+    [
+      "balloon-css",
+      "/Users/DIYgod/Code/PhpstormProjects/Amativeness"
+    ]
+  ],
+  "_from": "balloon-css@latest",
+  "_id": "balloon-css@0.2.2",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/balloon-css",
+  "_nodeVersion": "5.5.0",
+  "_npmOperationalInternal": {
+    "host": "packages-13-west.internal.npmjs.com",
+    "tmp": "tmp/balloon-css-0.2.2.tgz_1457978241433_0.0735802841372788"
+  },
+  "_npmUser": {
+    "email": "claudiohw@gmail.com",
+    "name": "kazzkiq"
+  },
+  "_npmVersion": "3.7.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "balloon-css",
+    "raw": "balloon-css",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/balloon-css/-/balloon-css-0.2.2.tgz",
+  "_shasum": "47dcb7dfcf9874c7940e27121e3da714253f6822",
+  "_shrinkwrap": null,
+  "_spec": "balloon-css",
+  "_where": "/Users/DIYgod/Code/PhpstormProjects/Amativeness",
+  "author": {
+    "name": "Claudio Holanda"
+  },
+  "bugs": {
+    "url": "https://github.com/kazzkiq/balloon.css/issues"
+  },
+  "dependencies": {},
+  "description": "Simple tooltips made of pure CSS",
+  "devDependencies": {
+    "less": "^2.6.1",
+    "less-plugin-clean-css": "^1.5.1",
+    "node-sass": "^3.4.2"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "47dcb7dfcf9874c7940e27121e3da714253f6822",
+    "tarball": "http://registry.npmjs.org/balloon-css/-/balloon-css-0.2.2.tgz"
+  },
+  "files": [
+    "src/balloon.scss"
+  ],
+  "gitHead": "2270326f7345f3151cb2d2b3b08f99177efc9388",
+  "homepage": "http://kazzkiq.github.io/balloon.css/",
+  "license": "MIT",
+  "main": "src/balloon.scss",
+  "maintainers": [
+    {
+      "name": "kazzkiq",
+      "email": "claudiohw@gmail.com"
+    }
+  ],
+  "name": "balloon-css",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kazzkiq/balloon.css.git"
+  },
+  "scripts": {
+    "build-all": "npm run build-sass && npm run build-less",
+    "build-less": "lessc src/balloon.less ./balloon.css && lessc --clean-css src/balloon.less ./balloon.min.css",
+    "build-sass": "node-sass src/balloon.scss ./balloon.css && node-sass src/balloon.scss ./balloon.min.css --output-style compressed",
+    "watch-sass": "node-sass --watch src/balloon.scss src/balloon.css"
+  },
+  "version": "0.2.2"
+}
