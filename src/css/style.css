@@ -845,10 +845,6 @@ form textarea {
     background: url(https://dn-diygod.qbox.me/topscroll.png);
 }
 
-#back-to-top:hover {
-    background: rgba(255, 255, 255, 0.6);
-}
-
 #back-to-top #rocket {
     margin: 8px;
 }
@@ -1848,13 +1844,21 @@ footer .container {
     left: 0;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
     #primary-navigation>div {
-        width: 610px;
+        width: 710px;
     }
 
     .navbar .container {
         overflow-x: scroll;
         overflow-y: hidden;
     }
+}
+
+#evanyou {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
