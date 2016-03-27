@@ -1,16 +1,20 @@
 {
   "_args": [
     [
-      "aplayer",
+      "aplayer@1.3.9",
       "/Users/DIYgod/Code/PhpstormProjects/Amativeness"
     ]
   ],
-  "_from": "aplayer@latest",
-  "_id": "aplayer@1.3.6",
+  "_from": "aplayer@1.3.9",
+  "_id": "aplayer@1.3.9",
   "_inCache": true,
   "_installable": true,
   "_location": "/aplayer",
   "_nodeVersion": "4.1.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/aplayer-1.3.9.tgz_1459100280571_0.294438396114856"
+  },
   "_npmUser": {
     "email": "diy.d.god@gmail.com",
     "name": "diygod"
@@ -19,18 +23,18 @@
   "_phantomChildren": {},
   "_requested": {
     "name": "aplayer",
-    "raw": "aplayer",
-    "rawSpec": "",
+    "raw": "aplayer@1.3.9",
+    "rawSpec": "1.3.9",
     "scope": null,
-    "spec": "latest",
-    "type": "tag"
+    "spec": "1.3.9",
+    "type": "version"
   },
   "_requiredBy": [
     "/"
   ],
-  "_shasum": "fc174eb1d51f71b4f3cafd7fa68df1a49ea676c6",
+  "_shasum": "3d2104a7b4bb3540127bb74a6e628b04e5df7a39",
   "_shrinkwrap": null,
-  "_spec": "aplayer",
+  "_spec": "aplayer@1.3.9",
   "_where": "/Users/DIYgod/Code/PhpstormProjects/Amativeness",
   "author": {
     "name": "DIYgod"
@@ -41,21 +45,24 @@
   "dependencies": {},
   "description": "Wow, such a beautiful html5 music player",
   "devDependencies": {
+    "babel-preset-es2015": "^6.6.0",
     "browser-sync": "^2.10.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.0",
     "gulp-cssnano": "^2.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.1"
   },
   "directories": {},
   "dist": {
-    "shasum": "fc174eb1d51f71b4f3cafd7fa68df1a49ea676c6",
-    "tarball": "http://registry.npmjs.org/aplayer/-/aplayer-1.3.6.tgz"
+    "shasum": "3d2104a7b4bb3540127bb74a6e628b04e5df7a39",
+    "tarball": "http://registry.npmjs.org/aplayer/-/aplayer-1.3.9.tgz"
   },
-  "gitHead": "58df0cd15117636d7a4cf018dd56c29057ba74cf",
+  "gitHead": "ccfb471d241c86c7ddaab676c65568ee2f192f50",
   "homepage": "https://github.com/DIYgod/APlayer#readme",
   "keywords": [
     "html5",
@@ -82,5 +89,5 @@
     "dev": "gulp",
     "test": "gulp release"
   },
-  "version": "1.3.6"
+  "version": "1.3.9"
 }
