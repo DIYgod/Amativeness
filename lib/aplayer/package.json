@@ -1,19 +1,19 @@
 {
   "_args": [
     [
-      "aplayer@1.3.9",
+      "aplayer@1.3.10",
       "/Users/DIYgod/Code/PhpstormProjects/Amativeness"
     ]
   ],
-  "_from": "aplayer@1.3.9",
-  "_id": "aplayer@1.3.9",
+  "_from": "aplayer@1.3.10",
+  "_id": "aplayer@1.3.10",
   "_inCache": true,
   "_installable": true,
   "_location": "/aplayer",
   "_nodeVersion": "4.1.1",
   "_npmOperationalInternal": {
     "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/aplayer-1.3.9.tgz_1459100280571_0.294438396114856"
+    "tmp": "tmp/aplayer-1.3.10.tgz_1459272134884_0.1640461606439203"
   },
   "_npmUser": {
     "email": "diy.d.god@gmail.com",
@@ -23,18 +23,18 @@
   "_phantomChildren": {},
   "_requested": {
     "name": "aplayer",
-    "raw": "aplayer@1.3.9",
-    "rawSpec": "1.3.9",
+    "raw": "aplayer@1.3.10",
+    "rawSpec": "1.3.10",
     "scope": null,
-    "spec": "1.3.9",
+    "spec": "1.3.10",
     "type": "version"
   },
   "_requiredBy": [
     "/"
   ],
-  "_shasum": "3d2104a7b4bb3540127bb74a6e628b04e5df7a39",
+  "_shasum": "40bf8d0bbeff8ddb65b453e27e7107c8a454f4cb",
   "_shrinkwrap": null,
-  "_spec": "aplayer@1.3.9",
+  "_spec": "aplayer@1.3.10",
   "_where": "/Users/DIYgod/Code/PhpstormProjects/Amativeness",
   "author": {
     "name": "DIYgod"
@@ -59,10 +59,10 @@
   },
   "directories": {},
   "dist": {
-    "shasum": "3d2104a7b4bb3540127bb74a6e628b04e5df7a39",
-    "tarball": "http://registry.npmjs.org/aplayer/-/aplayer-1.3.9.tgz"
+    "shasum": "40bf8d0bbeff8ddb65b453e27e7107c8a454f4cb",
+    "tarball": "http://registry.npmjs.org/aplayer/-/aplayer-1.3.10.tgz"
   },
-  "gitHead": "ccfb471d241c86c7ddaab676c65568ee2f192f50",
+  "gitHead": "512d66ce0578c960f1df1dd1cbafb15ede01578c",
   "homepage": "https://github.com/DIYgod/APlayer#readme",
   "keywords": [
     "html5",
@@ -89,5 +89,5 @@
     "dev": "gulp",
     "test": "gulp release"
   },
-  "version": "1.3.9"
+  "version": "1.3.10"
 }

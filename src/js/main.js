@@ -14,9 +14,13 @@ $(document).ready(function ($) {
     if ($(window).width() > 800) {
         $(window).scroll(function () {
             if ($(window).scrollTop() > 700) {
-                $("#back-to-top").fadeIn(800);
+                $("#back-to-top").animate({
+                    top: $(window).height() - 980 + 'px'
+                });
             } else {
-                $("#back-to-top").fadeOut(800);
+                $("#back-to-top").animate({
+                    top: '-900px'
+                });
             }
         });
     }
@@ -217,6 +221,20 @@ $(document).ready(function ($) {
 
 
     // APlayer
+    // if (document.getElementById('player6')) {
+    //     var ap6 = new APlayer({    //2523
+    //         element: document.getElementById('player6'),
+    //         autoplay: false,
+    //         showlrc: true,
+    //         music: {
+    //             title: 'The Sound Of Silence',
+    //             author: 'Simon',
+    //             url: 'https://dn-diygod.qbox.me/The Sound Of Silence.mp3',
+    //             pic: 'https://dn-diygod.qbox.me/The Sound Of Silence.jpg'
+    //         }
+    //     });
+    //     ap6.init();
+    // }
     if (document.getElementById('player5')) {
         var ap5 = new APlayer({    //2419
             element: document.getElementById('player5'),

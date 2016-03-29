@@ -829,20 +829,14 @@ form textarea {
 /* 返回顶部小火箭 */
 
 #back-to-top {
-    display: none;
     cursor: pointer;
     position: fixed;
     right: 50px;
-    bottom: 80px;
-    /*width: 48px;*/
-    /*height: 48px;*/
+    top: -900px;
     z-index: 999;
-    /*border-radius: 50%;*/
-    /*background: #FFF;*/
-    /*box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);*/
     width: 70px;
     height: 221px;
-    background: url(https://dn-diygod.qbox.me/topscroll.png);
+    background: url(https://dn-diygod.qbox.me/scroll.png);
 }
 
 #back-to-top #rocket {
