@@ -12,15 +12,14 @@ $(document).ready(function ($) {
     };
     // 判断位置控制 返回顶部的显隐
     if ($(window).width() > 800) {
+        var backTo = $("#back-to-top");
+        var backHeight = $(window).height() - 980 + 'px';
         $(window).scroll(function () {
-            if ($(window).scrollTop() > 700) {
-                $("#back-to-top").animate({
-                    top: $(window).height() - 980 + 'px'
-                });
-            } else {
-                $("#back-to-top").animate({
-                    top: '-900px'
-                });
+            if ($(window).scrollTop() > 700 && backTo.css('top') === '-900px') {
+                backTo.css('top', backHeight);
+            }
+            else if ($(window).scrollTop() <= 700 && backTo.css('top') !== '-900px') {
+                backTo.css('top', '-900px');
             }
         });
     }
@@ -221,20 +220,20 @@ $(document).ready(function ($) {
 
 
     // APlayer
-    // if (document.getElementById('player6')) {
-    //     var ap6 = new APlayer({    //2523
-    //         element: document.getElementById('player6'),
-    //         autoplay: false,
-    //         showlrc: true,
-    //         music: {
-    //             title: 'The Sound Of Silence',
-    //             author: 'Simon',
-    //             url: 'https://dn-diygod.qbox.me/The Sound Of Silence.mp3',
-    //             pic: 'https://dn-diygod.qbox.me/The Sound Of Silence.jpg'
-    //         }
-    //     });
-    //     ap6.init();
-    // }
+    if (document.getElementById('player7')) {
+        var ap7 = new APlayer({    //2537
+            element: document.getElementById('player7'),
+            autoplay: false,
+            showlrc: true,
+            music: {
+                title: '光るなら',
+                author: '《四月是你的谎言》OP',
+                url: 'https://dn-diygod.qbox.me/光るなら.mp3',
+                pic: 'https://dn-diygod.qbox.me/光るなら.png'
+            }
+        });
+        ap7.init();
+    }
     if (document.getElementById('player5')) {
         var ap5 = new APlayer({    //2419
             element: document.getElementById('player5'),
