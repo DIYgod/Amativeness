@@ -62,14 +62,15 @@ ap.init();
     element: document.getElementById('player1'),                       // Optional, player element
     narrow: false,                                                     // Optional, narrow style
     autoplay: true,                                                    // Optional, autoplay song(s), not supported by mobile browsers
-    showlrc: false,                                                    // Optional, show lrc
+    showlrc: 0,                                                        // Optional, show lrc, can be 0, 1, 2, see: ###With lrc
     mutex: true,                                                       // Optional, pause other players when this player playing
     theme: '#e6d0b2',                                                  // Optional, theme color, default: #b7daff
-    music: {                                                           // Required, music info
+    music: {                                                           // Required, music info, see: ###With playlist
         title: 'Preparation',                                          // Required, music title
         author: 'Hans Zimmer/Richard Harvey',                          // Required, music author
         url: 'http://7xifn9.com1.z0.glb.clouddn.com/Preparation.mp3',  // Required, music url
         pic: 'http://7xifn9.com1.z0.glb.clouddn.com/Preparation.jpg'   // Optional, music picture
+        lrc: '[00:00.00]lrc here\n[00:01.00]aplayer'                   // Optional, lrc, see: ###With lrc
     }
 }
 ```
@@ -84,10 +85,14 @@ ap.init();
 
 ```js
 var APlayer = require('APlayer');
-var ap = new APlayer({...});
+var ap = new APlayer({
+    // ...
+});
 ```
 
 ### With lrc
+
+Show lrc, you can put LRC in JS or HTML as you like.
 
 #### LRC format:
 
@@ -100,47 +105,48 @@ Support multiple time tag, support three decimal second
 ...
 ```
 
-#### HTML:
+#### LRC in JS:
+
+JS:
+
+```js
+{
+    showlrc: 1,
+    music: {
+        lrc: '[00:00.00]lrc here\n[00:01.00]aplayer'    // lrc here, separate lines with \n
+    }
+}
+```
+
+#### LRC in HTML:
+
+JS:
+
+```js
+{
+    showlrc: 2
+}
+```
+
+HTML:
 
 ```HTML
-<link rel="stylesheet" href="APlayer.min.css">
-<!-- ... -->
 <div id="player1" class="aplayer">
     <pre class="aplayer-lrc-content">
-        [ti:平凡之路]
-        [ar:朴树]
-        [al:《后会无期》主题歌]
-        [by:周敏]
-
         [00:00.00]平凡之路 - 朴树
         [00:04.01]作词：韩寒 朴树
         [00:08.02]作曲：朴树 编曲：朴树
         [00:12.02]徘徊着的 在路上的
         [00:17.37]你要走吗
         [00:23.20]易碎的 骄傲着
-        [00:28.75]那也曾是我的模样
-        [00:34.55]沸腾着的 不安着的
-        [00:40.26]你要去哪
-        [00:46.00]谜一样的 沉默着的
-        [00:51.75]故事你真的在听吗
-        [00:56.25][03:25.78][04:10.64]我曾经跨过山和大海
-        [00:59.55][03:28.14][04:13.54]也穿过人山人海
-        [01:02.70][03:30.44]我曾经拥有着一切
-        [01:05.00][03:33.69]转眼都飘散如烟
-        [01:07.75][03:36.24]我曾经失落失望失掉所有方向
-        [01:13.46][03:42.04]直到看见平凡才是唯一的答案
         <!-- ... -->
     </pre>
 </div>
-<!-- ... -->
-<script src="APlayer.min.js"></script>
 ```
 
-#### JS:
-
-Option: `showlrc: true`
-
 ### With playlist
+
+Show multiple music.
 
 #### JS:
 
@@ -149,16 +155,16 @@ Option:
 ```JS
 music: [
     {
-        title: '...',
-        author: '...',
-        url: '...',
-        pic: '...'
+        title: '',
+        author: '',
+        url: '',
+        pic: ''
     },
     {
-        title: '...',
-        author: '...',
-        url: '...',
-        pic: '...'
+        title: '',
+        author: '',
+        url: '',
+        pic: ''
     },
     ...
 ]
