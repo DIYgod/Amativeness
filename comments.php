@@ -12,7 +12,7 @@ if (post_password_required())
         )),
         'label_submit' => '咻～',
         'comment_notes_after' => '',
-        'comment_field' => '<div class="content-field"> <textarea class="text-block" id="comment-content" name="comment" cols="45" rows="8" aria-required="true" placeholder="|´・ω・)ノ还不快点说点什么呀poi~"></textarea></div>',
+        'comment_field' => '<div class="content-field"> <textarea class="text-block" id="comment-content" name="comment" cols="45" rows="8" aria-required="true" placeholder="|´・ω・)ノ还不快点说点什么呀poi~"></textarea><div class="OwO"></div></div>',
     );
     comment_form($args);
     ?>

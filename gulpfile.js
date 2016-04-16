@@ -20,6 +20,8 @@ gulp.task('lib', function() {
         .pipe(gulp.dest('lib/font-awesome'));
     gulp.src(['node_modules/balloon-css/**'])
         .pipe(gulp.dest('lib/balloon-css'));
+    gulp.src(['node_modules/owo/**'])
+        .pipe(gulp.dest('lib/owo'));
 });
 
 // Build js files
