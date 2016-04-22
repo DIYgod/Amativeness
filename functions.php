@@ -1026,4 +1026,22 @@ function get_author_class($comment_author_email){
         echo '<div class="comments-class">抖S</div>';
 }
 
+// 评论图片
+function auto_comment_image( $comment ) {// by https://mufeng.me
+
+    global $allowedtags;
+    $content = $comment["comment_content"];
+
+    // alt部分自行填写      
+    $content = preg_replace('/((https|http|ftp):\/\/){1}.+?.(jpg|gif|bmp|bnp|png)$/is','<img src="$0" alt="" />',$content);
+
+    //允许发布img标签      
+    $allowedtags['img'] = array('src' => array (), 'alt' => array ());
+
+    // 重新给$comment赋值      
+    $comment["comment_content"] = $content;
+    return $comment;
+}
+add_filter('preprocess_comment', 'auto_comment_image');
+
 ?>
