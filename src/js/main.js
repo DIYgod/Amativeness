@@ -341,6 +341,14 @@ $(document).ready(function ($) {
     document.ontouchstart = evanyou
     evanyou()
 
+    // OwO
+    if (document.getElementsByClassName('content-field').length) {
+        new OwO({
+            logo: 'OωO表情',
+            container: document.getElementsByClassName('content-field')[0].getElementsByClassName('OwO')[0],
+            target: document.getElementById('comment-content')
+        });
+    }
 });
 
 // 博客已运行XXX

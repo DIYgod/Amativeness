@@ -55,6 +55,9 @@
 <!--            C36.314,21.143,34.272,23.184,31.726,23.155z"></path>-->
 <!--        </svg>-->
     </div>
+    <div class="xm">
+        <img src="https://dn-diygod.qbox.me/xm.png">
+    </div>
     <div class="navbar">
         <?php if (is_user_logged_in()) : ?>
             <a href="<?php bloginfo('url'); ?>/wp-admin/" title="博客后台" class="houtai fa fa-user">后台</a>

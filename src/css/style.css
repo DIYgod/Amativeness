@@ -973,7 +973,7 @@ form textarea {
 .header-description {
     height: 650px;
     position: relative;
-    background-image: url(https://dn-diygod.qbox.me/background1.jpg);
+    background-image: url(https://dn-diygod.qbox.me/header.jpg);
     width: 100%;
     background-size: cover;
     background-position: center 30px;
@@ -1522,6 +1522,7 @@ canvas {
 
 .comment-block .comment-info {
     font-size: 0;
+    margin: 10px 0;
 }
 
 .comment-block .form-submit input[type=submit] {
@@ -1604,6 +1605,10 @@ canvas {
     white-space: normal;
     word-break: break-all;
     word-wrap: break-word;
+}
+
+.comment-block .commentlist .comment-content img {
+    max-width: 200px;
 }
 
 .comment-block .commentlist .comment-content > p {
@@ -2077,4 +2082,16 @@ footer .container {
     0%, 100% {
         transform: translate(0, 0) rotate(0deg);
     }
+}
+
+.OwO-logo span {
+    cursor: pointer;
+}
+
+.OwO-packages span {
+    cursor: pointer;
+}
+
+.OwO-item img {
+    cursor: pointer;
 }
