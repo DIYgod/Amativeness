@@ -365,5 +365,5 @@ function show_date_time() {
     var e_minsold = (e_hrsold - hrsold) * 60;
     var minsold = Math.floor((e_hrsold - hrsold) * 60);
     var seconds = Math.floor((e_minsold - minsold) * 60);
-    span_dt_dt.innerHTML = "博客已萌萌哒运行" + daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+    span_dt_dt.innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
 }
