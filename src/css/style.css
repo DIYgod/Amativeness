@@ -1824,11 +1824,11 @@ footer .container {
 }
 
 ::selection {
-    background: #92C0EF;
+    background: rgba(0, 149, 255, .2);
 }
 
 ::-moz-selection {
-    background: #92C0EF;
+    background: rgba(0, 149, 255, .2);
 }
 
 .catch-me {
