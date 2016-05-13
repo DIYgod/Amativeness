@@ -1,4 +1,12 @@
 $(document).ready(function ($) {
+    // typed.js
+    $(".typed a").typed({
+        strings: ["这里是网红DIYgod", "Anotherhome"],
+        typeSpeed: 30,
+        backSpeed: 30,
+        backDelay: 700
+    });
+
     // 利用 data-scroll 属性，滚动到任意 dom 元素
     $.scrollto = function (scrolldom, scrolltime) {
         $(scrolldom).click(function () {

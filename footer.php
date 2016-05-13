@@ -19,6 +19,7 @@
     </footer>
     </div>
     <?php wp_footer(); ?>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/typed.js/dist/typed.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/headroom.js/dist/headroom.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/notie/browser/notie.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/owo/dist/OwO.min.js"></script>

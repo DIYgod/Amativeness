@@ -984,7 +984,7 @@ form textarea {
 #site-header {
     position: relative;
     top: 180px;
-    font-family: kilsonburg;
+    font-family: kilsonburg, "Avenir Next", Helvetica, Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
     font-size: 34px;
     font-weight: bold;
     text-align: center;
@@ -2113,4 +2113,39 @@ footer .container {
 
 .xm img {
     width: 50px;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.typed {
+    font-size: 2em;
+    height: 68px;
+}
+
+.typed-cursor {
+    color: #fff;
+}
+
+#site-header h1 {
+    display: none;
 }
