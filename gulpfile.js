@@ -22,6 +22,10 @@ gulp.task('lib', function() {
         .pipe(gulp.dest('lib/balloon-css'));
     gulp.src(['node_modules/owo/**'])
         .pipe(gulp.dest('lib/owo'));
+    gulp.src(['node_modules/typed.js/**'])
+        .pipe(gulp.dest('lib/typed.js'));
+    gulp.src(['node_modules/socket.io-client/**'])
+        .pipe(gulp.dest('lib/socket.io-client'));
 });
 
 // Build js files
