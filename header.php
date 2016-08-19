@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="theme-color" content="#595C5E">
@@ -17,6 +17,7 @@
 <!--    <link rel="stylesheet" href="--><?php //bloginfo('template_url'); ?><!--/lib/font-awesome/css/font-awesome.min.css">-->
     <script src='https://dn-diygod.qbox.me/jquery.min.js'></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/aplayer/dist/APlayer.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/dplayer/dist/DPlayer.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/nprogress/nprogress.min.js"></script>
     <script>
         (function (i, s, o, g, r, a, m) {

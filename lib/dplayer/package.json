@@ -1,0 +1,49 @@
+{
+  "name": "dplayer",
+  "version": "1.0.5",
+  "description": "Wow, such a lovely HTML5 danmaku video player",
+  "main": "dist/DPlayer.min.js",
+  "scripts": {
+    "test": "webpack",
+    "start": "webpack-dev-server --hot --progress --inline --host 0.0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DIYgod/DPlayer.git"
+  },
+  "keywords": [
+    "player",
+    "danmaku",
+    "video",
+    "html5"
+  ],
+  "author": {
+    "name": "DIYgod"
+  },
+  "license": "SATA",
+  "bugs": {
+    "url": "https://github.com/DIYgod/DPlayer/issues"
+  },
+  "homepage": "https://github.com/DIYgod/DPlayer#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.4.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.13.2",
+    "css-loader": "^0.23.1",
+    "exports-loader": "^0.6.3",
+    "file-loader": "^0.9.0",
+    "node-sass": "^3.8.0",
+    "postcss-loader": "^0.10.0",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "readme": "# DPlayer\n\n[![npm](https://img.shields.io/npm/v/dplayer.svg?style=flat-square)](https://www.npmjs.com/package/dplayer)\n[![npm](https://img.shields.io/npm/l/dplayer.svg?style=flat-square)](https://github.com/DIYgod/DPlayer/blob/master/LICENSE)\n[![devDependency Status](https://img.shields.io/david/dev/DIYgod/dplayer.svg?style=flat-square)](https://david-dm.org/DIYgod/DPlayer#info=devDependencies)\n[![npm](https://img.shields.io/npm/dt/dplayer.svg?style=flat-square)](https://www.npmjs.com/package/dplayer)\n[![Travis](https://img.shields.io/travis/DIYgod/DPlayer.svg?style=flat-square)](https://travis-ci.org/DIYgod/DPlayer)\n[![%e2%9d%a4](https://img.shields.io/badge/made%20with-%e2%9d%a4-ff69b4.svg?style=flat-square)](https://www.anotherhome.net/)\n\n> Wow, such a lovely HTML5 danmaku video player\n\n## Introduction\n\n[Demo](http://dplayer.js.org/)\n\nScreenshot\n![image](http://i.imgur.com/207ch36.jpg)\n\n## Install\n\n```\n$ npm install dplayer --save\n```\n\n## Usage\n\n### HTML\n\n```HTML\n<div id=\"player1\" class=\"dplayer\"></div>\n<!-- ... -->\n<script src=\"dist/DPlayer.min.js\"></script>\n```\n\n### JS\n\n```JS\nvar dp = new DPlayer(option);\ndp.init();\n```\n\n**Options**\n\n```JS\nvar option = {\n    element: document.getElementById('player1'),                       // Optional, player element\n    autoplay: false,                                                   // Optional, autoplay video, not supported by mobile browsers\n    theme: '#FADFA3',                                                  // Optional, theme color, default: #b7daff\n    loop: true,                                                        // Optional, loop play music, default: true\n    lang: 'zh',                                                        // Optional, language, `zh` for Chinese, `en` for English, default: Navigator language\n    screenshot: true,                                                  // Optional, enable screenshot function, default: false, NOTICE: if set it to true, video and video poster must enable Cross-Origin\n    video: {                                                           // Required, video info\n        url: '若能绽放光芒.mp4',                                         // Required, video url\n        pic: '若能绽放光芒.png'                                          // Optional, music picture\n    },\n    danmaku: {                                                         // Optional, showing danmaku, ignore this option to hide danmaku\n        id: '9E2E3368B56CDBB4',                                        // Required, danmaku id, NOTICE: it must be unique, can not use these in your new player: `https://dplayer.daoapp.io/list`\n        api: 'https://dplayer.daoapp.io/',                             // Required, danmaku api\n        token: 'tokendemo',                                            // Optional, danmaku token for api\n        maximum: 1000                                                  // Optional, maximum quantity of danmaku\n    }\n}\n```\n\n**API**\n\n+ `dp.init()`                       // Load player\n+ `dp.play()`                       // Resume play\n+ `dp.play(time)`                   // Set currentTime\n+ `dp.pause()`                      // Pause\n+ `dp.toggle()`                     // Toggle between play and pause\n+ `dp.on(event, handler)`           // Event binding\n+ `dp.dan`                          // Return danmaku info\n+ `dp.danIndex`                     // Return danmaku index\n+ `dp.video`                        // Return native video, most [native api](http://www.w3schools.com/tags/ref_av_dom.asp) are supported\n + `dp.video.currentTime`           // Returns the current playback position\n + `dp.video.loop`                  // Returns whether the video should start over again when finished\n + Most [native api](http://www.w3schools.com/tags/ref_av_dom.asp)\n\n**Event binding**\n\n`dp.on(event, handler)`\n\n`event`:\n+ `play`: Triggered when DPlayer start play\n+ `pause`: Triggered when DPlayer paused\n+ `canplay`: Triggered when enough data is available that DPlayer can be played\n+ `playing`: Triggered periodically when DPlayer is playing\n+ `ended`: Triggered when DPlayer ended\n+ `error`: Triggered when an error occurs\n\n**Live Video (HTTP Live Streaming, M3U8 format)**\n\nIt requires the library [hls.js](https://github.com/dailymotion/hls.js) and it should be loaded before DPlayer.min.js.\n\nLive danamku is not supported  yet.\n\n```HTML\n<div id=\"player1\" class=\"dplayer\"></div>\n<!-- ... -->\n<script src=\"plugin/hls.min.js\"></script>\n<script src=\"dist/DPlayer.min.js\"></script>\n\n<script>\nvar dp = new DPlayer({\n    // ...\n    video: {\n        url: 'xxx.m3u8'\n        // ...\n    }\n});\ndp.init();\n</script>\n```\n\n**Work with module bundler**\n\n```js\nvar DPlayer = require('DPlayer');\nvar dp = new DPlayer(option);\ndp.init();\n```\n\n### Danmaku back-end\n\n**Ready-made API:**\n\n`https://dplayer.daoapp.io/`\n\n**Build yourself:**\n\nRequired environment\n\n- Node.js\n- Mongodb\n\n## Run in development\n\n```\n$ npm install\n$ npm run dev\n```\n\n## Make a release\n\n```\n$ npm install\n$ npm run build\n```\n\n## Related Projects\n\n- [DPlayer-for-typecho](https://github.com/volio/DPlayer-for-typecho)\n\n- [Hexo-tag-dplayer](https://github.com/NextMoe/hexo-tag-dplayer)\n\n- [DPlayer_for_Z-BlogPHP](https://github.com/fghrsh/DPlayer_for_Z-BlogPHP)\n\n## LICENSE\n\n[The Star And Thank Author License (SATA)](https://github.com/DIYgod/DPlayer/blob/master/LICENSE)",
+  "readmeFilename": "README.md",
+  "gitHead": "8b447af42686e42400f7f6a50bc7e7f4fd388387",
+  "_id": "dplayer@1.0.5",
+  "_shasum": "cf59fc9396232fc7a6aff0bd23c1d53d13b8a280",
+  "_from": "dplayer@latest"
+}
