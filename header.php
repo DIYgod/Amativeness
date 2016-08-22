@@ -9,15 +9,8 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
     <link rel="apple-touch-icon" href="https://dn-diygod.qbox.me/head4.jpg">
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/lib/aplayer/dist/APlayer.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/lib/nprogress/nprogress.min.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/lib/balloon-css/balloon.min.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/lib/owo/dist/OwO.min.css">
     <link rel="stylesheet" href="https://staticfile.qnssl.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<!--    <link rel="stylesheet" href="--><?php //bloginfo('template_url'); ?><!--/lib/font-awesome/css/font-awesome.min.css">-->
-    <script src='https://dn-diygod.qbox.me/jquery.min.js'></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/lib/aplayer/dist/APlayer.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/lib/dplayer/dist/DPlayer.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/nprogress/nprogress.min.js"></script>
     <script>
         (function (i, s, o, g, r, a, m) {

@@ -19,12 +19,9 @@
     </footer>
     </div>
     <?php wp_footer(); ?>
+    <script src='https://dn-diygod.qbox.me/jquery.min.js'></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/typed.js/dist/typed.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/lib/headroom.js/dist/headroom.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/notie/browser/notie.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/lib/owo/dist/OwO.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/lib/socket.io-client/socket.io.js"></script>
-    <!--<script src="--><?php //echo get_template_directory_uri(); ?><!--/lib/aspace/ASpace.min.js"></script>-->
     <script src="<?php echo get_template_directory_uri(); ?>/main.js"></script>
     <script>
         <?php if(isset($_COOKIE['comment_author_'.COOKIEHASH])) {
