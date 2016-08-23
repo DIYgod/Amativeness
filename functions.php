@@ -1044,58 +1044,23 @@ function auto_comment_image( $comment ) {// by https://mufeng.me
 }
 add_filter('preprocess_comment', 'auto_comment_image');
 
-//// 禁止全英文和日文评论
-//function BYMT_comment_post( $incoming_comment ) {
-//    $pattern = '/[一-龥]/u';
-//    $jpattern ='/[ぁ-ん]+|[ァ-ヴ]+/u';
-//    if(!preg_match($pattern, $incoming_comment['comment_content'])) {
-//        err( "写点汉字吧，博主外语很捉急！ Please write some chinese words！" );
-//    }
-//    if(preg_match($jpattern, $incoming_comment['comment_content'])){
-//        err( "日文滚粗！Japanese Get out！日本語出て行け！" );
-//    }
-//    return( $incoming_comment );
-//}
-//add_filter('preprocess_comment', 'BYMT_comment_post');
-//
-////禁止北方野蛮人留言（俄语）
-//function BYMT_comment_ru_post( $incoming_comment ) {
-//    $ruattern ='/[А-я]+/u';
-//    if(preg_match($ruattern, $incoming_comment['comment_content'])){
-//        err( "北方野人讲的话我们不欢迎！Russians, get away！Savage выйти из Русского Севера!" );
-//    }
-//    return( $incoming_comment );
-//}
-//add_filter('preprocess_comment', 'BYMT_comment_ru_post');
-//
-////禁止朝鲜半岛幸福人民留言（朝鲜语/韩语）
-//function BYMT_comment_kr_post( $incoming_comment ) {
-//    $krattern ='/[갂-줎]+|[줐-쥯]+|[쥱-짛]+|[짞-쪧]+|[쪨-쬊]+|[쬋-쭬]+|[쵡-힝]+/u';
-//    if(preg_match($krattern, $incoming_comment['comment_content'])){
-//        err( "不要用韩语/朝鲜语思密达！Please do not use Korean！하시기 바랍니다 한국 / 한국어 사용하지 마십시오！" );
-//    }
-//    return( $incoming_comment );
-//}
-//add_filter('preprocess_comment', 'BYMT_comment_kr_post');
-//
-////禁止真主阿拉留言（阿拉伯语，部分）
-//function BYMT_comment_ar_post( $incoming_comment ) {
-//    $arattern ='/[؟-ض]+|[ط-ل]+|[م-م]+/u';
-//    if(preg_match($arattern, $incoming_comment['comment_content'])){
-//        err( "不要用阿拉伯语！Please do not use Arabic！！من فضلك لا تستخدم اللغة العربية" );
-//    }
-//    return( $incoming_comment );
-//}
-//add_filter('preprocess_comment', 'BYMT_comment_ar_post');
-//
-////禁止人妖部落留言（泰语）
-//function BYMT_comment_th_post( $incoming_comment ) {
-//    $thattern ='/[ก-๛]+/u';
-//    if(preg_match($thattern, $incoming_comment['comment_content'])){
-//        err( "人妖你好，人妖再见！Please do not use Thai！กรุณาอย่าใช้ภาษาไทย！" );
-//    }
-//    return( $incoming_comment );
-//}
-//add_filter('preprocess_comment', 'BYMT_comment_th_post');
+function add_image_placeholders( $content ) {
+    // Don't lazyload for feeds, previews, mobile
+    if( is_feed() || is_preview() || ( function_exists( 'is_mobile' ) && is_mobile() ) )
+        return $content;
+
+    // Don't lazy-load if the content has already been run through previously
+    if ( false !== strpos( $content, 'data-original' ) )
+        return $content;
+
+    // In case you want to change the placeholder image
+    $placeholder_image = apply_filters( 'lazyload_images_placeholder_image', 'https://dn-diygod.qbox.me/1.png' );
+
+    // This is a pretty simple regex, but it works
+    $content = preg_replace( '#<img([^>]+?)src=[\'"]?([^\'"\s>]+)[\'"]?([^>]*)>#', sprintf( '<img${1}src="%s" data-original="${2}"${3}>', $placeholder_image ), $content );
+
+    return $content;
+}
+add_filter( 'the_content', 'add_image_placeholders', 99 );
 
 ?>
