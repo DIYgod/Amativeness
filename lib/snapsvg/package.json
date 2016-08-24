@@ -1,0 +1,52 @@
+{
+  "name": "snapsvg",
+  "version": "0.4.0",
+  "description": "JavaScript Vector Library",
+  "main": "./dist/snap.svg.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:adobe-webplatform/Snap.svg.git"
+  },
+  "author": {
+    "name": "Dmitry Baranovskiy"
+  },
+  "license": "Apache License v2",
+  "dependencies": {
+    "eve": "~0.4.2"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-exec": "~0.4.2",
+    "mocha": "*",
+    "expect.js": "*",
+    "dr.js": "~0.1.0"
+  },
+  "gitHead": "7b096009c1dbdb4f4205c71a2c6d4e46af81d782",
+  "bugs": {
+    "url": "https://github.com/adobe-webplatform/Snap.svg/issues"
+  },
+  "homepage": "https://github.com/adobe-webplatform/Snap.svg",
+  "_id": "snapsvg@0.4.0",
+  "scripts": {},
+  "_shasum": "e0767014167825957de7e125c29b0fa89796ea03",
+  "_from": "snapsvg@latest",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "dmitrybaranovskiy",
+    "email": "dmitry@baranovskiy.com"
+  },
+  "maintainers": [
+    {
+      "name": "dmitrybaranovskiy",
+      "email": "dmitry@baranovskiy.com"
+    }
+  ],
+  "dist": {
+    "shasum": "e0767014167825957de7e125c29b0fa89796ea03",
+    "tarball": "https://registry.npmjs.org/snapsvg/-/snapsvg-0.4.0.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/snapsvg/-/snapsvg-0.4.0.tgz"
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Arc3</title>
+        <style>
+            svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        </style>
+		<script src="dist/snap.svg-min.js"></script>
+	</head>
+	<body>
+		<script>
+			    function intersect(x1, y1, x2, y2, x3, y3, x4, y4) {
+			        var nx = (x1 * y2 - y1 * x2) * (x3 - x4) - (x1 - x2) * (x3 * y4 - y3 * x4),
+			            ny = (x1 * y2 - y1 * x2) * (y3 - y4) - (y1 - y2) * (x3 * y4 - y3 * x4),
+			            denominator = (x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4);
+
+			        if (!denominator) {
+			            return;
+			        }
+			        var px = nx / denominator,
+			            py = ny / denominator;
+			        return {x: px, y: py};
+			    }
+				function calc_bisect_perp(x1, y1, x2, y2) {
+					var dx = x2 - x1,
+						dy = y2 - y1;
+					if (dy == 0) {
+						return [x1 + dx / 2, 0, x1 + dx / 2, 1];
+					} else if (dx == 0) {
+						return [0, y1 + dy / 2, 1, y1 + dy / 2];
+					} else {
+						var m, b, x3, y3;
+				    	m = -dx / dy;
+				    	x3 = x1 + dx / 2;
+				    	y3 = y1 + dy / 2;
+				    	b = y3 - m * x3;
+						return [0, b, 1, m + b];
+					}
+				}
+				function len(x1, y1, x2, y2) {
+					return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+				}
+				function angle(x1, y1, x2, y2) {
+				    if (x1 == x2) {
+						if (y2 < y1) {
+							return 270;
+						} else {
+							return 90;
+						}
+				    } else if (y1 == y2) {
+						if (x2 < x1) {
+							return 180;
+						} else {
+							return 0;
+						}
+				    } else {
+						var	angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
+						if (angle < 0) {
+						    angle += 360;
+						}
+						return angle;
+					}
+				}
+				function arc3(x1, y1, x2, y2, x3, y3) {
+                    var out = {};
+					if (x1 == x2 && y1 == y2 || x3 == x2 && y3 == y2) {
+						out.path = "L" + [x3, y3];
+                        return out;
+					}
+					if (x1 == x3 && y1 == y3) {
+						r = len(x1, y1, x2, y2) / 2;
+						out.path = "A" + [r, r, 0, 0, 0, x2, y2] + "A" + [r, r, 0, 0, 0, x1, y1];
+                        return out;
+					}
+					var bp1 = calc_bisect_perp(x1, y1, x2, y2),
+						bp2 = calc_bisect_perp(x2, y2, x3, y3),
+						inter = intersect(bp1[0], bp1[1], bp1[2], bp1[3], bp2[0], bp2[1], bp2[2], bp2[3]),
+					    ang_start = inter && angle(inter.x, inter.y, x1, y1),
+					    ang_int = inter && angle(inter.x, inter.y, x2, y2),
+					    ang_end = inter && angle(inter.x, inter.y, x3, y3),
+					    angl = ang_end - ang_start;
+                    if (ang_int < ang_start) {
+                        if (ang_start < ang_end) {
+                            angl -= 360;
+                        } else if (ang_int < ang_end) {
+                            angl += 360;
+                        }
+                    } else {
+                        if (ang_end < ang_start) {
+                            angl += 360;
+                        } else if (ang_end < ang_int) {
+                            angl -= 360;
+                        }
+                    }
+					if (inter) {
+						var r = len(x1, y1, inter.x, inter.y);
+                        out.cx = inter.x;
+                        out.cy = inter.y;
+                        out.a1 = ang_start;
+                        out.a2 = ang_end;
+                        out.r = r;
+                        out.f1 = +(Math.abs(angl) > 180);
+                        out.f2 = +(angl > 0);
+						out.path = "A" + [safeRound(r), safeRound(r), 0, out.f1, out.f2, x3, y3];
+					} else {
+                        out.path = "L" + [x3, y3];
+                    }
+                    return out;
+				}
+                function safeRound(n) {
+                    var match = (n + "").match(/^\d*\.[^0]*(?=0|$)/);
+                    return match ? +match[0] : n;
+                }
+                function findDotAtBezierSegment(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, t) {
+                    var t1 = 1 - t,
+                        pow = Math.pow;
+                    return {
+                        x: pow(t1, 3) * p1x + pow(t1, 2) * 3 * t * c1x + t1 * 3 * t * t * c2x + pow(t, 3) * p2x,
+                        y: pow(t1, 3) * p1y + pow(t1, 2) * 3 * t * c1y + t1 * 3 * t * t * c2y + pow(t, 3) * p2y
+                    };
+                }
+                function asArc(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y) {
+                    var m = findDotAtBezierSegment(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, .5),
+                        arc = arc3(p1x, p1y, m.x, m.y, p2x, p2y);
+                    for (var i = 1; i < 10; i++) {
+                        if (i != 5) {
+                            var dot = findDotAtBezierSegment(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, i / 10);
+                            if (Math.abs(len(arc.cx, arc.cy, dot.x, dot.y) - arc.r) > .5) {
+                                return null;
+                            }
+                        }
+                    }
+                    return arc.path;
+                }
+				var r = Snap(800, 600);
+                
+                r.path("M400,100c55.22,0,100,44.78,100,100").attr({
+                    fill: "none",
+                    stroke: "#000"
+                });
+                r.path("M400,100" + asArc(400, 100, 455.22, 100, 500, 144.78, 500, 200)).attr({
+                    fill: "none",
+                    stroke: "#c00",
+                    strokeWidth: 4,
+                    strokeOpacity: .5
+                });
+                console.log(asArc(400, 100, 455.22, 100, 500, 144.78, 500, 200));
+                console.log("M400,100c55.22,0,100,44.78,100,100");
+		</script>
+	</body>
+</html>

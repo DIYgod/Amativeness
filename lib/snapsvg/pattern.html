@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Pattern</title>
+        <script src="dist/snap.svg-min.js"></script>
+        <style>
+            html, body {
+                height: 100%;
+            }
+            input {
+                width: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <input id="stroke" value="10"/><input id="gap" value="10"/>
+        <script>
+            var s = Snap(),
+                stroke = 10,
+                gap = 10,
+                alpha = 0;
+            function getPattern(stroke, gap, angle) {
+                angle = (angle + 360) % 360;
+                if (+angle.toFixed(1) == 0 || +angle.toFixed(1) == 180) {
+                    p = s.ptrn(0, 0, 2, stroke + gap);
+                    p.rect(0, 0, 2, stroke);
+                    return p;
+                }
+                if (+angle.toFixed(1) == 90 || +angle.toFixed(1) == 270) {
+                    p = s.ptrn(0, 0, stroke + gap, 2);
+                    p.rect(0, 0, stroke, 2);
+                    return p;
+                }
+                var sin = Snap.sin(angle),
+                    cos = Snap.cos(angle),
+                    gs = gap / sin,
+                    ss = stroke / sin,
+                    gc = gap / cos,
+                    sc = stroke / cos;
+                    p = s.ptrn(Math.min(gs + ss, 0).toFixed(2), Math.min(gc + sc, 0).toFixed(2), Math.abs(gs + ss).toFixed(2), Math.abs(gc + sc).toFixed(2));
+                p.path("M" + [gs, 0] + "H" + (gs + ss) + "L" + [0, gc + sc] + "v" + (-sc) + "zM" + [gs + ss, gc] + "v" + sc + "h" + (-ss) + "z");
+                return p;
+            }
+            function update() {
+                p.remove();
+                demo.attr({
+                    fill: p = getPattern(stroke, gap, alpha)
+                });
+            }
+            function polka(dot, gap, type) {
+                var g = s.g(),
+                    gd = gap + dot,
+                    r = dot / 2,
+                    sin45 = Math.sin(Math.PI / 4),
+                    sin60 = Math.sin(Math.PI / 3),
+                    cos60 = Math.cos(Math.PI / 3);
+                switch (type) {
+                    case 1:
+                        g.circle(r, r, r);
+                        return g.toPattern(0, 0, gd, gd);
+                    break;
+                    case 2:
+                        g.circle(r, r, r);
+                        g.circle(r + gd * sin45, r + gd * sin45, r);
+                        if (gd * 2 * sin45 < r + gd * sin45 + r) {
+                            g.circle(r - gd * sin45, r + gd * sin45, r);
+                            g.circle(r + gd * sin45, r - gd * sin45, r);
+                            g.circle(r - gd * sin45, r - gd * sin45, r);
+                        }
+                        return g.toPattern(0, 0, gd * 2 * sin45, gd * 2 * sin45);
+                    break;
+                    case 3:
+                        g.circle(r, r, r);
+                        g.circle(r + gd * sin60, r + gd * cos60, r);
+                        if (gd * 2 * cos60 < r + gd * cos60 + r) {
+                            g.circle(r + gd * sin60, r - gd * cos60, r);
+                        }
+                        if (gd * 2 * sin60 < r + gd * sin60 + r) {
+                            g.circle(r - gd * sin60, r + gd * cos60, r);
+                            g.circle(r - gd * sin60, r - gd * cos60, r);
+                        }
+                        return g.toPattern(0, 0, gd * 2 * sin60, gd * 2 * cos60);
+                    break;
+                    case 4:
+                        g.circle(r, r, r);
+                        g.circle(r + gd * cos60, r + gd * sin60, r);
+                        if (gd * 2 * cos60 < r + gd * cos60 + r) {
+                            g.circle(r - gd * cos60, r + gd * sin60, r);
+                        }
+                        if (gd * 2 * sin60 < r + gd * sin60 + r) {
+                            g.circle(r + gd * cos60, r - gd * sin60, r);
+                            g.circle(r - gd * cos60, r - gd * sin60, r);
+                        }
+                        return g.toPattern(0, 0, gd * 2 * cos60, gd * 2 * sin60);
+                    break;
+                }
+            }
+            var p = polka(30, 2, 4),
+                demo = s.circle(150, 150, 100).attr({
+                    fill: p
+                });
+            s.circle(150, 150, 105).attr({
+                fill: "none",
+                stroke: "#aaa",
+                strokeWidth: 5
+            });
+            s.g(s.circle(150, 45, 4), s.circle(150, 255, 4)).attr({
+                fill: "#aaa",
+                stroke: "#fff"
+            }).clone().transform("r30,150,150").clone().transform("r45,150,150").clone().transform("r60,150,150").clone().transform("r90,150,150").clone().transform("r120,150,150").clone().transform("r135,150,150").clone().transform("r150,150,150");
+            s.circle(255, 150, 10).attr({
+                stroke: "#fff",
+                strokeWidth: 2
+            }).drag(function (dx, dy, x, y) {
+                var a = (180 + Snap.angle(150, 150, x, y)) % 360;
+                a = Snap.snapTo([0, 30, 45, 60, 90, 120, 135, 150, 180, 210, 225, 240, 270, 300, 315, 330, 360], a, 5);
+                this.attr({
+                    cx: 150 + 105 * Snap.cos(a),
+                    cy: 150 + 105 * Snap.sin(a)
+                });
+                alpha = -a;
+                update();
+            });
+
+            document.getElementById("stroke").onchange = function () {
+                this.value = +this.value || 0;
+                if (stroke != this.value) {
+                    stroke = this.value;
+                    update();
+                }
+            };
+            document.getElementById("gap").onchange = function () {
+                this.value = +this.value || 0;
+                if (gap != this.value) {
+                    gap = this.value;
+                    update();
+                }
+            };
+        </script>
+    </body>
+</html>

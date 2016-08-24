@@ -27,5 +27,5 @@
     <script>
         NProgress.set(1.0);
     </script>
-</body>
+    </body>
 </html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+        <script src="dist/snap.svg.js"></script>
+    </head>
+    <body>
+        <script>
+            var s = Snap(800, 600);
+            s.circle(100, 100, 10)
+            s.path("M100,100u30,0,180z").attr({
+                fill: "none",
+                stroke: "#000"
+            });
+        </script>
+    </body>
+</html>
