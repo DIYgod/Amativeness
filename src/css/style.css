@@ -33,7 +33,11 @@ Text Domain: Amativeness
     }
 
     #information {
-        padding: 20px 0 !important;
+        display: none;
+    }
+
+    .header-description #site-header {
+        top: 150px;
     }
 }
 
@@ -44,7 +48,11 @@ Text Domain: Amativeness
     }
 
     .container {
-        max-width: 95% !important;
+        max-width: 100% !important;
+    }
+
+    .block {
+        border-radius: 0 !important;
     }
 
     .round-date {
@@ -469,6 +477,7 @@ article > div > p {
 
 .article-list .main p {
     margin: 10px 0px;
+    line-height: 24px;
 }
 
 /* 布局 */
@@ -681,6 +690,7 @@ form textarea {
     font-weight: bold;
     text-align: center;
     margin: 15px 0;
+    line-height: 30px !important;
 }
 
 .post.block {
@@ -724,6 +734,8 @@ form textarea {
     color: #555;
     font-size: 14px;
     text-align: center;
+    word-break: break-word;
+    line-height: 20px;
 }
 
 /* 文章中 查看更多 链接 */
@@ -861,7 +873,7 @@ form textarea {
     right: 0px;
     top: 0px;
     position: fixed;
-    z-index: 99;
+    z-index: 9;
     background: #000;
     background: linear-gradient(left top,rgba(59,44,70,.6),rgba(40,42,44,.6));
 }
@@ -2503,4 +2515,84 @@ footer .container {
 .chatroom-send-btn:hover {
     background: #CCC;
     transition: all 0.3s;
+}
+
+/* svg loader */
+.pageload-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    background: #fff;
+    z-index: 99;
+}
+.pageload-overlay.show {
+    visibility: visible;
+}
+.pageload-overlay svg path {
+    fill: #FADFA3;
+}
+
+/* donate */
+.donate {
+    position: relative;
+}
+
+.donate-word {
+    background: #E26D6D;
+    height: 34px;
+    width: 80px;
+    border-radius: 4px;
+    line-height: 34px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    margin: 40px auto 25px;
+    cursor: pointer;
+}
+
+.donate-body {
+    display: none;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+    max-width: 100%;
+}
+
+.donate-body.donate-show {
+    display: flex;
+}
+
+.donate-item {
+    flex: 1;
+}
+
+.donate-item img {
+    width: 200px;
+}
+
+.donate-tip {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.donate-wx .donate-tip {
+    color: #44b549;
+}
+
+.donate-zfb .donate-tip {
+    color: #00A0E9;
+}
+
+.donate-table {
+    width: 100%;
+    text-align: center;
+}
+
+.donate-table th,
+.donate-table td {
+    padding: 10px 0;
+    max-width: 50%;
 }

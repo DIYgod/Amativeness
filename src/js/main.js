@@ -7,6 +7,7 @@ const Headroom = require('headroom.js');
 const OwO = require('owo');
 
 $(document).ready(function ($) {
+    const isMobile = /mobile/i.test(window.navigator.userAgent);
 
     // typed.js
     $(".typed a").typed({
@@ -234,48 +235,50 @@ $(document).ready(function ($) {
     //}
 
     // evanyou
-    var c = document.getElementById('evanyou'),
-        x = c.getContext('2d'),
-        pr = window.devicePixelRatio || 1,
-        w = window.innerWidth,
-        h = window.innerHeight,
-        f = 90,
-        q,
-        m = Math,
-        r = 0,
-        u = m.PI*2,
-        v = m.cos,
-        z = m.random
-    c.width = w*pr
-    c.height = h*pr
-    x.scale(pr, pr)
-    x.globalAlpha = 0.6
-    function evanyou(){
-        x.clearRect(0,0,w,h)
-        q=[{x:0,y:h*.7+f},{x:0,y:h*.7-f}]
-        while(q[1].x<w+f) d(q[0], q[1])
+    if (!isMobile) {
+        var c = document.getElementById('evanyou'),
+            x = c.getContext('2d'),
+            pr = window.devicePixelRatio || 1,
+            w = window.innerWidth,
+            h = window.innerHeight,
+            f = 90,
+            q,
+            m = Math,
+            r = 0,
+            u = m.PI*2,
+            v = m.cos,
+            z = m.random
+        c.width = w*pr
+        c.height = h*pr
+        x.scale(pr, pr)
+        x.globalAlpha = 0.6
+        function evanyou(){
+            x.clearRect(0,0,w,h)
+            q=[{x:0,y:h*.7+f},{x:0,y:h*.7-f}]
+            while(q[1].x<w+f) d(q[0], q[1])
+        }
+        function d(i,j){
+            x.beginPath()
+            x.moveTo(i.x, i.y)
+            x.lineTo(j.x, j.y)
+            var k = j.x + (z()*2-0.25)*f,
+                n = y(j.y)
+            x.lineTo(k, n)
+            x.closePath()
+            r-=u/-50
+            x.fillStyle = '#'+(v(r)*127+128<<16 | v(r+u/3)*127+128<<8 | v(r+u/3*2)*127+128).toString(16)
+            x.fill()
+            q[0] = q[1]
+            q[1] = {x:k,y:n}
+        }
+        function y(p){
+            var t = p + (z()*2-1.1)*f
+            return (t>h||t<0) ? y(p) : t
+        }
+        document.onclick = evanyou
+        document.ontouchstart = evanyou
+        evanyou()
     }
-    function d(i,j){
-        x.beginPath()
-        x.moveTo(i.x, i.y)
-        x.lineTo(j.x, j.y)
-        var k = j.x + (z()*2-0.25)*f,
-            n = y(j.y)
-        x.lineTo(k, n)
-        x.closePath()
-        r-=u/-50
-        x.fillStyle = '#'+(v(r)*127+128<<16 | v(r+u/3)*127+128<<8 | v(r+u/3*2)*127+128).toString(16)
-        x.fill()
-        q[0] = q[1]
-        q[1] = {x:k,y:n}
-    }
-    function y(p){
-        var t = p + (z()*2-1.1)*f
-        return (t>h||t<0) ? y(p) : t
-    }
-    document.onclick = evanyou
-    document.ontouchstart = evanyou
-    evanyou()
 
     // OwO
     if (document.getElementsByClassName('content-field').length) {
@@ -444,5 +447,70 @@ $(document).ready(function ($) {
         }
     }
     newPage($('body'));
-    
+
+    // // svg loader
+    // function finish(){
+    //     //动画加载完成后的代码
+    //     if(!loader.isAnimating ){
+    //         // $(".container").addClass('show');
+    //         loader.hide();
+    //         $('.pageload-overlay').css('background', 'none');
+    //
+    //         // typed.js
+    //         $(".typed a").typed({
+    //             strings: ["这里是网红DIYgod", "Anotherhome"],
+    //             typeSpeed: 30,
+    //             backSpeed: 30,
+    //             backDelay: 700
+    //         });
+    //     }
+    //     else{
+    //         setTimeout(finish,200)
+    //     }
+    // }
+    // finish();
+
+    // donate in page
+    $('.single article.block').append(`
+        <div class="donate">
+            <div class="donate-word">赞赏</div>
+            <div class="donate-body">
+                <div class="donate-wx donate-item">
+                    <img src="https://dn-diygod.qbox.me/2016-08-25_wxd.png">
+                    <div class="donate-tip">微信扫一扫,向我赞赏</div>
+                </div>
+                <div class="donate-zfb donate-item">
+                    <img src="https://dn-diygod.qbox.me/2016-08-25_zfbd.png">
+                    <div class="donate-tip">支付宝扫一扫,向我赞赏</div>
+                </div>
+            </div>
+        </div>
+    `);
+
+    $('.donate-word').click(() => {
+        if ($('.donate-body').hasClass('donate-show')) {
+            $('.donate-body').removeClass('donate-show');
+        }
+        else {
+            $('.donate-body').addClass('donate-show');
+        }
+    })
+
+    // donate list
+    if (window.donateData && $('.donate-table').length) {
+        const data = window.donateData.sort(function (a, b) {
+            return a[0] > b[0] ? 1: -1;
+        });
+        let html = ``;
+        for (let i = data.length - 1; i >= 0; i--) {
+            html += `
+                <tr>
+                    <td>${data[i][0]}</td>
+                    <td>${data[i][1]}</td>
+                    <td>${data[i][2]}</td>
+                </tr>
+            `
+        }
+        $('.donate-table tbody').append(html);
+    }
 });
