@@ -306,12 +306,33 @@ $(document).ready(function ($) {
                 theme: '#FADFA3',
                 loop: true,
                 screenshot: true,
+                preload: 'none',
                 video: {
                     url: 'https://o6m1xkyi2.qnssl.com/若能绽放光芒.mp4',
                     pic: 'https://o6m1xkyi2.qnssl.com/若能绽放光芒.png'
                 },
                 danmaku: {
                     id: '9E2E3368B56CDBB4',
+                    api: 'https://dplayer.daoapp.io/',
+                    token: 'tokendemo',
+                    maximum: 3000
+                }
+            });
+        }
+        if (page.find('#dplayer2').length) {
+            var dp2 = new DPlayer({
+                element: document.getElementById('dplayer2'),
+                autoplay: false,
+                theme: '#FADFA3',
+                loop: true,
+                screenshot: true,
+                preload: 'none',
+                video: {
+                    url: 'https://o6m1xkyi2.qnssl.com/微小微-江南皮革厂倒闭了.mp4',
+                    pic: 'https://o6m1xkyi2.qnssl.com/微小微-江南皮革厂倒闭了.jpg'
+                },
+                danmaku: {
+                    id: '5rGf5Y2X55qu6Z2p',
                     api: 'https://dplayer.daoapp.io/',
                     token: 'tokendemo',
                     maximum: 3000

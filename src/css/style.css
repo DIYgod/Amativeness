@@ -1818,7 +1818,7 @@ footer .container {
 
 @media (max-width: 750px) {
     #primary-navigation>div {
-        width: 710px;
+        width: 650px;
     }
 
     .navbar .container {
@@ -2595,4 +2595,8 @@ footer .container {
 .donate-table td {
     padding: 10px 0;
     max-width: 50%;
+}
+
+.dplayer .dplayer-danmaku .dplayer-danmaku-item {
+    font-family: sans-serif !important;
 }
