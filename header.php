@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="theme-color" content="#595C5E">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes"">
-    <title><?php wp_title('|', true, 'right'); ?></title>
+    <title><?php wp_title('-', true, 'right'); ?></title>
     <link rel="canonical" href="https://www.anotherhome.net/">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
     <link rel="apple-touch-icon" href="https://dn-diygod.qbox.me/head4.jpg">
