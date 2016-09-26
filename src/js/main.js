@@ -1,7 +1,7 @@
 require('balloon-css/balloon.min.css');
 require('owo/dist/OwO.min.css');
 
-const DPlayer = require('dplayer').DPlayer;
+const DPlayer = require('dplayer');
 const Headroom = require('headroom.js');
 const OwO = require('owo');
 
