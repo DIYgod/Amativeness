@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/lib/nprogress/nprogress.min.css">
     <link rel="stylesheet" href="https://staticfile.qnssl.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src='https://diygod.b0.upaiyun.com/jquery.min.js'></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/nprogress/nprogress.min.js"></script>
     <script>
         (function (i, s, o, g, r, a, m) {

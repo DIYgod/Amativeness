@@ -1077,4 +1077,66 @@ function execute_php($html){
     return $html;
 }
 
+// 反垃圾评论
+$leonax_magic_lower = 328;
+$leonax_magic_upper = 3450709;
+function leonax_anti_spam_form($fields){
+    global $leonax_magic_lower, $leonax_magic_upper;
+    $leonax_magic = mt_rand($leonax_magic_lower, $leonax_magic_upper);
+    $fields['leonax_magic'] = <<<EOT
+        <input type="hidden" id="leonax-magic" name="leonax-magic" value="0">
+        <script>
+            $(function() {
+                $("#comment-content").on("keyup", function() {
+                    $("#leonax-magic").val("$leonax_magic");
+                });
+                $('body').on('click touch', function () {
+                    $("#leonax-magic").val("$leonax_magic");
+                });
+            })
+        </script>
+EOT;
+    return $fields;
+}
+add_filter('comment_form_default_fields', 'leonax_anti_spam_form');
+
+function leonax_anit_spam_caught() {
+    wp_die('<strong>评论失败</strong>: 垃圾评论什么的去死吧！');
+}
+
+function leonax_anti_spam_check( $commentdata ) {
+    $comment_type = '';
+    if ( isset($commentdata['comment_type']) ) {
+        $comment_type = trim($commentdata['comment_type']);
+    }
+
+    if ( ($comment_type == 'pingback') || ($comment_type == 'trackback') ) {
+        return $commentdata;
+    }
+    $content = '';
+    if ( isset($commentdata['comment_content']) ) {
+        $content = trim($commentdata['comment_content']);
+    }
+    if (!strlen($content)) {
+        leonax_anit_spam_caught();
+    }
+
+    global $leonax_magic_lower, $leonax_magic_upper;
+
+    if ( isset($commentdata['user_ID']) && $commentdata['user_ID'] ) { // 登陆用户允许
+        return $commentdata;
+    }
+
+    if ( !isset($_POST['leonax-magic']) ) {
+        leonax_anit_spam_caught();
+    }
+    $magic = intval($_POST['leonax-magic']);
+    if ($magic < $leonax_magic_lower || $magic > $leonax_magic_upper) {
+        leonax_anit_spam_caught();
+    }
+    return $commentdata;
+}
+
+add_filter( 'preprocess_comment' , 'leonax_anti_spam_check' );
+
 ?>

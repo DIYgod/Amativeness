@@ -19,7 +19,6 @@
     </footer>
     </div>
     <?php wp_footer(); ?>
-    <script src='https://diygod.b0.upaiyun.com/jquery.min.js'></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/typed.js/dist/typed.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/jquery-lazyload/jquery.lazyload.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/notie/browser/notie.js"></script>
