@@ -984,7 +984,7 @@ add_action('comment_post', 'comment_mail_notify');
 
 // gravatar 镜像
 function qiniu_avatar($avatar) {
-    $avatar = str_replace(array("www.gravatar.com","0.gravatar.com","1.gravatar.com","2.gravatar.com","secure.gravatar.com","cn.gravatar.com"),"nzqrwm1zi.qnssl.com",$avatar);
+    $avatar = str_replace(array("www.gravatar.com","0.gravatar.com","1.gravatar.com","2.gravatar.com","secure.gravatar.com","cn.gravatar.com"),"gravatar2333.b0.upaiyun.com",$avatar);
     return $avatar;
 }
 add_filter( 'get_avatar', 'qiniu_avatar', 10, 3 );
@@ -994,7 +994,7 @@ add_filter( 'get_avatar', 'qiniu_avatar', 10, 3 );
 add_filter( 'avatar_defaults', 'newgravatar' );
 
 function newgravatar ($avatar_defaults) {
-    $myavatar = 'https://dn-diygod.qbox.me/2222.jpg';
+    $myavatar = 'https://diygod.b0.upaiyun.com/2222.jpg';
     $avatar_defaults[$myavatar] = "岁纳京子默认头像";
     return $avatar_defaults;
 }
@@ -1054,7 +1054,7 @@ function add_image_placeholders( $content ) {
         return $content;
 
     // In case you want to change the placeholder image
-    $placeholder_image = apply_filters( 'lazyload_images_placeholder_image', 'https://dn-diygod.qbox.me/1.png' );
+    $placeholder_image = apply_filters( 'lazyload_images_placeholder_image', 'https://diygod.b0.upaiyun.com/1.png' );
 
     // This is a pretty simple regex, but it works
     $content = preg_replace( '#<img([^>]+?)src=[\'"]?([^\'"\s>]+)[\'"]?([^>]*)>#', sprintf( '<img${1}src="%s" data-original="${2}"${3}>', $placeholder_image ), $content );
@@ -1062,5 +1062,19 @@ function add_image_placeholders( $content ) {
     return $content;
 }
 add_filter( 'the_content', 'add_image_placeholders', 99 );
+
+//让文本小工具支持简码
+add_filter('widget_text', 'do_shortcode');
+//让文本小工具支持PHP代码
+add_filter('widget_text','execute_php',100);
+function execute_php($html){
+    if(strpos($html,"<"."?php")!==false){
+        ob_start();
+        eval("?".">".$html);
+        $html=ob_get_contents();
+        ob_end_clean();
+    }
+    return $html;
+}
 
 ?>

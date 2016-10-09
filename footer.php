@@ -4,7 +4,7 @@
             <p>博客已萌萌哒运行<span id=span_dt_dt></span><span class="my-face">(●'◡'●)ﾉ♥</span></p>
             <p>
                 托管于<a href="http://www.aliyun.com/" target="_blank"> 阿里云</a>.
-                <a href="http://www.qiniu.com/" target="_blank">七牛</a> 提供文件云存储服务.
+                <a href="https://www.upyun.com/" target="_blank">又拍云</a> 提供静态文件云存储服务.
                 <a href="http://www.google.com/analytics/" target="_blank">Google Analytics </a>提供网站统计服务.
                 <a href="http://www.cloudxns.net/" target="_blank">CloudXNS </a>提供 DNS 解析服务.
             </p>
@@ -19,7 +19,7 @@
     </footer>
     </div>
     <?php wp_footer(); ?>
-    <script src='https://dn-diygod.qbox.me/jquery.min.js'></script>
+    <script src='https://diygod.b0.upaiyun.com/jquery.min.js'></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/typed.js/dist/typed.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/jquery-lazyload/jquery.lazyload.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/notie/browser/notie.js"></script>
