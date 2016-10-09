@@ -12,7 +12,7 @@ Text Domain: Amativeness
 */
 @font-face {
     font-family: kilsonburg;
-    src: url('https://dn-diygod.qbox.me/kilsonburg.ttf');
+    src: url('https://diygod.b0.upaiyun.com/kilsonburg.ttf');
 }
 
 @media (max-width: 700px) {
@@ -112,7 +112,7 @@ body {
 a {
     outline: none;
     text-decoration: none;
-    color: #000;
+    color: #444;
 }
 
 p {
@@ -848,7 +848,7 @@ form textarea {
     z-index: 9;
     width: 70px;
     height: 900px;
-    background: url(https://dn-diygod.qbox.me/scroll.png);
+    background: url(https://diygod.b0.upaiyun.com/scroll.png);
     transition: all 0.5s ease-in-out;
 }
 
@@ -986,7 +986,7 @@ form textarea {
 .header-description {
     height: 650px;
     position: relative;
-    background-image: url(https://dn-diygod.qbox.me/header.jpg);
+    background-image: url(https://diygod.b0.upaiyun.com/header.jpg);
     width: 100%;
     background-size: cover;
     background-position: center 0;
@@ -1796,11 +1796,12 @@ canvas {
 }
 
 .footer-image {
-    background: url(https://dn-diygod.qbox.me/footer01.png) no-repeat center;
+    background: url(https://diygod.b0.upaiyun.com/footer01.png) no-repeat center;
     height: 368px;
     z-index: 1;
     position: absolute;
     width: 100%;
+    pointer-events: none;
 }
 
 footer .container {
@@ -2599,4 +2600,47 @@ footer .container {
 
 .dplayer .dplayer-danmaku .dplayer-danmaku-item {
     font-family: sans-serif !important;
+}
+
+.recent-comments {
+    font-size: 13px;
+    list-style: none;
+    line-height: 20px;
+}
+
+.recent-comments:last-child a {
+    border-bottom: none;
+}
+
+.recent-comments a {
+    display: block;
+    padding: 5px;
+    transition: all .3s ease-out;
+    border-bottom: 1px solid #ddd;
+    margin: 5px 0;
+}
+
+.recent-comments a:hover {
+    background: rgba(230,244,250,.5);
+    border-radius: 5px;
+}
+
+.recent-avatar {
+    float: left;
+}
+
+.recent-avatar img {
+    border-radius: 50%;
+}
+
+.recent-body {
+    margin-left: 40px;
+}
+
+.recent-text {
+    font-size: 12px;
+}
+
+.recent-comments a * {
+    cursor: auto;
 }
