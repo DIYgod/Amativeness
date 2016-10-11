@@ -14,7 +14,6 @@
                 <a href="https://www.anotherhome.net/sitemap.xml" target="_blank">站点地图</a>.
                 鲁ICP备16000184号.
             </p>
-            <p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000410176'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1000410176%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script></p>
             <p>Made with <i class="fa fa-heart throb" style="color: #d43f57;"></i> by DIYgod. </p>
         </div>
     </footer>
