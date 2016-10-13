@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <InputEncoding>utf-8</InputEncoding>
+  <ShortName>Anotherhome</ShortName>
+  <Description>ペロペロ</Description>
+  <Image height="16" width="16" type="image/x-icon">https://www.anotherhome.net/wp-content/themes/Amativeness/favicon.ico</Image>
+  <Url type="text/html" template="https://www.anotherhome.net/?s={searchTerms}"/>
+</OpenSearchDescription>
