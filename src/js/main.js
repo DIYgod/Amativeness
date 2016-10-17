@@ -134,17 +134,19 @@ $(document).ready(function ($) {
     show_date_time();
 
     // 当页面向下滚动时，导航条消失，当页面向上滚动时，导航条出现
-    var head = document.getElementsByClassName('navbar')[0];
-    var headroom = new Headroom(head, {
-        "tolerance": 5,
-        "offset": 205,
-        "classes": {
-            "initial": "head-animated",
-            "pinned": "slideDown",
-            "unpinned": "slideUp"
-        }
-    });
-    headroom.init();
+    if (!isMobile) {
+        var head = document.getElementsByClassName('navbar')[0];
+        var headroom = new Headroom(head, {
+            "tolerance": 5,
+            "offset": 205,
+            "classes": {
+                "initial": "head-animated",
+                "pinned": "slideDown",
+                "unpinned": "slideUp"
+            }
+        });
+        headroom.init();
+    }
 
     // 版权信息
     var arCon = document.getElementsByClassName('article-content');
@@ -299,23 +301,24 @@ $(document).ready(function ($) {
         $(".post a").attr("target", "_blank");
 
         // DPlayer
-        if (page.find('#dplayer1').length) {
-            var dp1 = new DPlayer({
-                element: document.getElementById('dplayer1'),
+        if (page.find('#dplayer3').length) {
+            var dp3 = new DPlayer({
+                element: document.getElementById('dplayer3'),
                 autoplay: false,
                 theme: '#FADFA3',
                 loop: true,
                 screenshot: true,
                 preload: 'none',
                 video: {
-                    url: 'https://dplayer.b0.upaiyun.com/若能绽放光芒.mp4',
-                    pic: 'https://dplayer.b0.upaiyun.com/若能绽放光芒.png'
+                    url: 'https://dplayer.b0.upaiyun.com/【微小微】玖月奇迹－踩踩踩.mp4',
+                    pic: 'https://dplayer.b0.upaiyun.com/【微小微】玖月奇迹－踩踩踩.jpg'
                 },
                 danmaku: {
-                    id: '9E2E3368B56CDBB4',
+                    id: '18EE8C0B4653D5F4',
                     api: 'https://dplayer.daoapp.io/',
                     token: 'tokendemo',
-                    maximum: 3000
+                    maximum: 3000,
+                    addition: ['https://dplayer.daoapp.io/bilibili?aid=2903742']
                 }
             });
         }
@@ -339,6 +342,26 @@ $(document).ready(function ($) {
                 }
             });
         }
+        if (page.find('#dplayer1').length) {
+            var dp1 = new DPlayer({
+                element: document.getElementById('dplayer1'),
+                autoplay: false,
+                theme: '#FADFA3',
+                loop: true,
+                screenshot: true,
+                preload: 'none',
+                video: {
+                    url: 'https://dplayer.b0.upaiyun.com/若能绽放光芒.mp4',
+                    pic: 'https://dplayer.b0.upaiyun.com/若能绽放光芒.png'
+                },
+                danmaku: {
+                    id: '9E2E3368B56CDBB4',
+                    api: 'https://dplayer.daoapp.io/',
+                    token: 'tokendemo',
+                    maximum: 3000
+                }
+            });
+        }
 
         // APlayer
         if (page.find('#player1').length) {
@@ -351,6 +374,21 @@ $(document).ready(function ($) {
                     author: '七森中☆ごらく部',
                     url: 'https://diygod.b0.upaiyun.com/あっちゅ～ま青春!.mp3',
                     pic: 'https://diygod.b0.upaiyun.com/あっちゅ～ま青春!.jpg'
+                }
+            });
+        }
+        if (page.find('#player8').length) {
+            var ap7 = new APlayer({    //2770
+                element: document.getElementById('player8'),
+                autoplay: false,
+                showlrc: 3,
+                preload: 'none',
+                music: {
+                    title: 'STYX HELIX',
+                    author: 'MYTH & ROID',
+                    url: 'https://diygod.b0.upaiyun.com/STYX HELIX.mp3',
+                    pic: 'https://diygod.b0.upaiyun.com/STYX HELIX.jpg',
+                    lrc: 'https://api.lwl12.com/music/netease/lyric?raw=true&id=413961906'
                 }
             });
         }
@@ -485,6 +523,15 @@ $(document).ready(function ($) {
     // }
     // finish();
 
+    // share in page
+    $('.single article.block').append(`<div class="share">分享到：</div>`);
+    $('.share').share({
+        disabled: ['tencent', 'douban', 'linkedin', 'diandian', 'facebook', 'google'],
+        wechatQrcodeTitle   : "微信扫一扫",
+        wechatQrcodeHelper  : '<p>微信扫一扫，右上角分享</p>',
+        source: 'Anotherhome'
+    });
+
     // donate in page
     $('.single article.block').append(`
         <div class="donate">
@@ -492,11 +539,11 @@ $(document).ready(function ($) {
             <div class="donate-body">
                 <div class="donate-wx donate-item">
                     <img src="https://diygod.b0.upaiyun.com/2016-08-25_wxd.png">
-                    <div class="donate-tip">微信扫一扫,向我赞赏</div>
+                    <div class="donate-tip">微信扫一扫，向我赞赏</div>
                 </div>
                 <div class="donate-zfb donate-item">
                     <img src="https://diygod.b0.upaiyun.com/2016-08-25_zfbd.png">
-                    <div class="donate-tip">支付宝扫一扫,向我赞赏</div>
+                    <div class="donate-tip">支付宝扫一扫，向我赞赏</div>
                 </div>
             </div>
         </div>

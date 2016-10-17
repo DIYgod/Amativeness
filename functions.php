@@ -1139,4 +1139,72 @@ function leonax_anti_spam_check( $commentdata ) {
 
 add_filter( 'preprocess_comment' , 'leonax_anti_spam_check' );
 
+
+
+// ajax comment
+if(!function_exists('fa_ajax_comment_err')) :
+
+    function fa_ajax_comment_err($a) {
+        header('HTTP/1.0 500 Internal Server Error');
+        header('Content-Type: text/plain;charset=UTF-8');
+        echo $a;
+        exit;
+    }
+
+endif;
+
+if(!function_exists('fa_ajax_comment_callback')) :
+
+    function fa_ajax_comment_callback(){
+        $comment = wp_handle_comment_submission( wp_unslash( $_POST ) );
+        if ( is_wp_error( $comment ) ) {
+            $data = $comment->get_error_data();
+            if ( ! empty( $data ) ) {
+                fa_ajax_comment_err($comment->get_error_message());
+            } else {
+                exit;
+            }
+        }
+        $user = wp_get_current_user();
+        do_action('set_comment_cookies', $comment, $user);
+        $GLOBALS['comment'] = $comment; //根据你的评论结构自行修改，如使用默认主题则无需修改
+        ?>
+        <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+            <article id="comment-<?php comment_ID(); ?>" class="comment-b">
+                <header class="comment-meta comment-author vcard">
+                    <?php
+                    echo get_avatar($comment, 44);
+                    printf('<div class="comments-authore-title"><div class="comments-name">%1$s</div>',
+                        get_comment_author_link()
+                    );
+                    get_author_class($comment->comment_author_email,$comment->user_id);
+                    printf('<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
+                        esc_url(get_comment_link($comment->comment_ID)),
+                        get_comment_time('c'),
+                        /* translators: 1: date, 2: time */
+                        sprintf(__('%1$s %2$s', 'amativeness'), get_comment_date(), get_comment_time())
+                    );
+                    ?>
+                </header>
+                <!-- .comment-meta -->
+                <?php if ('0' == $comment->comment_approved) : ?>
+                    <p class="comment-awaiting-moderation"><?php _e('您的评论正在等待批准。', 'amativeness'); ?></p>
+                <?php endif; ?>
+                <section class="comment-content comment">
+                    <?php comment_text(); ?>
+                    <?php edit_comment_link(__('Edit', 'amativeness'), '<p class="edit-link">', '</p>'); ?>
+                    <div class="comment-reply"><a rel="nofollow" class="comment-reply-link" onclick="window.location.reload()" href="javascript:void(0)">回复</a></div>
+                </section>
+                <!-- .comment-content -->
+            </article>
+            <!-- #comment-## -->
+        </li>
+<?php die();
+}
+
+endif;
+
+add_action('wp_ajax_nopriv_ajax_comment', 'fa_ajax_comment_callback');
+add_action('wp_ajax_ajax_comment', 'fa_ajax_comment_callback');
+
 ?>

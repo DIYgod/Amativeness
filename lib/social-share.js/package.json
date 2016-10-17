@@ -1,0 +1,112 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "social-share.js",
+        "scope": null,
+        "escapedName": "social-share.js",
+        "name": "social-share.js",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/DIYgod/Code/PhpstormProjects/Amativeness"
+    ]
+  ],
+  "_from": "social-share.js@latest",
+  "_id": "social-share.js@1.0.15",
+  "_inCache": true,
+  "_location": "/social-share.js",
+  "_nodeVersion": "6.2.2",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/social-share.js-1.0.15.tgz_1467689371059_0.2691159874666482"
+  },
+  "_npmUser": {
+    "name": "overtrue",
+    "email": "i@overtrue.me"
+  },
+  "_npmVersion": "3.9.5",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "social-share.js",
+    "scope": null,
+    "escapedName": "social-share.js",
+    "name": "social-share.js",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/social-share.js/-/social-share.js-1.0.15.tgz",
+  "_shasum": "ebca2aed092fc22cc9d9659d56c2fed648bfddea",
+  "_shrinkwrap": null,
+  "_spec": "social-share.js",
+  "_where": "/Users/DIYgod/Code/PhpstormProjects/Amativeness",
+  "author": {
+    "name": "overtrue"
+  },
+  "bugs": {
+    "url": "https://github.com/overtrue/share.js/issues"
+  },
+  "dependencies": {},
+  "description": "create social share buttons on your site.",
+  "devDependencies": {
+    "del": "*",
+    "event-stream": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-combine-media-queries": "*",
+    "gulp-concat": "*",
+    "gulp-cssmin": "*",
+    "gulp-imagemin": "*",
+    "gulp-livereload": "*",
+    "gulp-load-plugins": "*",
+    "gulp-notify": "*",
+    "gulp-rename": "*",
+    "gulp-ruby-sass": "*",
+    "gulp-size": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "ebca2aed092fc22cc9d9659d56c2fed648bfddea",
+    "tarball": "https://registry.npmjs.org/social-share.js/-/social-share.js-1.0.15.tgz"
+  },
+  "gitHead": "ca0423efac2409f86fc0cf625d534440aaf6fdf5",
+  "homepage": "https://github.com/overtrue/share.js#readme",
+  "keywords": [
+    "sns",
+    "share",
+    "weibo",
+    "qq",
+    "douban",
+    "qzone",
+    "linkedin",
+    "facebook",
+    "google"
+  ],
+  "license": "MIT",
+  "main": "dist/js/share.min.js",
+  "maintainers": [
+    {
+      "name": "overtrue",
+      "email": "i@overtrue.me"
+    }
+  ],
+  "name": "social-share.js",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/overtrue/share.js.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.15"
+}

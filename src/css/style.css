@@ -39,6 +39,36 @@ Text Domain: Amativeness
     .header-description #site-header {
         top: 150px;
     }
+
+    #primary-navigation {
+        float: none;
+    }
+
+    #primary-navigation .nav-menu {
+        display: flex;
+    }
+
+    #primary-navigation .menu-item {
+        flex: 1;
+    }
+
+    #menu-item-2512 {
+        display: none;
+    }
+
+    #primary-navigation .fa {
+        display: none;
+    }
+
+    #primary-navigation a {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .navbar {
+        position: absolute !important;
+    }
 }
 
 @media (max-width: 800px) {
@@ -875,7 +905,7 @@ form textarea {
     position: fixed;
     z-index: 9;
     background: #000;
-    background: linear-gradient(left top,rgba(59,44,70,.6),rgba(40,42,44,.6));
+    background: rgba(40,42,44,.6);
 }
 
 .navbar .nav {
@@ -1817,17 +1847,6 @@ footer .container {
     left: 0;
 }
 
-@media (max-width: 750px) {
-    #primary-navigation>div {
-        width: 650px;
-    }
-
-    .navbar .container {
-        overflow-x: scroll;
-        overflow-y: hidden;
-    }
-}
-
 #evanyou {
     position: fixed;
     width: 100%;
@@ -2643,4 +2662,20 @@ footer .container {
 
 .recent-comments a * {
     cursor: auto;
+}
+
+.pingback {
+    display: none;
+}
+
+a * {
+    cursor: pointer;
+}
+
+.social-share .social-share-icon {
+    transition: none !important;
+}
+
+.share {
+    margin-top: 40px;
 }
