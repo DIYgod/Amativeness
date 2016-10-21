@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html itemscope="itemscope" itemtype="http://schema.org/WebPage">
 <head>
     <meta charset="UTF-8">
     <meta name="theme-color" content="#595C5E">
@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/lib/nprogress/nprogress.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/lib/social-share.js/dist/css/share.min.css">
     <link rel="stylesheet" href="https://staticfile.qnssl.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <script src='https://diygod.b0.upaiyun.com/jquery.min.js'></script>
 <!--    <script type="text/javascript" src="--><?php //bloginfo('template_url'); ?><!--/ajax-comment/app.js"></script>-->
     <script src="<?php echo get_template_directory_uri(); ?>/lib/nprogress/nprogress.min.js"></script>
     <script>

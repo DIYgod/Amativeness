@@ -159,22 +159,20 @@ if (!function_exists('amativeness_comment')) :
                 // Proceed with normal comments.
                 global $post;
                 ?>
-                <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+                <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>" itemprop="reviews" itemscope="" itemtype="http://schema.org/Review">
                 <article id="comment-<?php comment_ID(); ?>" class="comment-b">
                     <header class="comment-meta comment-author vcard">
                         <?php
                         echo get_avatar($comment, 44);
-                        printf('<div class="comments-authore-title"><div class="comments-name">%1$s %2$s</div>',
-                            get_comment_author_link(),
-                            // If current post author is also comment author, make it known visually.
-                            ($comment->user_id === $post->post_author) ? '<span class="comment-master">' . __('一只萌萌哒博主', 'amativeness') . '</span>' : ''
+                        printf('<div class="comments-authore-title"><div class="comments-name" itemprop="author">%1$s</div>',
+                            get_comment_author_link()
                         );
-                        get_author_class($comment->comment_author_email,$comment->user_id);
+                        echo ($comment->user_id === $post->post_author) ? '<div class="comments-class">' . __('一只萌萌哒博主', 'amativeness') . '</div>' : '';
                         echo '<div class="comments-ua">';
                         if(function_exists(useragent_output_custom) === true)
                             useragent_output_custom();
                         echo '</div></div>';
-                        printf('<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
+                        printf('<a href="%1$s"><time datetime="%2$s" itemprop="datePublished">%3$s</time></a>',
                             esc_url(get_comment_link($comment->comment_ID)),
                             get_comment_time('c'),
                             /* translators: 1: date, 2: time */
@@ -187,7 +185,7 @@ if (!function_exists('amativeness_comment')) :
                         <p class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.', 'amativeness'); ?></p>
                     <?php endif; ?>
                     <section class="comment-content comment">
-                        <?php comment_text(); ?>
+                        <div itemprop="reviewBody"><?php comment_text(); ?></div>
                         <?php edit_comment_link(__('Edit', 'amativeness'), '<p class="edit-link">', '</p>'); ?>
                         <div class="comment-reply"">
                             <?php comment_reply_link(array_merge($args, array('reply_text' => __('Reply', 'amativeness'), 'depth' => $depth, 'max_depth' => $args['max_depth']))); ?>
@@ -954,6 +952,8 @@ add_action('init', 'remove_emoji9s');
 function my_enqueue_scripts()
 {
     wp_deregister_script('jquery');
+    wp_register_script('jquery', ("https://diygod.b0.upaiyun.com/jquery.min.js"), false);
+    wp_enqueue_script('jquery');
 }
 
 add_action('wp_enqueue_scripts', 'my_enqueue_scripts', 1);
