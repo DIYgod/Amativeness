@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="theme-color" content="#595C5E">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes"">
-    <title><?php wp_title('-', true, 'right'); ?></title>
+    <title itemprop="name"><?php wp_title('-', true, 'right'); ?></title>
     <link rel="canonical" href="https://www.anotherhome.net/">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
     <link rel="apple-touch-icon" href="https://diygod.b0.upaiyun.com/head4.jpg">
@@ -49,7 +49,7 @@
             <a href="<?php bloginfo('url'); ?>/wp-admin/" title="博客后台" class="houtai fa fa-user">后台</a>
         <?php endif; ?>
         <div class="container">
-            <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+            <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
                 <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'nav-menu')); ?>
             </nav>
             <?php if (is_single()) : ?>

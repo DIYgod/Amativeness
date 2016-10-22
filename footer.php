@@ -1,4 +1,4 @@
-    <footer id="colophon" role="contentinfo">
+    <footer id="colophon" role="contentinfo" itemscope="" itemtype="https://schema.org/WPFooter">
         <div class="footer-image"></div>
         <div class="container">
             <p>博客已萌萌哒运行<span id=span_dt_dt></span><span class="my-face">(●'◡'●)ﾉ♥</span></p>
