@@ -903,7 +903,7 @@ form textarea {
     right: 0px;
     top: 0px;
     position: fixed;
-    z-index: 9;
+    z-index: 10;
     background: #000;
     background: rgba(40,42,44,.6);
 }
@@ -1683,16 +1683,29 @@ canvas {
 
 .page-numbers {
     display: inline-block;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 20px 10px;
+    color: #385966;
 }
 
 .page-numbers.current {
-    color: #B8DBFF;
+    color: rgb(81, 88, 101);
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(211, 211, 211);
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin: 0px 5px;
+    padding: 0;
 }
 
 .page-numbers.dots {
     background: #fff;
+}
+
+#comments-nav {
+    text-align: center;
 }
 
 .comments-ua {
@@ -2678,4 +2691,29 @@ a * {
 
 .share {
     margin-top: 40px;
+}
+
+/* ajax comment */
+.butterBar{
+    margin-left:36%;
+    max-width:640px;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:58%;
+    z-index:800
+}
+.butterBar--center{
+    left:50%;
+    margin-left:-320px
+}
+.butterBar-message{
+    background:rgba(255,255,255,0.97);
+    border-bottom-left-radius:4px;
+    border-bottom-right-radius:4px;
+    box-shadow:0 1px 1px rgba(0,0,0,0.25),0 0 1px rgba(0,0,0,0.35);
+    display:inline-block;
+    font-size:14px;
+    margin-bottom:0;
+    padding:12px 25px
 }

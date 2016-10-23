@@ -217,11 +217,11 @@ $(document).ready(function ($) {
     });
 
     // 防重复评论
-    if (document.getElementById('submit')) {
-        document.getElementById('submit').addEventListener('click', function () {
-            this.value = '正在提交,好累呀~';
-        });
-    }
+    // if (document.getElementById('submit')) {
+    //     document.getElementById('submit').addEventListener('click', function () {
+    //         this.value = '正在提交,好累呀~';
+    //     });
+    // }
 
     // 搜索
     //function search() {
@@ -301,66 +301,126 @@ $(document).ready(function ($) {
         $(".post a").attr("target", "_blank");
 
         // DPlayer
-        if (page.find('#dplayer3').length) {
-            var dp3 = new DPlayer({
-                element: document.getElementById('dplayer3'),
-                autoplay: false,
+        if (page.find('#dplayer4').length) {
+            var dp4 = new DPlayer({
+                element: document.getElementById('dplayer4'),
+                autoplay: true,
                 theme: '#FADFA3',
                 loop: true,
                 screenshot: true,
-                preload: 'none',
                 video: {
-                    url: 'https://dplayer.b0.upaiyun.com/【微小微】玖月奇迹－踩踩踩.mp4',
-                    pic: 'https://dplayer.b0.upaiyun.com/【微小微】玖月奇迹－踩踩踩.jpg'
+                    url: 'https://dplayer.b0.upaiyun.com/wxwlive/1019/index.m3u8',
+                    pic: 'https://dplayer.b0.upaiyun.com/wxwlive/1019/poster.png'
                 },
                 danmaku: {
-                    id: '18EE8C0B4653D5F4',
+                    id: '02d53ea190dc8583',
                     api: 'https://dplayer.daoapp.io/',
                     token: 'tokendemo',
                     maximum: 3000,
-                    addition: ['https://dplayer.daoapp.io/bilibili?aid=2903742']
+                    addition: ['https://dplayer.b0.upaiyun.com/wxwlive/1019/danmaku.json']
                 }
             });
+        }
+        if (page.find('#dplayer3').length) {
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
+                        const response = JSON.parse(xhr.responseText);
+                        var dp3 = new DPlayer({
+                            element: document.getElementById('dplayer3'),
+                            autoplay: false,
+                            theme: '#FADFA3',
+                            loop: true,
+                            preload: 'none',
+                            screenshot: false,
+                            video: {
+                                url: response.durl[0].url,
+                                pic: 'https://dplayer.b0.upaiyun.com/【微小微】玖月奇迹－踩踩踩.jpg'
+                            },
+                            danmaku: {
+                                id: '18EE8C0B4653D5F4',
+                                api: 'https://dplayer.daoapp.io/',
+                                token: 'tokendemo',
+                                maximum: 3000,
+                                addition: ['https://dplayer.daoapp.io/bilibili?aid=2903742']
+                            }
+                        });
+                    }
+                    else {
+                        console.log('Request was unsuccessful: ' + xhr.status);
+                    }
+                }
+            };
+            xhr.open('get', 'https://dplayer.daoapp.io/video/bilibili?aid=2903742', true);
+            xhr.send(null);
         }
         if (page.find('#dplayer2').length) {
-            var dp2 = new DPlayer({
-                element: document.getElementById('dplayer2'),
-                autoplay: false,
-                theme: '#FADFA3',
-                loop: true,
-                screenshot: true,
-                preload: 'none',
-                video: {
-                    url: 'https://dplayer.b0.upaiyun.com/微小微-江南皮革厂倒闭了.mp4',
-                    pic: 'https://dplayer.b0.upaiyun.com/微小微-江南皮革厂倒闭了.jpg'
-                },
-                danmaku: {
-                    id: '5rGf5Y2X55qu6Z2p',
-                    api: 'https://dplayer.daoapp.io/',
-                    token: 'tokendemo',
-                    maximum: 3000
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
+                        const response = JSON.parse(xhr.responseText);
+                        var dp2 = new DPlayer({
+                            element: document.getElementById('dplayer2'),
+                            autoplay: false,
+                            theme: '#FADFA3',
+                            loop: true,
+                            preload: 'none',
+                            screenshot: false,
+                            video: {
+                                url: response.durl[0].url,
+                                pic: 'https://dplayer.b0.upaiyun.com/微小微-江南皮革厂倒闭了.jpg'
+                            },
+                            danmaku: {
+                                id: '5rGf5Y2X55qu6Z2p',
+                                api: 'https://dplayer.daoapp.io/',
+                                token: 'tokendemo',
+                                maximum: 3000,
+                                addition: ['https://dplayer.daoapp.io/bilibili?aid=4045652']
+                            }
+                        });
+                    }
+                    else {
+                        console.log('Request was unsuccessful: ' + xhr.status);
+                    }
                 }
-            });
+            };
+            xhr.open('get', 'https://dplayer.daoapp.io/video/bilibili?aid=4045652', true);
+            xhr.send(null);
         }
         if (page.find('#dplayer1').length) {
-            var dp1 = new DPlayer({
-                element: document.getElementById('dplayer1'),
-                autoplay: false,
-                theme: '#FADFA3',
-                loop: true,
-                screenshot: true,
-                preload: 'none',
-                video: {
-                    url: 'https://dplayer.b0.upaiyun.com/若能绽放光芒.mp4',
-                    pic: 'https://dplayer.b0.upaiyun.com/若能绽放光芒.png'
-                },
-                danmaku: {
-                    id: '9E2E3368B56CDBB4',
-                    api: 'https://dplayer.daoapp.io/',
-                    token: 'tokendemo',
-                    maximum: 3000
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
+                        const response = JSON.parse(xhr.responseText);
+                        var dp1 = new DPlayer({
+                            element: document.getElementById('dplayer1'),
+                            autoplay: false,
+                            theme: '#FADFA3',
+                            loop: true,
+                            screenshot: false,
+                            preload: 'none',
+                            video: {
+                                url: response.durl[0].url,
+                                pic: 'https://dplayer.b0.upaiyun.com/若能绽放光芒.png'
+                            },
+                            danmaku: {
+                                id: '9E2E3368B56CDBB4',
+                                api: 'https://dplayer.daoapp.io/',
+                                token: 'tokendemo',
+                                maximum: 3000
+                            }
+                        });
+                    }
+                    else {
+                        console.log('Request was unsuccessful: ' + xhr.status);
+                    }
                 }
-            });
+            };
+            xhr.open('get', 'https://dplayer.daoapp.io/video/bilibili?aid=1714157', true);
+            xhr.send(null);
         }
 
         // APlayer
@@ -575,4 +635,142 @@ $(document).ready(function ($) {
         }
         $('.donate-table tbody').append(html);
     }
+
+    // ajax comment
+    var __cancel = jQuery('#cancel-comment-reply-link'),
+        __cancel_text = __cancel.text(),
+        __list = 'commentlist';//your comment wrapprer
+
+    var ajaxcomment = {
+        ajax_url: 'https://www.anotherhome.net/wp-admin/admin-ajax.php',
+        formpostion: 'bottom',
+        order: 'noasc'
+    }
+    jQuery(document).on("submit", "#commentform", function() {
+        jQuery.ajax({
+            url: ajaxcomment.ajax_url,
+            data: jQuery(this).serialize() + "&action=ajax_comment",
+            type: jQuery(this).attr('method'),
+            beforeSend: function () {
+                addComment.createButterbar("正在提交,好累呀~");
+                NProgress.set(0.7);
+            },
+            error: function(request) {
+                var t = addComment;
+                t.createButterbar(request.responseText);
+                NProgress.set(1.0);
+            },
+            success: function(data) {
+                jQuery('textarea').each(function() {
+                    this.value = ''
+                });
+                var t = addComment,
+                    cancel = t.I('cancel-comment-reply-link'),
+                    temp = t.I('wp-temp-form-div'),
+                    respond = t.I(t.respondId),
+                    post = t.I('comment_post_ID').value,
+                    parent = t.I('comment_parent').value;
+                if (parent != '0') {
+                    jQuery('#respond').before('<ol class="children">' + data + '</ol>');
+                } else if (!jQuery('.' + __list ).length) {
+                    if (ajaxcomment.formpostion == 'bottom') {
+                        jQuery('#respond').before('<ol class="' + __list + '">' + data + '</ol>');
+                    } else {
+                        jQuery('#respond').after('<ol class="' + __list + '">' + data + '</ol>');
+                    }
+
+                } else {
+                    if (ajaxcomment.order == 'asc') {
+                        jQuery('.' + __list ).append(data); // your comments wrapper
+                    } else {
+                        jQuery('.' + __list ).prepend(data); // your comments wrapper
+                    }
+                }
+                t.createButterbar("提交");
+                NProgress.set(1.0);
+                cancel.style.display = 'none';
+                cancel.onclick = null;
+                t.I('comment_parent').value = '0';
+                if (temp && respond) {
+                    temp.parentNode.insertBefore(respond, temp);
+                    temp.parentNode.removeChild(temp)
+                }
+            }
+        });
+        return false;
+    });
+    var addComment = {
+        moveForm: function(commId, parentId, respondId) {
+            var t = this,
+                div, comm = t.I(commId),
+                respond = t.I(respondId),
+                cancel = t.I('cancel-comment-reply-link'),
+                parent = t.I('comment_parent'),
+                post = t.I('comment_post_ID');
+            __cancel.text(__cancel_text);
+            t.respondId = respondId;
+            if (!t.I('wp-temp-form-div')) {
+                div = document.createElement('div');
+                div.id = 'wp-temp-form-div';
+                div.style.display = 'none';
+                respond.parentNode.insertBefore(div, respond)
+            }!comm ? (temp = t.I('wp-temp-form-div'), t.I('comment_parent').value = '0', temp.parentNode.insertBefore(respond, temp), temp.parentNode.removeChild(temp)) : comm.parentNode.insertBefore(respond, comm.nextSibling);
+            jQuery("body").animate({
+                scrollTop: jQuery('#respond').offset().top - 180
+            }, 400);
+            parent.value = parentId;
+            cancel.style.display = '';
+            cancel.onclick = function() {
+                var t = addComment,
+                    temp = t.I('wp-temp-form-div'),
+                    respond = t.I(t.respondId);
+                t.I('comment_parent').value = '0';
+                if (temp && respond) {
+                    temp.parentNode.insertBefore(respond, temp);
+                    temp.parentNode.removeChild(temp);
+                }
+                this.style.display = 'none';
+                this.onclick = null;
+                return false;
+            };
+            try {
+                t.I('comment').focus();
+            } catch (e) {}
+            return false;
+        },
+        I: function(e) {
+            return document.getElementById(e);
+        },
+        clearButterbar: function(e) {
+            if (jQuery(".butterBar").length > 0) {
+                jQuery(".butterBar").remove();
+            }
+        },
+        createButterbar: function(message) {
+            // var t = this;
+            // t.clearButterbar();
+            // jQuery("body").append('<div class="butterBar butterBar--center"><p class="butterBar-message">' + message + '</p></div>');
+            // setTimeout("jQuery('.butterBar').remove()", 3000);
+            document.getElementById('submit').value = message;
+        }
+    };
+    // ajax comment end
+
+    // ajax comment page
+    function ajaxCommentPage() {
+        $("#comments-nav a").on("click", function(e) {
+            e.preventDefault();
+            NProgress.set(0.7);
+            jQuery.get($(this).attr('href'), function(data) {
+                $(".commentshow").html($(data).find('.commentshow'));
+                NProgress.set(1.0);
+                $("body, html").animate({
+                    scrollTop: $(".commentshow").offset().top - 120
+                }, 1000);
+                ajaxCommentPage();
+            });
+            return false;
+        })
+    }
+    ajaxCommentPage();
 });
