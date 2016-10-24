@@ -167,6 +167,7 @@ if (!function_exists('amativeness_comment')) :
                         printf('<div class="comments-authore-title"><div class="comments-name" itemprop="author">%1$s</div>',
                             get_comment_author_link()
                         );
+                        get_author_class($comment->comment_author_email,$comment->user_id);
                         echo ($comment->user_id === $post->post_author) ? '<div class="comments-class">' . __('一只萌萌哒博主', 'amativeness') . '</div>' : '';
                         echo '<div class="comments-ua">';
                         if(function_exists(useragent_output_custom) === true)
