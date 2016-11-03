@@ -12,7 +12,7 @@
     <link rel="search" type="application/opensearchdescription+xml" href="<?php bloginfo('template_url'); ?>/search.xml" title="Anotherhome">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/lib/nprogress/nprogress.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/lib/social-share.js/dist/css/share.min.css">
-    <link rel="stylesheet" href="https://staticfile.qnssl.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://staticfile.qnssl.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--    <script type="text/javascript" src="--><?php //bloginfo('template_url'); ?><!--/ajax-comment/app.js"></script>-->
     <script src="<?php echo get_template_directory_uri(); ?>/lib/nprogress/nprogress.min.js"></script>
     <script>
