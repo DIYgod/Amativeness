@@ -295,7 +295,7 @@ $(document).ready(function ($) {
             logo: 'OωO表情',
             container: document.getElementsByClassName('content-field')[0].getElementsByClassName('OwO')[0],
             target: document.getElementById('comment-content'),
-            api: 'https://www.anotherhome.net/api/OwO/OwO.json',
+            api: 'https://api.prprpr.me/OwO/OwO.json',
         });
     }
 
