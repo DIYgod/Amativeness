@@ -193,9 +193,17 @@ $(document).ready(function ($) {
     //    });
     //}
 
-    // poi
-    // var poi = new Audio('https://diygod.b0.upaiyun.com/poi.wav');
-    // poi.play();
+    // audio
+    var loliAudio;
+    function playLoli() {
+        if (!loliAudio) {
+            loliAudio = new Audio('https://diygod.b0.upaiyun.com/loli.mp3');
+        }
+        loliAudio.play();
+    }
+    document.getElementsByClassName('xm')[0].addEventListener('click', function () {
+        playLoli();
+    });
 
     // 关闭侧边栏
     document.getElementsByClassName('close-side')[0].addEventListener('click', function () {
@@ -301,6 +309,26 @@ $(document).ready(function ($) {
         $(".post a").attr("target", "_blank");
 
         // DPlayer
+        if (page.find('#dplayer5').length) {
+            var dp5 = new DPlayer({
+                element: document.getElementById('dplayer5'),
+                autoplay: true,
+                theme: '#FADFA3',
+                loop: true,
+                screenshot: true,
+                video: {
+                    url: 'https://dplayer.b0.upaiyun.com/wxwlive/1102/index.m3u8',
+                    pic: 'https://dplayer.b0.upaiyun.com/wxwlive/1102/poster.png'
+                },
+                danmaku: {
+                    id: 'f171a0b104c1fd55',
+                    api: 'https://api.prprpr.me/dplayer/',
+                    token: 'tokendemo',
+                    maximum: 3000,
+                    addition: ['https://dplayer.b0.upaiyun.com/wxwlive/1102/danmaku.json']
+                }
+            });
+        }
         if (page.find('#dplayer4').length) {
             var dp4 = new DPlayer({
                 element: document.getElementById('dplayer4'),
@@ -314,7 +342,7 @@ $(document).ready(function ($) {
                 },
                 danmaku: {
                     id: '02d53ea190dc8583',
-                    api: 'https://dplayer.daoapp.io/',
+                    api: 'https://api.prprpr.me/dplayer/',
                     token: 'tokendemo',
                     maximum: 3000,
                     addition: ['https://dplayer.b0.upaiyun.com/wxwlive/1019/danmaku.json']
@@ -340,10 +368,10 @@ $(document).ready(function ($) {
                             },
                             danmaku: {
                                 id: '18EE8C0B4653D5F4',
-                                api: 'https://dplayer.daoapp.io/',
+                                api: 'https://api.prprpr.me/dplayer/',
                                 token: 'tokendemo',
                                 maximum: 3000,
-                                addition: ['https://dplayer.daoapp.io/bilibili?aid=2903742']
+                                addition: ['https://api.prprpr.me/dplayer/bilibili?aid=2903742']
                             }
                         });
                     }
@@ -352,7 +380,7 @@ $(document).ready(function ($) {
                     }
                 }
             };
-            xhr.open('get', 'https://dplayer.daoapp.io/video/bilibili?aid=2903742', true);
+            xhr.open('get', 'https://api.prprpr.me/dplayer/video/bilibili?aid=2903742', true);
             xhr.send(null);
         }
         if (page.find('#dplayer2').length) {
@@ -374,10 +402,10 @@ $(document).ready(function ($) {
                             },
                             danmaku: {
                                 id: '5rGf5Y2X55qu6Z2p',
-                                api: 'https://dplayer.daoapp.io/',
+                                api: 'https://api.prprpr.me/dplayer/',
                                 token: 'tokendemo',
                                 maximum: 3000,
-                                addition: ['https://dplayer.daoapp.io/bilibili?aid=4045652']
+                                addition: ['https://api.prprpr.me/dplayer/bilibili?aid=4045652']
                             }
                         });
                     }
@@ -386,7 +414,7 @@ $(document).ready(function ($) {
                     }
                 }
             };
-            xhr.open('get', 'https://dplayer.daoapp.io/video/bilibili?aid=4045652', true);
+            xhr.open('get', 'https://api.prprpr.me/dplayer/video/bilibili?aid=4045652', true);
             xhr.send(null);
         }
         if (page.find('#dplayer1').length) {
@@ -408,7 +436,7 @@ $(document).ready(function ($) {
                             },
                             danmaku: {
                                 id: '9E2E3368B56CDBB4',
-                                api: 'https://dplayer.daoapp.io/',
+                                api: 'https://api.prprpr.me/dplayer/',
                                 token: 'tokendemo',
                                 maximum: 3000
                             }
@@ -419,7 +447,7 @@ $(document).ready(function ($) {
                     }
                 }
             };
-            xhr.open('get', 'https://dplayer.daoapp.io/video/bilibili?aid=1714157', true);
+            xhr.open('get', 'https://api.prprpr.me/dplayer/video/bilibili?aid=1714157', true);
             xhr.send(null);
         }
 
