@@ -727,15 +727,11 @@ form textarea {
     margin-bottom: 40px;
 }
 
-.block.post,
-.block.widget,
-.block.comment-block {
+.block.widget {
     transition: all .2s linear;
 }
 
-.block.post:hover,
-.block.widget:hover,
-.block.comment-block:hover {
+.block.widget:hover {
     transform: translate3d(0, -2px, 0);
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
@@ -1204,7 +1200,8 @@ form textarea {
 }
 
 /* 一连串较长的英文字符自动换行 */
-#content .post {
+#content .post,
+.recent-comments {
     white-space: normal;
     word-break: break-all;
     word-wrap: break-word;
