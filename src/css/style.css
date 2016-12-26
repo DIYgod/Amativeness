@@ -1025,10 +1025,10 @@ form textarea {
 .header-description {
     height: 650px;
     position: relative;
-    background-image: url(https://diygod.b0.upaiyun.com/header1000.jpg);
+    background-image: url(https://diygod.b0.upaiyun.com/header-your-name2.jpg);
     width: 100%;
     background-size: cover;
-    background-position: center 0;
+    background-position: center 50%;
     background-repeat: no-repeat;
 }
 
@@ -2201,9 +2201,9 @@ footer .container {
     color: #fff;
 }
 
-#site-header h1 {
-    display: none;
-}
+/*#site-header h1 {*/
+    /*display: none;*/
+/*}*/
 
 /* blogChat */
 .chatroom-feedback {
@@ -2727,3 +2727,34 @@ a * {
     margin-bottom:0;
     padding:12px 25px
 }
+
+/*.header-description:before {*/
+    /*content:" ";*/
+    /*display:block;*/
+    /*position:absolute;*/
+    /*top:0;*/
+    /*left:-50%;*/
+    /*width:200%;*/
+    /*height:100%;*/
+    /*z-index:1;*/
+    /*background-size:40rem 40rem;*/
+    /*background-image:url(https://diygod.b0.upaiyun.com/falling-snow2.png);*/
+    /*animation: snow 28s linear infinite;*/
+/*}*/
+
+/*.header-description:after{*/
+    /*content:" ";*/
+    /*display:block;*/
+    /*position:absolute;*/
+    /*top:0;*/
+    /*left:-50%;*/
+    /*width:200%;*/
+    /*height:100%;*/
+    /*background-size:40rem 40rem;*/
+    /*background-image:url(https://diygod.b0.upaiyun.com/falling-snow1.png);*/
+    /*animation: snow 18s linear infinite;*/
+/*}*/
+
+/*@keyframes snow{*/
+    /*0%{background-position-x:0;background-position-y:0}50%{background-position-y:40rem}100%{background-position-x:40rem;background-position-y:80rem}*/
+/*}*/
