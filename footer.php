@@ -4,7 +4,7 @@
             <p>博客已萌萌哒运行<span id=span_dt_dt></span><span class="my-face">(●'◡'●)ﾉ♥</span></p>
             <p>
                 托管于<a href="http://www.aliyun.com/" target="_blank"> 阿里云</a>.
-                <a href="https://www.upyun.com/" target="_blank">又拍云</a> 提供静态文件云存储服务.
+                <a href="https://www.upyun.com/" target="_blank"><img src="https://diygod.b0.upaiyun.com/upyun.png" height="20"></a> 提供静态文件云存储服务.
                 <a href="http://www.google.com/analytics/" target="_blank">Google Analytics </a>提供网站统计服务.
                 <a href="http://www.cloudxns.net/" target="_blank">CloudXNS </a>提供 DNS 解析服务.
             </p>
