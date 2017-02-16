@@ -32,5 +32,15 @@
             <?php the_content(__('Continue reading <span class="meta-nav">&rarr;</span>', 'amativeness')); ?>
             <?php wp_link_pages(array('before' => '<div class="page-links">' . __('Pages:', 'amativeness'), 'after' => '</div>')); ?>
         </div><!-- .article-content -->
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- 自适应_标题下 -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5433699470727157"
+             data-ad-slot="7856112224"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     <?php endif; ?>
 </article><!-- #post -->
