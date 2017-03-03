@@ -27,5 +27,10 @@
     <script>
         NProgress.set(1.0);
     </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register("/sw.js?v=<?php echo rand(1,999); ?>");
+        }
+    </script>
     </body>
 </html>
