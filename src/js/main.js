@@ -309,6 +309,65 @@ $(document).ready(function ($) {
         $(".post a").attr("target", "_blank");
 
         // DPlayer
+        if (page.find('#dplayer8').length) {
+            var dp8 = new DPlayer({
+                element: document.getElementById('dplayer8'),
+                autoplay: false,
+                theme: '#FADFA3',
+                loop: true,
+                screenshot: true,
+                video: {
+                    url: 'https://dplayer.b0.upaiyun.com/wxwlive/1216/2/index.m3u8',
+                    pic: 'https://dplayer.b0.upaiyun.com/wxwlive/1216/1/poster.png'
+                },
+                danmaku: {
+                    id: 'f9e80f1d90cd12f5',
+                    api: 'https://api.prprpr.me/dplayer/',
+                    token: 'tokendemo',
+                    addition: ['https://dplayer.b0.upaiyun.com/wxwlive/1216/2/danmaku.json']
+                }
+            });
+        }
+        if (page.find('#dplayer7').length) {
+            var dp7 = new DPlayer({
+                element: document.getElementById('dplayer7'),
+                autoplay: true,
+                theme: '#FADFA3',
+                loop: true,
+                screenshot: true,
+                video: {
+                    url: 'https://dplayer.b0.upaiyun.com/wxwlive/1216/1/index.m3u8',
+                    pic: 'https://dplayer.b0.upaiyun.com/wxwlive/1216/1/poster.png'
+                },
+                danmaku: {
+                    id: '8810755617f77d00',
+                    api: 'https://api.prprpr.me/dplayer/',
+                    token: 'tokendemo',
+                    addition: ['https://dplayer.b0.upaiyun.com/wxwlive/1216/1/danmaku.json']
+                }
+            });
+        }
+        if (page.find('#dplayer6').length) {
+            var dp6 = new DPlayer({
+                element: document.getElementById('dplayer6'),
+                autoplay: false,
+                theme: '#FADFA3',
+                loop: true,
+                screenshot: false,
+                preload: 'none',
+                video: {
+                    url: 'https://api.prprpr.me/dplayer/video/bilibili?aid=7185185',
+                    pic: 'https://dplayer.b0.upaiyun.com/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97.jpg'
+                },
+                danmaku: {
+                    id: 'AA6061E1FBE38E61',
+                    api: 'https://api.prprpr.me/dplayer/',
+                    token: 'tokendemo',
+                    maximum: 3000,
+                    addition: ['https://api.prprpr.me/dplayer/bilibili?aid=7185185']
+                }
+            });
+        }
         if (page.find('#dplayer5').length) {
             var dp5 = new DPlayer({
                 element: document.getElementById('dplayer5'),
@@ -350,105 +409,66 @@ $(document).ready(function ($) {
             });
         }
         if (page.find('#dplayer3').length) {
-            const xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = () => {
-                if (xhr.readyState === 4) {
-                    if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
-                        const response = JSON.parse(xhr.responseText);
-                        var dp3 = new DPlayer({
-                            element: document.getElementById('dplayer3'),
-                            autoplay: false,
-                            theme: '#FADFA3',
-                            loop: true,
-                            preload: 'none',
-                            screenshot: false,
-                            video: {
-                                url: response.durl[0].url,
-                                pic: 'https://dplayer.b0.upaiyun.com/【微小微】玖月奇迹－踩踩踩.jpg'
-                            },
-                            danmaku: {
-                                id: '18EE8C0B4653D5F4',
-                                api: 'https://api.prprpr.me/dplayer/',
-                                token: 'tokendemo',
-                                maximum: 3000,
-                                addition: ['https://api.prprpr.me/dplayer/bilibili?aid=2903742']
-                            }
-                        });
-                    }
-                    else {
-                        console.log('Request was unsuccessful: ' + xhr.status);
-                    }
+            var dp3 = new DPlayer({
+                element: document.getElementById('dplayer3'),
+                autoplay: false,
+                theme: '#FADFA3',
+                loop: true,
+                screenshot: false,
+                preload: 'none',
+                video: {
+                    url: 'https://api.prprpr.me/dplayer/video/bilibili?aid=2903742',
+                    pic: 'https://dplayer.b0.upaiyun.com/【微小微】玖月奇迹－踩踩踩.jpg'
+                },
+                danmaku: {
+                    id: '18EE8C0B4653D5F4',
+                    api: 'https://api.prprpr.me/dplayer/',
+                    token: 'tokendemo',
+                    maximum: 3000,
+                    addition: ['https://api.prprpr.me/dplayer/bilibili?aid=2903742']
                 }
-            };
-            xhr.open('get', 'https://api.prprpr.me/dplayer/video/bilibili?aid=2903742', true);
-            xhr.send(null);
+            });
         }
         if (page.find('#dplayer2').length) {
-            const xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = () => {
-                if (xhr.readyState === 4) {
-                    if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
-                        const response = JSON.parse(xhr.responseText);
-                        var dp2 = new DPlayer({
-                            element: document.getElementById('dplayer2'),
-                            autoplay: false,
-                            theme: '#FADFA3',
-                            loop: true,
-                            preload: 'none',
-                            screenshot: false,
-                            video: {
-                                url: response.durl[0].url,
-                                pic: 'https://dplayer.b0.upaiyun.com/微小微-江南皮革厂倒闭了.jpg'
-                            },
-                            danmaku: {
-                                id: '5rGf5Y2X55qu6Z2p',
-                                api: 'https://api.prprpr.me/dplayer/',
-                                token: 'tokendemo',
-                                maximum: 3000,
-                                addition: ['https://api.prprpr.me/dplayer/bilibili?aid=4045652']
-                            }
-                        });
-                    }
-                    else {
-                        console.log('Request was unsuccessful: ' + xhr.status);
-                    }
+            var dp2 = new DPlayer({
+                element: document.getElementById('dplayer2'),
+                autoplay: false,
+                theme: '#FADFA3',
+                loop: true,
+                screenshot: false,
+                preload: 'none',
+                video: {
+                    url: 'https://api.prprpr.me/dplayer/video/bilibili?aid=4045652',
+                    pic: 'https://dplayer.b0.upaiyun.com/微小微-江南皮革厂倒闭了.jpg'
+                },
+                danmaku: {
+                    id: '5rGf5Y2X55qu6Z2p',
+                    api: 'https://api.prprpr.me/dplayer/',
+                    token: 'tokendemo',
+                    maximum: 3000,
+                    addition: ['https://api.prprpr.me/dplayer/bilibili?aid=4045652']
                 }
-            };
-            xhr.open('get', 'https://api.prprpr.me/dplayer/video/bilibili?aid=4045652', true);
-            xhr.send(null);
+            });
         }
         if (page.find('#dplayer1').length) {
-            const xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = () => {
-                if (xhr.readyState === 4) {
-                    if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
-                        const response = JSON.parse(xhr.responseText);
-                        var dp1 = new DPlayer({
-                            element: document.getElementById('dplayer1'),
-                            autoplay: false,
-                            theme: '#FADFA3',
-                            loop: true,
-                            screenshot: false,
-                            preload: 'none',
-                            video: {
-                                url: response.durl[0].url,
-                                pic: 'https://dplayer.b0.upaiyun.com/若能绽放光芒.png'
-                            },
-                            danmaku: {
-                                id: '9E2E3368B56CDBB4',
-                                api: 'https://api.prprpr.me/dplayer/',
-                                token: 'tokendemo',
-                                maximum: 3000
-                            }
-                        });
-                    }
-                    else {
-                        console.log('Request was unsuccessful: ' + xhr.status);
-                    }
+            var dp1 = new DPlayer({
+                element: document.getElementById('dplayer1'),
+                autoplay: false,
+                theme: '#FADFA3',
+                loop: true,
+                screenshot: false,
+                preload: 'none',
+                video: {
+                    url: 'https://api.prprpr.me/dplayer/video/bilibili?aid=1714157',
+                    pic: 'https://dplayer.b0.upaiyun.com/若能绽放光芒.png'
+                },
+                danmaku: {
+                    id: '9E2E3368B56CDBB4',
+                    api: 'https://api.prprpr.me/dplayer/',
+                    token: 'tokendemo',
+                    maximum: 3000
                 }
-            };
-            xhr.open('get', 'https://api.prprpr.me/dplayer/video/bilibili?aid=1714157', true);
-            xhr.send(null);
+            });
         }
 
         // APlayer
@@ -571,18 +591,12 @@ $(document).ready(function ($) {
             }
         }
         if (page.find('.like-vote').length) {
-            $.getJSON("https://www.anotherhome.net/api/vote/like.php?action=get", function (data) {
-                $('.like-vote span').html(data.like);
+            $.getJSON("https://api.prprpr.me/count/?id=DIYgod-like&action=get", function (data) {
+                $('.like-vote span').html(data);
             });
             $('.like-vote').click(function () {
-                $.getJSON("https://www.anotherhome.net/api/vote/like.php?action=add", function (data) {
-                    if (data.success) {
-                        $('.like-vote span').html(data.like);
-                        $('.like-title').html('我也喜欢你 (*≧▽≦)');
-                    }
-                    else {
-                        $('.like-title').html('你的爱我已经感受到了~');
-                    }
+                $.getJSON("https://api.prprpr.me/count/?id=DIYgod-like&action=add", function (data) {
+                    $('.like-vote span').html(data);
                 });
             });
         }
@@ -681,11 +695,13 @@ $(document).ready(function ($) {
             type: jQuery(this).attr('method'),
             beforeSend: function () {
                 addComment.createButterbar("正在提交,好累呀~");
+                $('.form-submit input').attr('disabled', 'disabled');
                 NProgress.set(0.7);
             },
             error: function(request) {
                 var t = addComment;
                 t.createButterbar(request.responseText);
+                $('.form-submit input').attr('disabled', false);
                 NProgress.set(1.0);
             },
             success: function(data) {
@@ -715,6 +731,7 @@ $(document).ready(function ($) {
                     }
                 }
                 t.createButterbar("提交");
+                $('.form-submit input').attr('disabled', false);
                 NProgress.set(1.0);
                 cancel.style.display = 'none';
                 cancel.onclick = null;

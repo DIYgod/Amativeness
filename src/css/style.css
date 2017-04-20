@@ -1025,7 +1025,7 @@ form textarea {
 .header-description {
     height: 650px;
     position: relative;
-    background-image: url(https://diygod.b0.upaiyun.com/header-your-name2.jpg);
+    background-image: url(https://diygod.b0.upaiyun.com/header-sagiri.jpg);
     width: 100%;
     background-size: cover;
     background-position: center 50%;
@@ -2201,9 +2201,9 @@ footer .container {
     color: #fff;
 }
 
-/*#site-header h1 {*/
-    /*display: none;*/
-/*}*/
+#site-header h1 {
+    display: none;
+}
 
 /* blogChat */
 .chatroom-feedback {
@@ -2758,3 +2758,7 @@ a * {
 /*@keyframes snow{*/
     /*0%{background-position-x:0;background-position-y:0}50%{background-position-y:40rem}100%{background-position-x:40rem;background-position-y:80rem}*/
 /*}*/
+
+.single article.block .article-content {
+    margin-bottom: 40px;
+}
