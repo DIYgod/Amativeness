@@ -1207,11 +1207,6 @@ form textarea {
     word-wrap: break-word;
 }
 
-canvas {
-    position: relative;
-    top: -198px;
-}
-
 .animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
