@@ -202,9 +202,9 @@ $(document).ready(function ($) {
         }
         loliAudio.play();
     }
-    document.getElementsByClassName('xm')[0].addEventListener('click', function () {
-        playLoli();
-    });
+    // document.getElementsByClassName('xm')[0].addEventListener('click', function () {
+    //     playLoli();
+    // });
 
     // 关闭侧边栏
     document.getElementsByClassName('close-side')[0].addEventListener('click', function () {
