@@ -69,6 +69,10 @@ Text Domain: Amativeness
     .navbar {
         position: absolute !important;
     }
+
+    .xm {
+        display: none;
+    }
 }
 
 @media (max-width: 800px) {
