@@ -819,4 +819,7 @@ $(document).ready(function ($) {
         })
     }
     ajaxCommentPage();
+
+    // live2d
+    loadlive2d("live2d", "https://diygod.b0.upaiyun.com/live2d/22/22.model.json");
 });

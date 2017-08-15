@@ -95,7 +95,7 @@
                     style="color: #009925;">the</span> <span style="color: #d50f25;">World.</span></a></h2>
     </div>
     <div class="xm">
-        <img src="https://diygod.b0.upaiyun.com/xm.png">
+        <canvas id="live2d" width="150" height="400" class="live2d"></canvas>
     </div>
     <div class="container" id="content">
         <div class="article-list">
