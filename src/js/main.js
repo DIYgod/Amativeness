@@ -821,5 +821,5 @@ $(document).ready(function ($) {
     ajaxCommentPage();
 
     // live2d
-    loadlive2d("live2d", "https://www.anotherhome.net/wp-content/themes/Amativeness/lib/live2d/22/22.model.json");
+    loadlive2d("live2d", "./lib/live2d/22/22.model.json");
 });
