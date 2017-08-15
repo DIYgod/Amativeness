@@ -23,6 +23,7 @@
     <script src="<?php echo get_template_directory_uri(); ?>/lib/jquery-lazyload/jquery.lazyload.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/notie/browser/notie.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/social-share.js/dist/js/jquery.share.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/live2d/live2d.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/main.js"></script>
     <script>
         NProgress.set(1.0);
