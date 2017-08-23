@@ -64,6 +64,7 @@
                 </div>
             <?php endif; ?>
             <div class="nav-right">
+                <div><span id="online-count"></span>人在线</div>
                 <form class="search-form" method="post" action="<?php bloginfo('url'); ?>">
                     <input type="text" name="s" class="search-input" placeholder="站内搜索">
                     <button type="submit" class="search-submit sousuo">
