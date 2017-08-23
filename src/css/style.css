@@ -81,6 +81,10 @@ Text Domain: Amativeness
         position: relative !important;
     }
 
+    .navbar .nav-right .online {
+        display: none !important;
+    }
+
     .container {
         max-width: 100% !important;
     }
