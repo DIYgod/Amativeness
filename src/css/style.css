@@ -931,7 +931,8 @@ form textarea {
 .navbar .nav-right {
     position: absolute;
     right: -43px;
-    top: 2.5px;
+    top: 0;
+    bottom: 0;
 }
 
 .navbar .search-form {
@@ -949,6 +950,7 @@ form textarea {
     border: none;
     border-radius: 2px;
     transition: .6s;
+    margin-top: 6.5px;
 }
 
 .navbar .search-form:hover .search-input {
@@ -2760,4 +2762,12 @@ a * {
 
 .single article.block .article-content {
     margin-bottom: 40px;
+}
+
+.online {
+    float: left;
+    line-height: 38px;
+    color: #fff;
+    margin-right: 20px;
+    font-size: 12px;
 }
