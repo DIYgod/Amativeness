@@ -1,4 +1,5 @@
 <?php
+define("version", "20170824");
 add_filter('show_admin_bar', '__return_false');
 // Set up the content width value based on the theme's design and stylesheet.
 if (!isset($content_width))
@@ -51,7 +52,7 @@ function amativeness_scripts_styles()
     // Adds JavaScript for handling the navigation menu hide-and-show behavior.
     // wp_enqueue_script( 'amativeness-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', true );
     // Loads our main stylesheet.
-    wp_enqueue_style('amativeness-style', get_stylesheet_uri());
+    wp_enqueue_style('amativeness-style', get_stylesheet_uri(), array(), version);
     // Loads the Internet Explorer specific stylesheet.
     wp_enqueue_style('amativeness-ie', get_template_directory_uri() . '/css/ie.css', array('amativeness-style'), '20121010');
     $wp_styles->add_data('amativeness-ie', 'conditional', 'lt IE 9');
