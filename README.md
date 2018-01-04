@@ -2,9 +2,7 @@
 
 > A beautiful Wordpress theme, based on [Amativeness 3.0](http://azfashao.com/amativeness3-0/).
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/ucdjQF7wcNNiWY9mCEpAeGLz/DIYgod/Amativeness'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/ucdjQF7wcNNiWY9mCEpAeGLz/DIYgod/Amativeness.svg' />
-</a>
+
 
 ## Development
 
